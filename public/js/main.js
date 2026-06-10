@@ -75,6 +75,20 @@ window.closeMobileMenu = function () {
   });
 })();
 
+// ── Spotlight glow card pointer tracking ──
+document.addEventListener('pointermove', function (e) {
+  var x = e.clientX;
+  var y = e.clientY;
+  var xp = (x / window.innerWidth).toFixed(2);
+  var yp = (y / window.innerHeight).toFixed(2);
+  document.querySelectorAll('[data-glow]').forEach(function (el) {
+    el.style.setProperty('--x', x.toFixed(2));
+    el.style.setProperty('--xp', xp);
+    el.style.setProperty('--y', y.toFixed(2));
+    el.style.setProperty('--yp', yp);
+  });
+});
+
 // ── Contact form submit feedback ──
 (function () {
   const form = document.getElementById('contact-form');
