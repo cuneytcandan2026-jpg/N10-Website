@@ -37,9 +37,9 @@ window.closeMobileMenu = function () {
 // ── Active nav link detection ──
 (function () {
   const path = window.location.pathname;
-  let slug = path.replace(/^\//, '').replace('.html', '') || 'index';
-  // Treat root path as index
-  if (slug === '' || slug === '/') slug = 'index';
+  const filename = path.split('/').pop() || 'index.html';
+  let slug = filename.replace('.html', '') || 'index';
+  if (slug === '' || slug === 'N10-Website') slug = 'index';
   document.querySelectorAll('[data-nav="' + slug + '"]').forEach(function (el) {
     el.classList.add('nav-active');
   });
