@@ -1,0 +1,425 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Trial — N10 Academy</title>
+  <meta name="description" content="Book a free trial at N10 Academy, Jubilee Park, Edmonton. Contact Coach Nathan on 07539 072029 or fill in our enquiry form." />
+  <meta property="og:title" content="Book a Trial — N10 Academy" />
+  <meta property="og:description" content="Book a free trial session at N10 Academy in Edmonton, North London. Boys and girls U6–U18 welcome." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red:      '#E30513',
+              redDark:  '#B00410',
+              black:    '#0A0A0B',
+              charcoal: '#111114',
+              surface:  '#1C1C21',
+              elevated: '#252529',
+              gold:     '#F5C518',
+              glow:     '#FF4D1C',
+              white:    '#F8F8FA',
+              muted:    '#9090A0',
+            }
+          },
+          fontFamily: {
+            display: ['"Bebas Neue"', 'Impact', 'sans-serif'],
+            body:    ['Inter', 'system-ui', 'sans-serif'],
+          },
+          letterSpacing: {
+            display: '0.04em',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="/public/css/styles.css" />
+</head>
+<body class="font-body">
+
+  <!-- NAV -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center">
+
+      <!-- Logo + Wordmark -->
+      <div class="flex-1 flex items-center">
+        <a href="index.html" class="flex items-center gap-3 group rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-label="N10 Academy home">
+          <img src="/public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy crest" class="h-12 w-auto transition-transform duration-300 ease-out group-hover:scale-105" />
+          <div class="flex flex-col justify-center">
+            <span class="font-display text-xl text-brand-white leading-none" style="letter-spacing: 0.1em;">N10 ACADEMY</span>
+            <span class="text-brand-muted font-semibold uppercase mt-1 hidden sm:block" style="font-size: 9px; letter-spacing: 0.14em;">Elite Youth Football Academy</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Centre: Desktop nav links -->
+      <div class="hidden md:flex items-center gap-1">
+        <a href="index.html"      data-nav="index"      class="nav-link">Home</a>
+        <a href="programmes.html" data-nav="programmes" class="nav-link">Programmes</a>
+        <a href="coaches.html"    data-nav="coaches"    class="nav-link">Coaches</a>
+        <a href="about.html"      data-nav="about"      class="nav-link">About Us</a>
+      </div>
+
+      <!-- Right: CTA + Hamburger -->
+      <div class="flex-1 flex items-center justify-end gap-3">
+        <a href="contact.html" data-nav="contact" class="hidden md:inline-block btn-red py-2.5 px-6 text-sm">Book a Free Trial</a>
+        <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden flex flex-col justify-center gap-1.5 w-11 h-11 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold rounded">
+          <span class="block h-0.5 bg-brand-white transition-transform duration-300 origin-center" id="bar1"></span>
+          <span class="block h-0.5 bg-brand-white transition-opacity duration-300" id="bar2"></span>
+          <span class="block h-0.5 bg-brand-white transition-transform duration-300 origin-center" id="bar3"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden flex-col bg-brand-charcoal border-t border-white/10 px-6 py-4 gap-0">
+      <a href="index.html"      data-nav="index"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Home</a>
+      <a href="programmes.html" data-nav="programmes" class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Programmes</a>
+      <a href="coaches.html"    data-nav="coaches"    class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Coaches</a>
+      <a href="about.html"      data-nav="about"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">About Us</a>
+      <a href="contact.html" class="btn-red mt-4 text-center w-full block" onclick="closeMobileMenu()">Book a Free Trial</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="page-hero bg-brand-black px-6" aria-label="Contact page header">
+      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(227,5,19,0.25) 0%, transparent 65%);" aria-hidden="true"></div>
+      <div class="max-w-4xl mx-auto text-center relative z-10 w-full">
+        <p class="section-label mb-4 reveal justify-center">Get In Touch</p>
+        <h1 class="font-display text-6xl sm:text-7xl md:text-8xl text-brand-white leading-none tracking-display mb-4 reveal">
+          BOOK A <span class="text-brand-red">FREE TRIAL</span>
+        </h1>
+        <p class="text-brand-muted text-base sm:text-lg max-w-xl mx-auto leading-relaxed reveal">
+          Fill in the form, call us, or drop us a WhatsApp. We'll be in touch to confirm your child's free trial session.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- CONTACT CARDS -->
+    <section class="bg-brand-black py-16 px-6 border-b border-white/5">
+      <div class="max-w-4xl mx-auto grid sm:grid-cols-3 gap-6">
+
+        <a href="tel:07539072029" class="bg-brand-surface rounded-lg p-6 card-hover flex flex-col items-center text-center gap-3 reveal reveal-delay-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" style="box-shadow: 0 4px 24px rgba(0,0,0,0.4);">
+          <div class="w-12 h-12 rounded-full bg-brand-red/10 flex items-center justify-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91A16 16 0 0 0 14.09 15.91l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <p class="text-brand-white font-semibold text-sm">Phone</p>
+            <p class="text-brand-muted text-sm">07539 072029</p>
+          </div>
+        </a>
+
+        <a href="mailto:info@n10academy.co.uk" class="bg-brand-surface rounded-lg p-6 card-hover flex flex-col items-center text-center gap-3 reveal reveal-delay-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" style="box-shadow: 0 4px 24px rgba(0,0,0,0.4);">
+          <div class="w-12 h-12 rounded-full bg-brand-red/10 flex items-center justify-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <p class="text-brand-white font-semibold text-sm">Email</p>
+            <p class="text-brand-muted text-sm">info@n10academy.co.uk</p>
+          </div>
+        </a>
+
+        <a href="https://instagram.com/n10_academy_official" target="_blank" rel="noopener" class="bg-brand-surface rounded-lg p-6 card-hover flex flex-col items-center text-center gap-3 reveal reveal-delay-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" style="box-shadow: 0 4px 24px rgba(0,0,0,0.4);">
+          <div class="w-12 h-12 rounded-full bg-brand-red/10 flex items-center justify-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+          <div>
+            <p class="text-brand-white font-semibold text-sm">Instagram</p>
+            <p class="text-brand-muted text-sm">@n10_academy_official</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- FORM + LOCATION -->
+    <section class="bg-brand-charcoal py-16 px-6">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
+
+        <!-- Form -->
+        <div class="reveal">
+          <p class="section-label mb-4">Enquiry Form</p>
+          <h2 class="font-display text-4xl sm:text-5xl text-brand-white leading-none tracking-display mb-8">REGISTER <span class="text-brand-red">INTEREST</span></h2>
+
+          <div id="form-success" class="hidden mb-6 bg-green-900/30 border border-green-500/40 rounded-lg p-4">
+            <p class="text-green-400 font-semibold text-sm">✓ Enquiry sent! We'll be in touch within 24 hours.</p>
+          </div>
+
+          <form id="contact-form" novalidate class="bg-brand-surface rounded-lg p-8" style="box-shadow: 0 8px 48px rgba(0,0,0,0.5);">
+            <div class="grid sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label for="parent-name" class="block text-brand-white text-xs font-semibold uppercase tracking-widest mb-2">Parent / Guardian Name *</label>
+                <input type="text" id="parent-name" name="parent_name" placeholder="Your full name" class="form-input" required />
+              </div>
+              <div>
+                <label for="phone" class="block text-brand-white text-xs font-semibold uppercase tracking-widest mb-2">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="07000 000000" class="form-input" required />
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-brand-white text-xs font-semibold uppercase tracking-widest mb-2">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" class="form-input" required />
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label for="child-name" class="block text-brand-white text-xs font-semibold uppercase tracking-widest mb-2">Child's Name *</label>
+                <input type="text" id="child-name" name="child_name" placeholder="Child's full name" class="form-input" required />
+              </div>
+              <div>
+                <label for="child-age" class="block text-brand-white text-xs font-semibold uppercase tracking-widest mb-2">Child's Age *</label>
+                <input type="number" id="child-age" name="child_age" placeholder="e.g. 9" min="5" max="18" class="form-input" required />
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="programme" class="block text-brand-white text-xs font-semibold uppercase tracking-widest mb-2">Preferred Programme</label>
+              <select id="programme" name="programme" class="form-input">
+                <option value="" disabled selected>Select a programme</option>
+                <option>Weekly Group Training</option>
+                <option>1-to-1 Coaching</option>
+                <option>Holiday Camp</option>
+                <option>Technical Skills Training</option>
+                <option>Match Preparation Sessions</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="mb-6">
+              <label for="message" class="block text-brand-white text-xs font-semibold uppercase tracking-widest mb-2">Message (Optional)</label>
+              <textarea id="message" name="message" rows="4" placeholder="Any questions or anything you'd like us to know..." class="form-input resize-none"></textarea>
+            </div>
+            <button type="submit" class="btn-red w-full text-center">Send Enquiry</button>
+            <p class="text-brand-muted text-xs text-center mt-3">We'll never share your details. GDPR compliant.</p>
+          </form>
+        </div>
+
+        <!-- Location info -->
+        <div class="reveal">
+          <p class="section-label mb-4">Find Us</p>
+          <h2 class="font-display text-4xl sm:text-5xl text-brand-white leading-none tracking-display mb-8">TRAINING <span class="text-brand-red">LOCATION</span></h2>
+
+          <div class="space-y-6 mb-8">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-brand-red/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <p class="text-brand-white font-semibold text-sm mb-1">Address</p>
+                <address class="not-italic text-brand-muted text-sm leading-relaxed">
+                  Jubilee Park<br />
+                  Houndsfield Road<br />
+                  Edmonton, London<br />
+                  N9 7RA
+                </address>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-brand-red/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <div>
+                <p class="text-brand-white font-semibold text-sm mb-1">Training Days</p>
+                <p class="text-brand-muted text-sm">Saturdays 10:00AM – 12:00PM</p>
+                <p class="text-brand-muted text-sm">Tuesdays 5:00PM – 7:00PM (Girls)</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-brand-red/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91A16 16 0 0 0 14.09 15.91l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <p class="text-brand-white font-semibold text-sm mb-1">Coach Nathan</p>
+                <a href="tel:07539072029" class="text-brand-muted text-sm hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">07539 072029</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="rounded-lg overflow-hidden mb-6" style="box-shadow: 0 4px 24px rgba(0,0,0,0.5);">
+            <img src="/public/images/google-map.jpg" alt="Map showing Jubilee Park training location, Houndsfield Road, Edmonton N9 7RA" class="w-full h-56 object-cover" />
+          </div>
+
+          <!-- WhatsApp CTA -->
+          <div class="bg-brand-surface rounded-lg p-6 flex items-center gap-4" style="border: 1px solid rgba(37,211,102,0.2);">
+            <div class="w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center" style="background: #25D366;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="text-brand-white font-semibold text-sm">Chat on WhatsApp</p>
+              <p class="text-brand-muted text-xs">Quick responses from Coach Nathan</p>
+            </div>
+            <a href="https://wa.me/447539072029" target="_blank" rel="noopener" class="flex-shrink-0 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold transition-opacity duration-200 hover:opacity-90" style="background: #25D366; color: white;" aria-label="Chat with N10 Academy on WhatsApp">Message Us</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="bg-brand-black py-16 px-6">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-16">
+          <p class="section-label mb-4 reveal justify-center">Common Questions</p>
+          <h2 class="font-display text-5xl sm:text-6xl text-brand-white leading-none tracking-display reveal">FREQUENTLY <span class="text-brand-red">ASKED</span></h2>
+        </div>
+
+        <div class="space-y-2 reveal">
+
+          <div class="faq-item bg-brand-surface rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-expanded="false">
+              <span class="text-brand-white font-semibold text-sm">What age groups do you accept?</span>
+              <span class="faq-icon flex-shrink-0">+</span>
+            </button>
+            <div class="faq-panel">
+              <div class="px-6 pb-5">
+                <p class="text-brand-muted text-sm leading-relaxed">We welcome boys and girls from U6 all the way through to U18. Each age group has a programme specifically designed for their stage of development, from introduction to football at U6–U7 through to our senior academy at U17–U18.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-brand-surface rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-expanded="false">
+              <span class="text-brand-white font-semibold text-sm">How do trial sessions work?</span>
+              <span class="faq-icon flex-shrink-0">+</span>
+            </button>
+            <div class="faq-panel">
+              <div class="px-6 pb-5">
+                <p class="text-brand-muted text-sm leading-relaxed">Your child comes along to a regular session at Jubilee Park free of charge. Coach Nathan and our coaching team will assess their ability and help match them to the right programme and age group. All abilities are welcome — we don't turn anyone away.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-brand-surface rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-expanded="false">
+              <span class="text-brand-white font-semibold text-sm">What equipment does my child need?</span>
+              <span class="faq-icon flex-shrink-0">+</span>
+            </button>
+            <div class="faq-panel">
+              <div class="px-6 pb-5">
+                <p class="text-brand-muted text-sm leading-relaxed">Your child will need football boots (or trainers for their first trial), shin pads, and a water bottle. Comfortable sportswear is fine. You don't need to purchase any specific kit for a trial session.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-brand-surface rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-expanded="false">
+              <span class="text-brand-white font-semibold text-sm">Where exactly do you train?</span>
+              <span class="faq-icon flex-shrink-0">+</span>
+            </button>
+            <div class="faq-panel">
+              <div class="px-6 pb-5">
+                <p class="text-brand-muted text-sm leading-relaxed">All sessions are held at Jubilee Park, Houndsfield Road, Edmonton, London N9 7RA. The park is easily accessible by public transport and has ample parking nearby.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-brand-surface rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-expanded="false">
+              <span class="text-brand-white font-semibold text-sm">How much does it cost?</span>
+              <span class="faq-icon flex-shrink-0">+</span>
+            </button>
+            <div class="faq-panel">
+              <div class="px-6 pb-5">
+                <p class="text-brand-muted text-sm leading-relaxed">The first trial session is completely free. After the trial, pricing is discussed on an individual basis depending on the programme chosen. We offer flexible payment options to ensure no child misses out due to cost.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-brand-surface rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-expanded="false">
+              <span class="text-brand-white font-semibold text-sm">Are your coaches qualified?</span>
+              <span class="faq-icon flex-shrink-0">+</span>
+            </button>
+            <div class="faq-panel">
+              <div class="px-6 pb-5">
+                <p class="text-brand-muted text-sm leading-relaxed">Yes. All N10 Academy coaches hold recognised FA coaching qualifications (Level 1 or Level 2), are fully DBS checked, and have completed FA Safeguarding and First Aid training. We take coach development seriously.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-brand-surface rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-expanded="false">
+              <span class="text-brand-white font-semibold text-sm">Is it safe for my child?</span>
+              <span class="faq-icon flex-shrink-0">+</span>
+            </button>
+            <div class="faq-panel">
+              <div class="px-6 pb-5">
+                <p class="text-brand-muted text-sm leading-relaxed">Child safety is our absolute priority. All coaches are DBS checked and Safeguarding trained in line with FA guidelines. We operate a clear Child Protection Policy and maintain a positive, respectful environment at every session. Parents are always welcome to stay and watch.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-black border-t border-white/5 pt-16 pb-8 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div class="lg:col-span-1">
+          <img src="/public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy" class="h-14 w-auto mb-4" />
+          <p class="text-brand-muted text-sm leading-relaxed mb-4">Developing champions on and off the pitch. Elite mentality. Positive environment. Real results.</p>
+          <p class="font-display text-sm text-brand-red tracking-display">ELITE MENTALITY</p>
+        </div>
+        <div>
+          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">PAGES</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Home</a></li>
+            <li><a href="about.html"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">About Us</a></li>
+            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Programmes</a></li>
+            <li><a href="coaches.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Coaches</a></li>
+            <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Contact / Book Trial</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">SESSIONS</h4>
+          <ul class="space-y-3">
+            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Weekly Training</a></li>
+            <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Book a Trial</a></li>
+            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Holiday Camps</a></li>
+            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">1-to-1 Coaching</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">CONNECT</h4>
+          <ul class="space-y-3">
+            <li><a href="tel:07539072029"              class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">07539 072029</a></li>
+            <li><a href="mailto:info@n10academy.co.uk" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">info@n10academy.co.uk</a></li>
+            <li><a href="https://instagram.com/n10_academy_official" target="_blank" rel="noopener" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">@n10_academy_official</a></li>
+            <li><p class="text-brand-muted text-sm">Jubilee Park, Edmonton, N9 7RA</p></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-brand-muted text-xs">© 2026 N10 Academy. All rights reserved.</p>
+        <p class="text-brand-muted text-xs">Uniting Talent. Building Character. Inspiring Futures.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float button -->
+  <a href="https://wa.me/447539072029" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat with N10 Academy on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="/public/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet the Coaches — N10 Academy</title>
+  <meta name="description" content="FA-qualified, DBS-checked coaches committed to youth development. Meet the team behind N10 Academy in Edmonton, North London." />
+  <meta property="og:title" content="Meet the Coaches — N10 Academy" />
+  <meta property="og:description" content="Our experienced, FA-qualified coaching team is dedicated to developing young footballers in a safe, positive environment." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red:      '#E30513',
+              redDark:  '#B00410',
+              black:    '#0A0A0B',
+              charcoal: '#111114',
+              surface:  '#1C1C21',
+              elevated: '#252529',
+              gold:     '#F5C518',
+              glow:     '#FF4D1C',
+              white:    '#F8F8FA',
+              muted:    '#9090A0',
+            }
+          },
+          fontFamily: {
+            display: ['"Bebas Neue"', 'Impact', 'sans-serif'],
+            body:    ['Inter', 'system-ui', 'sans-serif'],
+          },
+          letterSpacing: {
+            display: '0.04em',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="/public/css/styles.css" />
+</head>
+<body class="font-body">
+
+  <!-- NAV -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center">
+
+      <!-- Logo + Wordmark -->
+      <div class="flex-1 flex items-center">
+        <a href="index.html" class="flex items-center gap-3 group rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-label="N10 Academy home">
+          <img src="/public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy crest" class="h-12 w-auto transition-transform duration-300 ease-out group-hover:scale-105" />
+          <div class="flex flex-col justify-center">
+            <span class="font-display text-xl text-brand-white leading-none" style="letter-spacing: 0.1em;">N10 ACADEMY</span>
+            <span class="text-brand-muted font-semibold uppercase mt-1 hidden sm:block" style="font-size: 9px; letter-spacing: 0.14em;">Elite Youth Football Academy</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Centre: Desktop nav links -->
+      <div class="hidden md:flex items-center gap-1">
+        <a href="index.html"      data-nav="index"      class="nav-link">Home</a>
+        <a href="programmes.html" data-nav="programmes" class="nav-link">Programmes</a>
+        <a href="coaches.html"    data-nav="coaches"    class="nav-link">Coaches</a>
+        <a href="about.html"      data-nav="about"      class="nav-link">About Us</a>
+      </div>
+
+      <!-- Right: CTA + Hamburger -->
+      <div class="flex-1 flex items-center justify-end gap-3">
+        <a href="contact.html" class="hidden md:inline-block btn-red py-2.5 px-6 text-sm">Book a Free Trial</a>
+        <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden flex flex-col justify-center gap-1.5 w-11 h-11 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold rounded">
+          <span class="block h-0.5 bg-brand-white transition-transform duration-300 origin-center" id="bar1"></span>
+          <span class="block h-0.5 bg-brand-white transition-opacity duration-300" id="bar2"></span>
+          <span class="block h-0.5 bg-brand-white transition-transform duration-300 origin-center" id="bar3"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden flex-col bg-brand-charcoal border-t border-white/10 px-6 py-4 gap-0">
+      <a href="index.html"      data-nav="index"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Home</a>
+      <a href="programmes.html" data-nav="programmes" class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Programmes</a>
+      <a href="coaches.html"    data-nav="coaches"    class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Coaches</a>
+      <a href="about.html"      data-nav="about"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">About Us</a>
+      <a href="contact.html" class="btn-red mt-4 text-center w-full block" onclick="closeMobileMenu()">Book a Free Trial</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="page-hero bg-brand-black px-6" aria-label="Coaches page header">
+      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(227,5,19,0.25) 0%, transparent 65%);" aria-hidden="true"></div>
+      <div class="max-w-4xl mx-auto text-center relative z-10 w-full">
+        <p class="section-label mb-4 reveal justify-center">The Team</p>
+        <h1 class="font-display text-6xl sm:text-7xl md:text-8xl text-brand-white leading-none tracking-display mb-4 reveal">
+          MEET THE <span class="text-brand-red">COACHES</span>
+        </h1>
+        <p class="text-brand-muted text-base sm:text-lg max-w-2xl mx-auto leading-relaxed reveal">
+          Experienced, FA-qualified, and deeply passionate about youth development. The N10 coaching team is why parents trust us with their children.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- HEAD COACH -->
+    <section class="bg-brand-charcoal py-16 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <p class="section-label mb-4 reveal justify-center">Head Coach</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
+
+          <!-- Portrait -->
+          <div class="reveal">
+            <div class="relative rounded-lg overflow-hidden">
+              <img src="https://placehold.co/480x560/1C1C21/E30513?text=Coach+Nathan" alt="Coach Nathan, Head Coach and Founder of N10 Academy" class="w-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-black/60 via-transparent to-transparent" aria-hidden="true"></div>
+              <div class="absolute inset-0" style="background: rgba(227,5,19,0.08); mix-blend-mode: multiply;" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Details -->
+          <div class="reveal">
+            <div class="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest" style="background: rgba(245,197,24,0.15); border: 1px solid rgba(245,197,24,0.3); color: #F5C518;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              Featured Coach
+            </div>
+
+            <h2 class="font-display text-5xl sm:text-6xl text-brand-white leading-none tracking-display mb-1">COACH NATHAN</h2>
+            <p class="text-brand-red font-semibold text-sm uppercase tracking-widest mb-6">Head Coach &amp; Founder</p>
+
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-brand-elevated text-brand-muted text-xs px-3 py-1 rounded-full border border-white/10">FA Level 2 Coach</span>
+              <span class="bg-brand-elevated text-brand-muted text-xs px-3 py-1 rounded-full border border-white/10">FA Safeguarding</span>
+              <span class="bg-brand-elevated text-brand-muted text-xs px-3 py-1 rounded-full border border-white/10">First Aid Trained</span>
+              <span class="bg-brand-elevated text-brand-muted text-xs px-3 py-1 rounded-full border border-white/10">DBS Checked</span>
+            </div>
+
+            <p class="text-brand-muted text-sm leading-relaxed mb-6">
+              Coach Nathan founded N10 Academy with a single mission: to give every young player in North London the quality coaching they deserve. With years of experience developing youth players at grassroots level, Nathan combines a deep technical knowledge of the game with a genuine passion for mentoring young people.
+            </p>
+
+            <p class="text-brand-muted text-sm leading-relaxed mb-8">
+              Nathan's player-first approach puts individual development at the heart of every session. He understands that a positive experience at a young age can shape a player's relationship with football for life — and he takes that responsibility seriously.
+            </p>
+
+            <!-- Philosophy quote -->
+            <blockquote class="border-l-4 border-brand-red pl-6 mb-8">
+              <p class="text-brand-white text-base leading-relaxed italic">"My job isn't just to teach football. It's to give every young player belief in themselves — on the pitch and in life."</p>
+              <footer class="text-brand-muted text-sm mt-2">— Coach Nathan, Head Coach &amp; Founder</footer>
+            </blockquote>
+
+            <!-- Expertise tags -->
+            <div>
+              <p class="text-brand-muted text-xs font-semibold uppercase tracking-widest mb-3">Areas of Expertise</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs px-3 py-1.5 rounded font-medium" style="background: rgba(227,5,19,0.1); border: 1px solid rgba(227,5,19,0.2); color: #E30513;">Technical Development</span>
+                <span class="text-xs px-3 py-1.5 rounded font-medium" style="background: rgba(227,5,19,0.1); border: 1px solid rgba(227,5,19,0.2); color: #E30513;">Youth Psychology</span>
+                <span class="text-xs px-3 py-1.5 rounded font-medium" style="background: rgba(227,5,19,0.1); border: 1px solid rgba(227,5,19,0.2); color: #E30513;">Tactical Coaching</span>
+                <span class="text-xs px-3 py-1.5 rounded font-medium" style="background: rgba(227,5,19,0.1); border: 1px solid rgba(227,5,19,0.2); color: #E30513;">Player Assessment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ASSISTANT COACHES -->
+    <section class="bg-brand-black py-16 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <p class="section-label mb-4 reveal justify-center">Coaching Staff</p>
+          <h2 class="font-display text-5xl sm:text-6xl text-brand-white leading-none tracking-display reveal">ASSISTANT <span class="text-brand-red">COACHES</span></h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Coach 2 -->
+          <article class="bg-brand-surface rounded-lg overflow-hidden card-hover reveal reveal-delay-1" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
+            <div class="relative">
+              <img src="https://placehold.co/400x480/111114/E30513?text=Coach" alt="Assistant coach at N10 Academy" class="w-full h-64 object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent" aria-hidden="true"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-2xl text-brand-white tracking-display mb-1">COACH [NAME]</h3>
+              <p class="text-brand-red text-xs font-semibold uppercase tracking-widest mb-4">Assistant Coach — U8–U11</p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="bg-brand-elevated text-brand-muted text-xs px-2 py-1 rounded">FA Level 1</span>
+                <span class="bg-brand-elevated text-brand-muted text-xs px-2 py-1 rounded">DBS Checked</span>
+                <span class="bg-brand-elevated text-brand-muted text-xs px-2 py-1 rounded">FA Safeguarding</span>
+              </div>
+              <p class="text-brand-muted text-xs leading-relaxed italic">"Every child can play — it's our job to help them find their way."</p>
+            </div>
+          </article>
+
+          <!-- Coach 3 -->
+          <article class="bg-brand-surface rounded-lg overflow-hidden card-hover reveal reveal-delay-2" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
+            <div class="relative">
+              <img src="https://placehold.co/400x480/111114/E30513?text=Coach" alt="Assistant coach at N10 Academy" class="w-full h-64 object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent" aria-hidden="true"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-2xl text-brand-white tracking-display mb-1">COACH [NAME]</h3>
+              <p class="text-brand-red text-xs font-semibold uppercase tracking-widest mb-4">Assistant Coach — U12–U15</p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="bg-brand-elevated text-brand-muted text-xs px-2 py-1 rounded">FA Level 2</span>
+                <span class="bg-brand-elevated text-brand-muted text-xs px-2 py-1 rounded">DBS Checked</span>
+                <span class="bg-brand-elevated text-brand-muted text-xs px-2 py-1 rounded">First Aid</span>
+              </div>
+              <p class="text-brand-muted text-xs leading-relaxed italic">"Discipline and creativity — both are essential for a complete player."</p>
+            </div>
+          </article>
+
+          <!-- Coach 4 -->
+          <article class="bg-brand-surface rounded-lg overflow-hidden card-hover reveal reveal-delay-3" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
+            <div class="relative">
+              <img src="https://placehold.co/400x480/111114/E30513?text=Coach" alt="Assistant coach at N10 Academy" class="w-full h-64 object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent" aria-hidden="true"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-2xl text-brand-white tracking-display mb-1">COACH [NAME]</h3>
+              <p class="text-brand-red text-xs font-semibold uppercase tracking-widest mb-4">Girls Programme Lead</p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="bg-brand-elevated text-brand-muted text-xs px-2 py-1 rounded">FA Level 1</span>
+                <span class="bg-brand-elevated text-brand-muted text-xs px-2 py-1 rounded">DBS Checked</span>
+                <span class="bg-brand-elevated text-brand-muted text-xs px-2 py-1 rounded">FA Safeguarding</span>
+              </div>
+              <p class="text-brand-muted text-xs leading-relaxed italic">"Girls' football is growing fast — I'm proud to be part of that here at N10."</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CREDENTIALS BAR -->
+    <section class="bg-brand-charcoal py-14 px-6 border-y border-white/5">
+      <div class="max-w-5xl mx-auto">
+        <p class="text-center text-brand-muted text-xs font-semibold uppercase tracking-widest mb-8 reveal">All N10 Academy Coaches Hold</p>
+        <div class="flex flex-wrap justify-center gap-3 reveal">
+          <div class="cred-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            FA Level 1 / Level 2
+          </div>
+          <div class="cred-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            FA Safeguarding
+          </div>
+          <div class="cred-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            First Aid Certificate
+          </div>
+          <div class="cred-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            DBS Checked
+          </div>
+          <div class="cred-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Child Protection Policy
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SAFEGUARDING -->
+    <section class="bg-brand-black py-16 px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-brand-surface rounded-lg p-8 reveal" style="border-left: 4px solid #F5C518; box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
+          <div class="flex items-start gap-5">
+            <div class="w-14 h-14 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(245,197,24,0.1);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F5C518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-display text-3xl text-brand-white tracking-display mb-3">SAFEGUARDING STATEMENT</h3>
+              <p class="text-brand-muted text-sm leading-relaxed mb-4">
+                At N10 Academy, child welfare comes first — in every session, every decision, every interaction. Every member of our coaching staff is fully DBS checked and has completed FA Safeguarding and Child Protection training before working with any player.
+              </p>
+              <p class="text-brand-muted text-sm leading-relaxed">
+                We operate a comprehensive Child Protection Policy in line with The Football Association's guidelines. Parents are always welcome to observe sessions, and any concern — however small — is taken seriously and addressed promptly. Your child's safety is our responsibility and our honour.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- JOIN THE COACHING TEAM -->
+    <section class="bg-brand-charcoal py-14 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <p class="section-label mb-4 reveal justify-center">We're Growing</p>
+        <h2 class="font-display text-4xl sm:text-5xl text-brand-white leading-none tracking-display mb-4 reveal">WANT TO COACH<br /><span class="text-brand-red">WITH US?</span></h2>
+        <p class="text-brand-muted text-sm leading-relaxed max-w-xl mx-auto mb-8 reveal">
+          N10 Academy is always looking for passionate, qualified coaches who share our values. If you hold an FA coaching qualification, are DBS checked, and genuinely love developing young players — we'd love to hear from you.
+        </p>
+        <a href="contact.html" class="btn-outline reveal">Get In Touch</a>
+      </div>
+    </section>
+
+
+    <!-- FINAL CTA -->
+    <section class="py-14 px-6" style="background: #E30513;">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="font-display text-5xl sm:text-6xl text-white leading-none tracking-display mb-4 reveal">MEET US ON THE PITCH</h2>
+        <p class="text-white/80 mb-10 reveal">Book your child's free trial and experience the N10 difference firsthand.</p>
+        <a href="contact.html" class="btn-outline text-white border-white/70 hover:bg-white/10 hover:border-white reveal">Book a Free Trial</a>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-black border-t border-white/5 pt-16 pb-8 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div class="lg:col-span-1">
+          <img src="/public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy" class="h-14 w-auto mb-4" />
+          <p class="text-brand-muted text-sm leading-relaxed mb-4">Developing champions on and off the pitch. Elite mentality. Positive environment. Real results.</p>
+          <p class="font-display text-sm text-brand-red tracking-display">ELITE MENTALITY</p>
+        </div>
+        <div>
+          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">PAGES</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Home</a></li>
+            <li><a href="about.html"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">About Us</a></li>
+            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Programmes</a></li>
+            <li><a href="coaches.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Coaches</a></li>
+            <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Contact / Book Trial</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">SESSIONS</h4>
+          <ul class="space-y-3">
+            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Weekly Training</a></li>
+            <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Book a Trial</a></li>
+            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Holiday Camps</a></li>
+            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">1-to-1 Coaching</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">CONNECT</h4>
+          <ul class="space-y-3">
+            <li><a href="tel:07539072029"              class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">07539 072029</a></li>
+            <li><a href="mailto:info@n10academy.co.uk" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">info@n10academy.co.uk</a></li>
+            <li><a href="https://instagram.com/n10_academy_official" target="_blank" rel="noopener" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">@n10_academy_official</a></li>
+            <li><p class="text-brand-muted text-sm">Jubilee Park, Edmonton, N9 7RA</p></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-brand-muted text-xs">© 2026 N10 Academy. All rights reserved.</p>
+        <p class="text-brand-muted text-xs">Uniting Talent. Building Character. Inspiring Futures.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/public/js/main.js"></script>
+</body>
+</html>
