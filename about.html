@@ -13,35 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              red:      '#E30513',
-              redDark:  '#B00410',
-              black:    '#0A0A0B',
-              charcoal: '#111114',
-              surface:  '#1C1C21',
-              elevated: '#252529',
-              gold:     '#F5C518',
-              glow:     '#FF4D1C',
-              white:    '#F8F8FA',
-              muted:    '#9090A0',
-            }
-          },
-          fontFamily: {
-            display: ['"Bebas Neue"', 'Impact', 'sans-serif'],
-            body:    ['Inter', 'system-ui', 'sans-serif'],
-          },
-          letterSpacing: {
-            display: '0.04em',
-          }
-        }
-      }
-    }
-  </script>
+  <script src="public/js/tailwind.config.js"></script>
   <link rel="stylesheet" href="public/css/styles.css" />
 </head>
 <body class="font-body">
@@ -72,6 +44,7 @@
       <!-- Right: CTA + Hamburger -->
       <div class="flex-1 flex items-center justify-end gap-3">
         <a href="contact.html" class="hidden md:inline-block btn-red py-2.5 px-6 text-sm">Book a Free Trial</a>
+        <a href="contact.html" class="mobile-nav-cta btn-red py-2 px-3.5 text-xs font-semibold">Book Trial</a>
         <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden flex flex-col justify-center gap-1.5 w-11 h-11 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold rounded">
           <span class="block h-0.5 bg-brand-white transition-transform duration-300 origin-center" id="bar1"></span>
           <span class="block h-0.5 bg-brand-white transition-opacity duration-300" id="bar2"></span>
@@ -130,7 +103,7 @@
           </div>
           <div class="md:col-span-2 reveal">
             <div class="relative rounded-lg overflow-hidden">
-              <img src="https://placehold.co/480x560/1C1C21/E30513?text=Our+Story" alt="N10 Academy founding story" class="w-full object-cover" />
+              <img src="public/assets/inspiration/Instagram%20N10/Football%20sessions.jpg" alt="N10 Academy founding story — players in training at Jubilee Park" class="w-full object-cover" />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-black/60 via-transparent to-transparent" aria-hidden="true"></div>
               <div class="absolute bottom-6 left-6 right-6">
                 <p class="font-display text-xl text-brand-white tracking-display">"UNITING TALENT."</p>
@@ -152,7 +125,8 @@
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
-          <div class="bg-brand-surface rounded-lg p-8 card-hover reveal reveal-delay-1" style="box-shadow: 0 4px 24px rgba(0,0,0,0.4); border-top: 4px solid #E30513;">
+          <div data-glow class="bg-brand-surface rounded-lg p-8 card-hover reveal reveal-delay-1" style="box-shadow: 0 4px 24px rgba(0,0,0,0.4); border-top: 4px solid #E30513;">
+            <div data-glow></div>
             <div class="w-12 h-12 rounded-lg bg-brand-red/10 flex items-center justify-center mb-5">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
@@ -160,7 +134,8 @@
             <p class="text-brand-muted text-sm leading-relaxed">To provide elite-quality football coaching in an inclusive, safe, and positive environment — accessible to every child in our community, regardless of ability or background. We develop players and people.</p>
           </div>
 
-          <div class="bg-brand-surface rounded-lg p-8 card-hover reveal reveal-delay-2" style="box-shadow: 0 4px 24px rgba(0,0,0,0.4); border-top: 4px solid #F5C518;">
+          <div data-glow class="bg-brand-surface rounded-lg p-8 card-hover reveal reveal-delay-2" style="box-shadow: 0 4px 24px rgba(0,0,0,0.4); border-top: 4px solid #F5C518;">
+            <div data-glow></div>
             <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-5" style="background: rgba(245,197,24,0.1);">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F5C518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
@@ -173,7 +148,7 @@
 
 
     <!-- STATS BAR -->
-    <section class="bg-brand-charcoal border-y border-white/5 py-10 px-6">
+    <section id="about-stats" class="bg-brand-charcoal border-y border-white/5 py-10 px-6">
       <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         <div class="reveal reveal-delay-1">
           <p class="font-display text-5xl text-brand-red tracking-display leading-none">200+</p>
@@ -188,8 +163,8 @@
           <p class="text-brand-muted text-xs uppercase tracking-widest mt-2 font-semibold">Age Groups</p>
         </div>
         <div class="reveal reveal-delay-4">
-          <p class="font-display text-5xl text-brand-red tracking-display leading-none">FA</p>
-          <p class="text-brand-muted text-xs uppercase tracking-widest mt-2 font-semibold">Qualified Coaches</p>
+          <p class="font-display text-5xl text-brand-red tracking-display leading-none">100%</p>
+          <p class="text-brand-muted text-xs uppercase tracking-widest mt-2 font-semibold">FA-Qualified Staff</p>
         </div>
       </div>
     </section>
@@ -206,9 +181,12 @@
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
           <!-- Integrity -->
-          <div class="relative rounded-lg overflow-hidden card-hover group reveal reveal-delay-1" style="height: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
-            <img src="https://images.unsplash.com/photo-1779809140671-a7d62f0063e6?w=600&h=400&fit=crop&q=80&auto=format" alt="Coach and player in honest, professional interaction" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.5) 50%, rgba(10,10,11,0.1) 100%);"></div>
+          <div data-glow class="relative rounded-lg card-hover group reveal reveal-delay-1" style="height: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
+            <div data-glow></div>
+            <div class="absolute inset-0 overflow-hidden rounded-lg">
+              <img src="https://images.unsplash.com/photo-1779809140671-a7d62f0063e6?w=600&h=400&fit=crop&q=80&auto=format" alt="Coach and player in honest, professional interaction" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.5) 50%, rgba(10,10,11,0.1) 100%);"></div>
+            </div>
             <div class="absolute top-4 left-4 w-10 h-10 rounded-lg flex items-center justify-center z-10" style="background: rgba(227,5,19,0.25); border: 1px solid rgba(227,5,19,0.4); backdrop-filter: blur(4px);">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
@@ -219,9 +197,12 @@
           </div>
 
           <!-- Respect -->
-          <div class="relative rounded-lg overflow-hidden card-hover group reveal reveal-delay-2" style="height: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
-            <img src="https://images.unsplash.com/photo-1598880513655-d1c6d4b2dfbf?w=600&h=400&fit=crop&q=80&auto=format" alt="Players showing respect and sportsmanship" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.5) 50%, rgba(10,10,11,0.1) 100%);"></div>
+          <div data-glow class="relative rounded-lg card-hover group reveal reveal-delay-2" style="height: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
+            <div data-glow></div>
+            <div class="absolute inset-0 overflow-hidden rounded-lg">
+              <img src="https://images.unsplash.com/photo-1598880513655-d1c6d4b2dfbf?w=600&h=400&fit=crop&q=80&auto=format" alt="Players showing respect and sportsmanship" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.5) 50%, rgba(10,10,11,0.1) 100%);"></div>
+            </div>
             <div class="absolute top-4 left-4 w-10 h-10 rounded-lg flex items-center justify-center z-10" style="background: rgba(227,5,19,0.25); border: 1px solid rgba(227,5,19,0.4); backdrop-filter: blur(4px);">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </div>
@@ -232,9 +213,12 @@
           </div>
 
           <!-- Excellence -->
-          <div class="relative rounded-lg overflow-hidden card-hover group reveal reveal-delay-3" style="height: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
-            <img src="https://images.unsplash.com/photo-1618073193718-23a66109f4e6?w=600&h=400&fit=crop&q=80&auto=format" alt="Player pushing to achieve excellence on the pitch" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.5) 50%, rgba(10,10,11,0.1) 100%);"></div>
+          <div data-glow class="relative rounded-lg card-hover group reveal reveal-delay-3" style="height: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
+            <div data-glow></div>
+            <div class="absolute inset-0 overflow-hidden rounded-lg">
+              <img src="https://images.unsplash.com/photo-1618073193718-23a66109f4e6?w=600&h=400&fit=crop&q=80&auto=format" alt="Player pushing to achieve excellence on the pitch" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.5) 50%, rgba(10,10,11,0.1) 100%);"></div>
+            </div>
             <div class="absolute top-4 left-4 w-10 h-10 rounded-lg flex items-center justify-center z-10" style="background: rgba(227,5,19,0.25); border: 1px solid rgba(227,5,19,0.4); backdrop-filter: blur(4px);">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
@@ -245,9 +229,12 @@
           </div>
 
           <!-- Inclusion -->
-          <div class="relative rounded-lg overflow-hidden card-hover group reveal reveal-delay-4" style="height: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
-            <img src="https://images.unsplash.com/photo-1622659097509-4d56de14539e?w=600&h=400&fit=crop&q=80&auto=format" alt="Young players of all abilities training together" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.5) 50%, rgba(10,10,11,0.1) 100%);"></div>
+          <div data-glow class="relative rounded-lg card-hover group reveal reveal-delay-4" style="height: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
+            <div data-glow></div>
+            <div class="absolute inset-0 overflow-hidden rounded-lg">
+              <img src="https://images.unsplash.com/photo-1622659097509-4d56de14539e?w=600&h=400&fit=crop&q=80&auto=format" alt="Young players of all abilities training together" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.5) 50%, rgba(10,10,11,0.1) 100%);"></div>
+            </div>
             <div class="absolute top-4 left-4 w-10 h-10 rounded-lg flex items-center justify-center z-10" style="background: rgba(227,5,19,0.25); border: 1px solid rgba(227,5,19,0.4); backdrop-filter: blur(4px);">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             </div>
@@ -258,9 +245,12 @@
           </div>
 
           <!-- Development -->
-          <div class="relative rounded-lg overflow-hidden card-hover group reveal reveal-delay-5" style="height: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
-            <img src="https://images.unsplash.com/photo-1622659097972-68f1d8c1829f?w=600&h=400&fit=crop&q=80&auto=format" alt="Player developing football skills in structured training" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.5) 50%, rgba(10,10,11,0.1) 100%);"></div>
+          <div data-glow class="relative rounded-lg card-hover group reveal reveal-delay-5" style="height: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
+            <div data-glow></div>
+            <div class="absolute inset-0 overflow-hidden rounded-lg">
+              <img src="https://images.unsplash.com/photo-1622659097972-68f1d8c1829f?w=600&h=400&fit=crop&q=80&auto=format" alt="Player developing football skills in structured training" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.5) 50%, rgba(10,10,11,0.1) 100%);"></div>
+            </div>
             <div class="absolute top-4 left-4 w-10 h-10 rounded-lg flex items-center justify-center z-10" style="background: rgba(227,5,19,0.25); border: 1px solid rgba(227,5,19,0.4); backdrop-filter: blur(4px);">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
             </div>
@@ -271,9 +261,12 @@
           </div>
 
           <!-- Community -->
-          <div class="relative rounded-lg overflow-hidden card-hover group reveal reveal-delay-6" style="height: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
-            <img src="https://images.unsplash.com/photo-1780265358334-2ee1c0723955?w=600&h=400&fit=crop&q=80&auto=format" alt="N10 Academy community of players, parents and coaches" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.5) 50%, rgba(10,10,11,0.1) 100%);"></div>
+          <div data-glow class="relative rounded-lg card-hover group reveal reveal-delay-6" style="height: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
+            <div data-glow></div>
+            <div class="absolute inset-0 overflow-hidden rounded-lg">
+              <img src="https://images.unsplash.com/photo-1780265358334-2ee1c0723955?w=600&h=400&fit=crop&q=80&auto=format" alt="N10 Academy community of players, parents and coaches" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.5) 50%, rgba(10,10,11,0.1) 100%);"></div>
+            </div>
             <div class="absolute top-4 left-4 w-10 h-10 rounded-lg flex items-center justify-center z-10" style="background: rgba(227,5,19,0.25); border: 1px solid rgba(227,5,19,0.4); backdrop-filter: blur(4px);">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
             </div>
@@ -292,7 +285,7 @@
       <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div class="reveal order-2 md:order-1">
           <div class="relative rounded-lg overflow-hidden">
-            <img src="https://placehold.co/600x480/1C1C21/E30513?text=Coaching+Philosophy" alt="N10 Academy coaching in action" class="w-full object-cover" />
+            <img src="public/assets/inspiration/Instagram%20N10/Girls%20Football%20Team.jpg" alt="N10 Academy coaching in action" class="w-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-brand-black/60 via-transparent to-transparent" aria-hidden="true"></div>
             <div class="absolute inset-0" style="background: rgba(227,5,19,0.1); mix-blend-mode: multiply;" aria-hidden="true"></div>
           </div>
@@ -347,7 +340,7 @@
         </div>
 
         <!-- Desktop: horizontal steps -->
-        <div class="hidden md:flex items-start gap-0 reveal">
+        <div class="hidden lg:flex items-start gap-0 reveal">
 
           <div class="flex flex-col items-center flex-1 text-center">
             <div class="w-14 h-14 rounded-full bg-brand-red flex items-center justify-center mb-4 flex-shrink-0">
@@ -399,8 +392,8 @@
 
         </div>
 
-        <!-- Mobile: vertical steps -->
-        <div class="md:hidden space-y-6 reveal">
+        <!-- Mobile/tablet: vertical steps -->
+        <div class="lg:hidden space-y-6 reveal">
           <div class="flex items-start gap-4">
             <div class="w-12 h-12 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0">
               <span class="font-display text-brand-white tracking-display">01</span>
@@ -475,7 +468,8 @@
         </div>
 
         <div class="grid sm:grid-cols-2 gap-6 reveal">
-          <div class="bg-brand-surface rounded-lg p-6 flex items-start gap-4 card-hover" style="box-shadow: 0 4px 24px rgba(0,0,0,0.3);">
+          <div data-glow class="bg-brand-surface rounded-lg p-6 flex items-start gap-4 card-hover" style="box-shadow: 0 4px 24px rgba(0,0,0,0.3);">
+            <div data-glow></div>
             <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(34,197,94,0.15);">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
@@ -485,7 +479,8 @@
             </div>
           </div>
 
-          <div class="bg-brand-surface rounded-lg p-6 flex items-start gap-4 card-hover" style="box-shadow: 0 4px 24px rgba(0,0,0,0.3);">
+          <div data-glow class="bg-brand-surface rounded-lg p-6 flex items-start gap-4 card-hover" style="box-shadow: 0 4px 24px rgba(0,0,0,0.3);">
+            <div data-glow></div>
             <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(34,197,94,0.15);">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
@@ -495,7 +490,8 @@
             </div>
           </div>
 
-          <div class="bg-brand-surface rounded-lg p-6 flex items-start gap-4 card-hover" style="box-shadow: 0 4px 24px rgba(0,0,0,0.3);">
+          <div data-glow class="bg-brand-surface rounded-lg p-6 flex items-start gap-4 card-hover" style="box-shadow: 0 4px 24px rgba(0,0,0,0.3);">
+            <div data-glow></div>
             <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(34,197,94,0.15);">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
@@ -505,7 +501,8 @@
             </div>
           </div>
 
-          <div class="bg-brand-surface rounded-lg p-6 flex items-start gap-4 card-hover" style="box-shadow: 0 4px 24px rgba(0,0,0,0.3);">
+          <div data-glow class="bg-brand-surface rounded-lg p-6 flex items-start gap-4 card-hover" style="box-shadow: 0 4px 24px rgba(0,0,0,0.3);">
+            <div data-glow></div>
             <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(34,197,94,0.15);">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
@@ -526,7 +523,7 @@
         <p class="text-white/80 mb-10 reveal">Book a free trial and see N10 Academy for yourself.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center reveal">
           <a href="contact.html" class="btn-outline text-white border-white/70 hover:bg-white/10 hover:border-white text-center">Book a Free Trial</a>
-          <a href="coaches.html" style="background: #0A0A0B; color: #F8F8FA; border-color: #0A0A0B;" class="btn-red text-center hover:opacity-90">Meet the Coaches</a>
+          <a href="coaches.html" class="btn-dark text-center">Meet the Coaches</a>
         </div>
       </div>
     </section>
@@ -554,7 +551,7 @@
           </ul>
         </div>
         <div>
-          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">SESSIONS</h4>
+          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">PROGRAMMES & TRIALS</h4>
           <ul class="space-y-3">
             <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Weekly Training</a></li>
             <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Book a Trial</a></li>
@@ -573,7 +570,10 @@
         </div>
       </div>
       <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-brand-muted text-xs">© 2026 N10 Academy. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <p class="text-brand-muted text-xs">© 2026 N10 Academy. All rights reserved.</p>
+          <a href="privacy.html" class="text-brand-muted text-xs hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Privacy Policy</a>
+        </div>
         <p class="text-brand-muted text-xs">Uniting Talent. Building Character. Inspiring Futures.</p>
       </div>
     </div>

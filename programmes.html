@@ -13,35 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              red:      '#E30513',
-              redDark:  '#B00410',
-              black:    '#0A0A0B',
-              charcoal: '#111114',
-              surface:  '#1C1C21',
-              elevated: '#252529',
-              gold:     '#F5C518',
-              glow:     '#FF4D1C',
-              white:    '#F8F8FA',
-              muted:    '#9090A0',
-            }
-          },
-          fontFamily: {
-            display: ['"Bebas Neue"', 'Impact', 'sans-serif'],
-            body:    ['Inter', 'system-ui', 'sans-serif'],
-          },
-          letterSpacing: {
-            display: '0.04em',
-          }
-        }
-      }
-    }
-  </script>
+  <script src="public/js/tailwind.config.js"></script>
   <link rel="stylesheet" href="public/css/styles.css" />
 </head>
 <body class="font-body">
@@ -72,6 +44,7 @@
       <!-- Right: CTA + Hamburger -->
       <div class="flex-1 flex items-center justify-end gap-3">
         <a href="contact.html" class="hidden md:inline-block btn-red py-2.5 px-6 text-sm">Book a Free Trial</a>
+        <a href="contact.html" class="mobile-nav-cta btn-red py-2 px-3.5 text-xs font-semibold">Book Trial</a>
         <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden flex flex-col justify-center gap-1.5 w-11 h-11 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold rounded">
           <span class="block h-0.5 bg-brand-white transition-transform duration-300 origin-center" id="bar1"></span>
           <span class="block h-0.5 bg-brand-white transition-opacity duration-300" id="bar2"></span>
@@ -130,8 +103,9 @@
         <div class="grid lg:grid-cols-2 gap-8">
 
           <!-- 1: Weekly Group Training -->
-          <article class="bg-brand-surface rounded-lg overflow-hidden card-hover reveal reveal-delay-1" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
-            <div class="h-2 w-full" style="background: #E30513;"></div>
+          <article data-glow class="bg-brand-surface rounded-lg card-hover reveal reveal-delay-1" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
+            <div data-glow></div>
+            <div class="h-2 w-full rounded-t-lg" style="background: #E30513;"></div>
             <div class="p-8">
               <div class="flex items-start justify-between gap-4 mb-4 flex-wrap">
                 <h3 class="font-display text-3xl text-brand-white tracking-display">WEEKLY GROUP TRAINING</h3>
@@ -140,7 +114,7 @@
                   <span class="text-xs px-3 py-1 rounded-full font-semibold bg-brand-elevated text-brand-muted">90 min / week</span>
                 </div>
               </div>
-              <p class="text-brand-muted text-sm leading-relaxed mb-5">The foundation of academy life. Structured group sessions combining technical drills, small-sided games, and tactical work. Designed for consistent, progressive development across the whole season.</p>
+              <p class="text-brand-muted text-sm leading-relaxed mb-5">The core N10 programme — one weekly session that builds real, visible improvement over the season. Your child will train with a group their own age, develop genuine friendships, and come home genuinely proud of what they've learned. Most parents tell us their child's confidence on the ball doubles within the first six weeks.</p>
               <div class="grid sm:grid-cols-2 gap-6 mb-6">
                 <div>
                   <p class="text-brand-white text-xs font-semibold uppercase tracking-widest mb-2">Key Skills</p>
@@ -165,8 +139,9 @@
           </article>
 
           <!-- 2: 1-to-1 Coaching -->
-          <article class="bg-brand-surface rounded-lg overflow-hidden card-hover reveal reveal-delay-2" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
-            <div class="h-2 w-full" style="background: #F5C518;"></div>
+          <article data-glow class="bg-brand-surface rounded-lg card-hover reveal reveal-delay-2" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
+            <div data-glow></div>
+            <div class="h-2 w-full rounded-t-lg" style="background: #F5C518;"></div>
             <div class="p-8">
               <div class="flex items-start justify-between gap-4 mb-4 flex-wrap">
                 <h3 class="font-display text-3xl text-brand-white tracking-display">1-TO-1 COACHING</h3>
@@ -175,7 +150,7 @@
                   <span class="text-xs px-3 py-1 rounded-full font-semibold bg-brand-elevated text-brand-muted">60 min / session</span>
                 </div>
               </div>
-              <p class="text-brand-muted text-sm leading-relaxed mb-5">The fastest route to individual improvement. Coach Nathan works one-on-one with your child to identify specific weaknesses, target them directly, and build on existing strengths. Ideal for players who want to make rapid progress.</p>
+              <p class="text-brand-muted text-sm leading-relaxed mb-5">If your child has a specific area they want to improve — or if you've noticed them holding back in group sessions — one-to-one coaching gives them undivided attention from Coach Nathan. No distractions, no waiting around. Just 60 focused minutes on the exact thing that will make the biggest difference to their game.</p>
               <div class="grid sm:grid-cols-2 gap-6 mb-6">
                 <div>
                   <p class="text-brand-white text-xs font-semibold uppercase tracking-widest mb-2">Key Skills</p>
@@ -200,8 +175,9 @@
           </article>
 
           <!-- 3: Holiday Camps -->
-          <article class="bg-brand-surface rounded-lg overflow-hidden card-hover reveal reveal-delay-3" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
-            <div class="h-2 w-full" style="background: #9090A0;"></div>
+          <article data-glow class="bg-brand-surface rounded-lg card-hover reveal reveal-delay-3" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
+            <div data-glow></div>
+            <div class="h-2 w-full rounded-t-lg" style="background: #9090A0;"></div>
             <div class="p-8">
               <div class="flex items-start justify-between gap-4 mb-4 flex-wrap">
                 <h3 class="font-display text-3xl text-brand-white tracking-display">HOLIDAY CAMPS</h3>
@@ -210,7 +186,7 @@
                   <span class="text-xs px-3 py-1 rounded-full font-semibold bg-brand-elevated text-brand-muted">Multi-day</span>
                 </div>
               </div>
-              <p class="text-brand-muted text-sm leading-relaxed mb-5">Intensive football camps during school half-terms and summer. Full days packed with technical drills, small-sided games, fun challenges and team activities. A brilliant environment for rapid skill development and making new friends.</p>
+              <p class="text-brand-muted text-sm leading-relaxed mb-5">A full day of football your child will talk about all week. Small groups, structured coaching, and plenty of actual match time — so they go home having played the game they love, not just drilled. Safe, supervised, and genuinely fun. Perfect for keeping kids active over half-term while they make real progress.</p>
               <div class="grid sm:grid-cols-2 gap-6 mb-6">
                 <div>
                   <p class="text-brand-white text-xs font-semibold uppercase tracking-widest mb-2">Key Skills</p>
@@ -235,8 +211,9 @@
           </article>
 
           <!-- 4: Technical Skills Training -->
-          <article class="bg-brand-surface rounded-lg overflow-hidden card-hover reveal reveal-delay-4" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
-            <div class="h-2 w-full" style="background: #FF4D1C;"></div>
+          <article data-glow class="bg-brand-surface rounded-lg card-hover reveal reveal-delay-4" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
+            <div data-glow></div>
+            <div class="h-2 w-full rounded-t-lg" style="background: #FF4D1C;"></div>
             <div class="p-8">
               <div class="flex items-start justify-between gap-4 mb-4 flex-wrap">
                 <h3 class="font-display text-3xl text-brand-white tracking-display">TECHNICAL SKILLS</h3>
@@ -245,7 +222,7 @@
                   <span class="text-xs px-3 py-1 rounded-full font-semibold bg-brand-elevated text-brand-muted">60 min / session</span>
                 </div>
               </div>
-              <p class="text-brand-muted text-sm leading-relaxed mb-5">Laser-focused sessions dedicated to the technical mastery of specific skills. Perfect for players who want to sharpen a particular part of their game — whether it's dribbling, finishing, or set-piece delivery.</p>
+              <p class="text-brand-muted text-sm leading-relaxed mb-5">Designed for players who already love the game and want to take a specific skill to the next level. Whether it's finishing, dribbling under pressure, or set pieces — these focused sessions give your child repetition, feedback, and rapid improvement in the exact area that matters most to them.</p>
               <div class="grid sm:grid-cols-2 gap-6 mb-6">
                 <div>
                   <p class="text-brand-white text-xs font-semibold uppercase tracking-widest mb-2">Key Skills</p>
@@ -273,8 +250,9 @@
 
         <!-- 5th card: Match Preparation (full width) -->
         <div class="mt-8 reveal">
-          <article class="bg-brand-surface rounded-lg overflow-hidden card-hover" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
-            <div class="h-2 w-full" style="background: linear-gradient(90deg, #E30513, #F5C518);"></div>
+          <article data-glow class="bg-brand-surface rounded-lg card-hover" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
+            <div data-glow></div>
+            <div class="h-2 w-full rounded-t-lg" style="background: linear-gradient(90deg, #E30513, #F5C518);"></div>
             <div class="p-8 lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start">
               <div>
                 <div class="flex items-start justify-between gap-4 mb-4 flex-wrap">
@@ -284,7 +262,7 @@
                     <span class="text-xs px-3 py-1 rounded-full font-semibold bg-brand-elevated text-brand-muted">75 min / session</span>
                   </div>
                 </div>
-                <p class="text-brand-muted text-sm leading-relaxed mb-5">Tactical sessions designed to prepare players for competitive match day. Covers team shape, press triggers, set pieces, and mental preparation. Ideal for players representing clubs or school teams who want to perform at their peak on matchday.</p>
+                <p class="text-brand-muted text-sm leading-relaxed mb-5">For players who already compete for a club or school team and want to perform better on the day. These sessions teach your child to read the game, not just play it — so they feel composed, switched on, and ready when it matters most. Parents regularly tell us the change in their child's match-day focus is noticeable within weeks.</p>
                 <a href="contact.html" class="btn-red text-center w-full sm:w-auto block sm:inline-block">Book a Trial</a>
               </div>
               <div class="mt-8 lg:mt-0 grid sm:grid-cols-2 gap-6">
@@ -378,6 +356,20 @@
               </tr>
             </tbody>
           </table>
+        </div>
+
+        <!-- Pricing note -->
+        <div class="mt-8 rounded-lg px-6 py-5 reveal" style="background: rgba(227,5,19,0.07); border: 1px solid rgba(227,5,19,0.2);">
+          <p class="text-brand-white/80 text-sm leading-relaxed text-center">
+            <span class="text-brand-white font-semibold">Pricing:</span> Weekly group sessions start from <span class="text-brand-red font-semibold">£X per month</span>. Your child's first trial is always free. Flexible payment options available.
+            <a href="contact.html" class="text-brand-red hover:text-brand-glow underline underline-offset-2 ml-2 transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold rounded">Get in touch for details →</a>
+          </p>
+        </div>
+
+        <!-- CTA below table -->
+        <div class="mt-10 text-center reveal">
+          <p class="text-brand-muted text-base mb-5">Not sure which programme is right for your child? <span class="text-brand-white">Book a free trial and we'll advise.</span></p>
+          <a href="contact.html" class="btn-red inline-block">Book a Free Trial</a>
         </div>
       </div>
     </section>
@@ -501,7 +493,7 @@
           </ul>
         </div>
         <div>
-          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">SESSIONS</h4>
+          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">PROGRAMMES & TRIALS</h4>
           <ul class="space-y-3">
             <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Weekly Training</a></li>
             <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Book a Trial</a></li>
@@ -520,7 +512,10 @@
         </div>
       </div>
       <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-brand-muted text-xs">© 2026 N10 Academy. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <p class="text-brand-muted text-xs">© 2026 N10 Academy. All rights reserved.</p>
+          <a href="privacy.html" class="text-brand-muted text-xs hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Privacy Policy</a>
+        </div>
         <p class="text-brand-muted text-xs">Uniting Talent. Building Character. Inspiring Futures.</p>
       </div>
     </div>

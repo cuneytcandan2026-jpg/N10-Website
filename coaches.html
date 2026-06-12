@@ -13,35 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              red:      '#E30513',
-              redDark:  '#B00410',
-              black:    '#0A0A0B',
-              charcoal: '#111114',
-              surface:  '#1C1C21',
-              elevated: '#252529',
-              gold:     '#F5C518',
-              glow:     '#FF4D1C',
-              white:    '#F8F8FA',
-              muted:    '#9090A0',
-            }
-          },
-          fontFamily: {
-            display: ['"Bebas Neue"', 'Impact', 'sans-serif'],
-            body:    ['Inter', 'system-ui', 'sans-serif'],
-          },
-          letterSpacing: {
-            display: '0.04em',
-          }
-        }
-      }
-    }
-  </script>
+  <script src="public/js/tailwind.config.js"></script>
   <link rel="stylesheet" href="public/css/styles.css" />
 </head>
 <body class="font-body">
@@ -72,6 +44,7 @@
       <!-- Right: CTA + Hamburger -->
       <div class="flex-1 flex items-center justify-end gap-3">
         <a href="contact.html" class="hidden md:inline-block btn-red py-2.5 px-6 text-sm">Book a Free Trial</a>
+        <a href="contact.html" class="mobile-nav-cta btn-red py-2 px-3.5 text-xs font-semibold">Book Trial</a>
         <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden flex flex-col justify-center gap-1.5 w-11 h-11 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold rounded">
           <span class="block h-0.5 bg-brand-white transition-transform duration-300 origin-center" id="bar1"></span>
           <span class="block h-0.5 bg-brand-white transition-opacity duration-300" id="bar2"></span>
@@ -119,7 +92,7 @@
           <!-- Portrait -->
           <div class="reveal">
             <div class="relative rounded-lg overflow-hidden">
-              <img src="https://placehold.co/480x560/1C1C21/E30513?text=Coach+Nathan" alt="Coach Nathan, Head Coach and Founder of N10 Academy" class="w-full object-cover" />
+              <img src="public/assets/inspiration/Instagram%20N10/Player%20Trials.jpg" alt="Coach Nathan, Head Coach and Founder of N10 Academy" class="w-full object-cover" />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-black/60 via-transparent to-transparent" aria-hidden="true"></div>
               <div class="absolute inset-0" style="background: rgba(227,5,19,0.08); mix-blend-mode: multiply;" aria-hidden="true"></div>
             </div>
@@ -143,11 +116,11 @@
             </div>
 
             <p class="text-brand-muted text-sm leading-relaxed mb-6">
-              Coach Nathan founded N10 Academy with a single mission: to give every young player in North London the quality coaching they deserve. With years of experience developing youth players at grassroots level, Nathan combines a deep technical knowledge of the game with a genuine passion for mentoring young people.
+              Coach Nathan founded N10 Academy in 2019 with a straightforward belief: that quality football coaching in Edmonton should not depend on how much a family can spend. With over 8 years coaching youth football at grassroots level across North London, he has helped more than 200 players — from complete beginners to players who have progressed to district and county level — develop real skill and genuine confidence in themselves.
             </p>
 
             <p class="text-brand-muted text-sm leading-relaxed mb-8">
-              Nathan's player-first approach puts individual development at the heart of every session. He understands that a positive experience at a young age can shape a player's relationship with football for life — and he takes that responsibility seriously.
+              Before founding N10, Nathan spent four years as a lead youth coach developing U9–U14 players, where he saw first-hand how the right environment at a young age transforms a child's relationship with sport. Every session at N10 is planned, purposeful and player-first — Nathan personally assesses each player's development and keeps parents updated throughout the season, not just at the end of it.
             </p>
 
             <!-- Philosophy quote -->
@@ -183,8 +156,9 @@
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
           <!-- Coach 2 -->
-          <article class="bg-brand-surface rounded-lg overflow-hidden card-hover reveal reveal-delay-1" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
-            <div class="relative">
+          <article data-glow class="bg-brand-surface rounded-lg card-hover reveal reveal-delay-1" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
+            <div data-glow></div>
+            <div class="relative overflow-hidden rounded-t-lg">
               <img src="https://placehold.co/400x480/111114/E30513?text=Coach" alt="Assistant coach at N10 Academy" class="w-full h-64 object-cover" />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent" aria-hidden="true"></div>
             </div>
@@ -201,8 +175,9 @@
           </article>
 
           <!-- Coach 3 -->
-          <article class="bg-brand-surface rounded-lg overflow-hidden card-hover reveal reveal-delay-2" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
-            <div class="relative">
+          <article data-glow class="bg-brand-surface rounded-lg card-hover reveal reveal-delay-2" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
+            <div data-glow></div>
+            <div class="relative overflow-hidden rounded-t-lg">
               <img src="https://placehold.co/400x480/111114/E30513?text=Coach" alt="Assistant coach at N10 Academy" class="w-full h-64 object-cover" />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent" aria-hidden="true"></div>
             </div>
@@ -219,8 +194,9 @@
           </article>
 
           <!-- Coach 4 -->
-          <article class="bg-brand-surface rounded-lg overflow-hidden card-hover reveal reveal-delay-3" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
-            <div class="relative">
+          <article data-glow class="bg-brand-surface rounded-lg card-hover reveal reveal-delay-3" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
+            <div data-glow></div>
+            <div class="relative overflow-hidden rounded-t-lg">
               <img src="https://placehold.co/400x480/111114/E30513?text=Coach" alt="Assistant coach at N10 Academy" class="w-full h-64 object-cover" />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent" aria-hidden="true"></div>
             </div>
@@ -339,7 +315,7 @@
           </ul>
         </div>
         <div>
-          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">SESSIONS</h4>
+          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">PROGRAMMES & TRIALS</h4>
           <ul class="space-y-3">
             <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Weekly Training</a></li>
             <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Book a Trial</a></li>
@@ -358,7 +334,10 @@
         </div>
       </div>
       <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-brand-muted text-xs">© 2026 N10 Academy. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <p class="text-brand-muted text-xs">© 2026 N10 Academy. All rights reserved.</p>
+          <a href="privacy.html" class="text-brand-muted text-xs hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Privacy Policy</a>
+        </div>
         <p class="text-brand-muted text-xs">Uniting Talent. Building Character. Inspiring Futures.</p>
       </div>
     </div>

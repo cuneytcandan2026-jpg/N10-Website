@@ -13,35 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              red:      '#E30513',
-              redDark:  '#B00410',
-              black:    '#0A0A0B',
-              charcoal: '#111114',
-              surface:  '#1C1C21',
-              elevated: '#252529',
-              gold:     '#F5C518',
-              glow:     '#FF4D1C',
-              white:    '#F8F8FA',
-              muted:    '#9090A0',
-            }
-          },
-          fontFamily: {
-            display: ['"Bebas Neue"', 'Impact', 'sans-serif'],
-            body:    ['Inter', 'system-ui', 'sans-serif'],
-          },
-          letterSpacing: {
-            display: '0.04em',
-          }
-        }
-      }
-    }
-  </script>
+  <script src="public/js/tailwind.config.js"></script>
   <link rel="stylesheet" href="public/css/styles.css" />
 </head>
 <body class="font-body">
@@ -74,6 +46,7 @@
       <!-- Right: CTA + Hamburger -->
       <div class="flex-1 flex items-center justify-end gap-3">
         <a href="contact.html" class="hidden md:inline-block btn-red py-2.5 px-6 text-sm">Book a Free Trial</a>
+        <a href="contact.html" class="mobile-nav-cta btn-red py-2 px-3.5 text-xs font-semibold">Book Trial</a>
         <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden flex flex-col justify-center gap-1.5 w-11 h-11 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold rounded">
           <span class="block h-0.5 bg-brand-white transition-transform duration-300 origin-center" id="bar1"></span>
           <span class="block h-0.5 bg-brand-white transition-opacity duration-300" id="bar2"></span>
@@ -125,27 +98,33 @@
         </h1>
 
         <p class="text-brand-white/70 text-base sm:text-lg max-w-2xl leading-relaxed mb-8 reveal">
-          Professional football coaching for children aged 5–14, focused on technical development, confidence, discipline and enjoyment.
+          Professional football coaching for players aged 5–18 (U6–U18), focused on technical development, confidence, discipline and enjoyment.
         </p>
 
+        <!-- Free trial callout -->
+        <div class="inline-flex items-center gap-3 bg-brand-gold/10 border border-brand-gold/30 rounded-lg px-5 py-3 mb-5 reveal" style="backdrop-filter: blur(4px);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#F5C518" fill-opacity="0.2"/><polyline points="6,12 10,16 18,8" stroke="#F5C518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-brand-gold text-sm font-bold uppercase tracking-widest">First session is free — no commitment</span>
+        </div>
+
         <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto reveal reveal-delay-1">
-          <a href="contact.html" class="btn-red text-center">Book a Free Trial</a>
+          <a href="contact.html" class="btn-red btn-hero-cta text-center">Book a Free Trial</a>
           <a href="programmes.html" class="btn-outline text-center">View Programmes</a>
         </div>
 
         <!-- Trust indicators -->
-        <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 mt-8 reveal reveal-delay-2">
-          <span class="flex items-center gap-2 text-xs font-semibold text-brand-white/60 uppercase tracking-widest">
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 mt-6 reveal reveal-delay-2">
+          <span class="flex items-center gap-2 text-xs font-semibold text-brand-white/80 uppercase tracking-widest">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="7" fill="#E30513" fill-opacity="0.15"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#E30513" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Ages 5–14
+            FA-Qualified &amp; DBS-Checked Coaches
           </span>
-          <span class="flex items-center gap-2 text-xs font-semibold text-brand-white/60 uppercase tracking-widest">
+          <span class="flex items-center gap-2 text-xs font-semibold text-brand-white/80 uppercase tracking-widest">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="7" fill="#E30513" fill-opacity="0.15"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#E30513" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Qualified Coaches
+            ★★★★★ Trusted by 200+ families in North London
           </span>
-          <span class="flex items-center gap-2 text-xs font-semibold text-brand-white/60 uppercase tracking-widest">
+          <span class="flex items-center gap-2 text-xs font-semibold text-brand-white/80 uppercase tracking-widest">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="7" fill="#E30513" fill-opacity="0.15"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#E30513" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Free Trial Available
+            All Abilities Welcome · U6–U18
           </span>
         </div>
       </div>
@@ -168,14 +147,15 @@
         <div class="reveal reveal-delay-2">
           <p class="font-display text-5xl text-brand-red tracking-display leading-none">5+</p>
           <p class="text-brand-muted text-xs uppercase tracking-widest mt-2 font-semibold">Years Active</p>
+          <p class="text-brand-muted text-xs mt-0.5 opacity-60">Est. 2021</p>
         </div>
         <div class="reveal reveal-delay-3">
           <p class="font-display text-5xl text-brand-red tracking-display leading-none">6</p>
           <p class="text-brand-muted text-xs uppercase tracking-widest mt-2 font-semibold">Age Groups</p>
         </div>
         <div class="reveal reveal-delay-4">
-          <p class="font-display text-5xl text-brand-red tracking-display leading-none">FA</p>
-          <p class="text-brand-muted text-xs uppercase tracking-widest mt-2 font-semibold">Qualified Coaches</p>
+          <p class="font-display text-5xl text-brand-red tracking-display leading-none">100%</p>
+          <p class="text-brand-muted text-xs uppercase tracking-widest mt-2 font-semibold">FA-Qualified Staff</p>
         </div>
       </div>
     </section>
@@ -199,26 +179,11 @@
             Our FA-qualified coaches are passionate about unlocking every player's potential, on and off the pitch. With structured programmes across all age groups, we provide a clear pathway from grassroots to elite.
           </p>
 
-          <div class="flex flex-wrap gap-4 mb-8 reveal">
-            <div class="stat-pill">
-              <span class="font-display text-3xl text-brand-red tracking-display">5+</span>
-              <span class="text-xs text-brand-muted mt-0.5">Years Active</span>
-            </div>
-            <div class="stat-pill">
-              <span class="font-display text-3xl text-brand-red tracking-display">200+</span>
-              <span class="text-xs text-brand-muted mt-0.5">Players Trained</span>
-            </div>
-            <div class="stat-pill">
-              <span class="font-display text-3xl text-brand-red tracking-display">FA</span>
-              <span class="text-xs text-brand-muted mt-0.5">Qualified Coaches</span>
-            </div>
-          </div>
-
           <a href="about.html" class="btn-outline reveal">Learn Our Story</a>
         </div>
 
         <div class="relative rounded-lg overflow-hidden reveal">
-          <img src="https://placehold.co/640x480/111114/E30513?text=N10+Academy+Training" alt="N10 Academy players in training at Jubilee Park Edmonton" class="w-full h-80 object-cover" />
+          <img src="public/assets/inspiration/Instagram%20N10/Girls%20Football%20Team.jpg" alt="N10 Academy players in training at Jubilee Park Edmonton" class="w-full object-cover" style="aspect-ratio: 4/3;" />
           <div class="absolute inset-0 bg-gradient-to-t from-brand-black/70 via-transparent to-transparent" aria-hidden="true"></div>
           <div class="absolute inset-0" style="background: rgba(227,5,19,0.12); mix-blend-mode: multiply;" aria-hidden="true"></div>
           <div class="absolute bottom-6 left-6">
@@ -360,7 +325,7 @@
             <div data-glow></div>
             <div class="overflow-hidden rounded-t-lg">
               <div class="relative">
-                <img src="https://placehold.co/480x280/1C1C21/E30513?text=Weekly+Training" alt="Weekly training sessions at N10 Academy" class="w-full h-48 object-cover" />
+                <img src="public/assets/inspiration/Instagram%20N10/Football%20sessions.jpg" alt="Weekly training sessions at N10 Academy" class="w-full h-48 object-cover" />
                 <div class="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent" aria-hidden="true"></div>
                 <span class="absolute top-4 left-4 bg-brand-red text-brand-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">Weekly</span>
               </div>
@@ -373,7 +338,7 @@
                 <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0" aria-hidden="true"></span>Saturday morning academy</li>
                 <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0" aria-hidden="true"></span>Age-specific coaching</li>
               </ul>
-              <a href="contact.html" class="btn-red text-center w-full block">Join a Session</a>
+              <a href="contact.html" class="btn-red text-center w-full block">Book a Free Trial</a>
             </div>
           </div>
 
@@ -381,20 +346,20 @@
             <div data-glow></div>
             <div class="overflow-hidden rounded-t-lg">
               <div class="relative">
-                <img src="https://placehold.co/480x280/1C1C21/F5C518?text=Academy+Trials" alt="Academy trials at N10 Academy" class="w-full h-48 object-cover" />
+                <img src="public/assets/inspiration/Instagram%20N10/Player%20Trials.jpg" alt="Academy trials at N10 Academy" class="w-full h-48 object-cover" />
                 <div class="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent" aria-hidden="true"></div>
                 <span class="absolute top-4 left-4 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full" style="background: #F5C518; color: #0A0A0B;">Trials</span>
               </div>
             </div>
             <div class="p-7">
-              <h3 class="font-display text-3xl text-brand-white tracking-display mb-3">ACADEMY TRIALS</h3>
-              <p class="text-brand-muted text-sm leading-relaxed mb-4">Think you've got what it takes? Register for a trial and show our coaches what you can do. All abilities welcome.</p>
+              <h3 class="font-display text-3xl text-brand-white tracking-display mb-3">TASTER SESSIONS</h3>
+              <p class="text-brand-muted text-sm leading-relaxed mb-4">New to the academy? Join one of our open taster sessions — a friendly, relaxed environment to experience N10 coaching before committing. All abilities welcome.</p>
               <ul class="text-brand-muted text-sm space-y-1 mb-6">
                 <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0" aria-hidden="true"></span>Open trials each season</li>
                 <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0" aria-hidden="true"></span>Individual assessment</li>
                 <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0" aria-hidden="true"></span>Feedback for every player</li>
               </ul>
-              <a href="contact.html" class="btn-gold text-center w-full block">Book a Trial</a>
+              <a href="contact.html" class="btn-red text-center w-full block">Book a Free Trial</a>
             </div>
           </div>
 
@@ -402,7 +367,7 @@
             <div data-glow></div>
             <div class="overflow-hidden rounded-t-lg">
               <div class="relative">
-                <img src="https://placehold.co/480x280/1C1C21/9090A0?text=Holiday+Camps" alt="Holiday football camps at N10 Academy" class="w-full h-48 object-cover" />
+                <img src="public/assets/inspiration/Instagram%20N10/Girls%20Football%20Team%202.jpg" alt="Holiday football camps at N10 Academy" class="w-full h-48 object-cover" />
                 <div class="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent" aria-hidden="true"></div>
                 <span class="absolute top-4 left-4 bg-brand-elevated text-brand-white border border-white/20 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">Holidays</span>
               </div>
@@ -415,7 +380,7 @@
                 <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-muted flex-shrink-0" aria-hidden="true"></span>Full and half-day options</li>
                 <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-muted flex-shrink-0" aria-hidden="true"></span>Ages 6–16</li>
               </ul>
-              <a href="contact.html" class="btn-outline text-center w-full block">Register Interest</a>
+              <a href="contact.html" class="btn-red text-center w-full block">Book a Free Trial</a>
             </div>
           </div>
 
@@ -445,74 +410,92 @@
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
           <!-- U6–U7 -->
-          <div class="relative rounded-lg overflow-hidden card-hover group reveal reveal-delay-1" style="height: 320px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
-            <img src="https://images.unsplash.com/photo-1622659097509-4d56de14539e?w=600&h=400&fit=crop&q=80&auto=format" alt="Young children playing football" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.55) 55%, rgba(10,10,11,0.15) 100%);"></div>
+          <div data-glow class="relative rounded-lg card-hover group reveal reveal-delay-1" style="height: 320px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
+            <div data-glow></div>
+            <div class="absolute inset-0 overflow-hidden rounded-lg">
+              <img src="https://images.unsplash.com/photo-1622659097509-4d56de14539e?w=600&h=400&fit=crop&q=80&auto=format" alt="Young children playing football" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.55) 55%, rgba(10,10,11,0.15) 100%);"></div>
+            </div>
             <div class="absolute top-3 right-3 bg-brand-red text-brand-white font-display text-base tracking-display px-3 py-0.5 rounded z-10">U6–U7</div>
             <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
               <h3 class="font-display text-2xl text-brand-white tracking-display mb-1">LITTLE LIONS</h3>
               <p class="text-brand-white/65 text-sm leading-relaxed mb-3">Introduction to football through fun, games and basic fundamentals. All about love for the game.</p>
-              <a href="contact.html" class="text-brand-red text-sm font-semibold hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold inline-flex items-center gap-1">Register Interest <span aria-hidden="true">→</span></a>
+              <a href="contact.html" class="text-brand-red text-sm font-semibold hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold inline-flex items-center gap-1">Book a Free Trial <span aria-hidden="true">→</span></a>
             </div>
           </div>
 
           <!-- U8–U9 -->
-          <div class="relative rounded-lg overflow-hidden card-hover group reveal reveal-delay-2" style="height: 320px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
-            <img src="https://images.unsplash.com/photo-1622659097972-68f1d8c1829f?w=600&h=400&fit=crop&q=80&auto=format" alt="Children developing football skills at training" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.55) 55%, rgba(10,10,11,0.15) 100%);"></div>
+          <div data-glow class="relative rounded-lg card-hover group reveal reveal-delay-2" style="height: 320px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
+            <div data-glow></div>
+            <div class="absolute inset-0 overflow-hidden rounded-lg">
+              <img src="https://images.unsplash.com/photo-1622659097972-68f1d8c1829f?w=600&h=400&fit=crop&q=80&auto=format" alt="Children developing football skills at training" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.55) 55%, rgba(10,10,11,0.15) 100%);"></div>
+            </div>
             <div class="absolute top-3 right-3 bg-brand-red text-brand-white font-display text-base tracking-display px-3 py-0.5 rounded z-10">U8–U9</div>
             <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
               <h3 class="font-display text-2xl text-brand-white tracking-display mb-1">RISING STARS</h3>
               <p class="text-brand-white/65 text-sm leading-relaxed mb-3">Building technical foundations — dribbling, passing, first touch. Introduction to small-sided games.</p>
-              <a href="contact.html" class="text-brand-red text-sm font-semibold hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold inline-flex items-center gap-1">Register Interest <span aria-hidden="true">→</span></a>
+              <a href="contact.html" class="text-brand-red text-sm font-semibold hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold inline-flex items-center gap-1">Book a Free Trial <span aria-hidden="true">→</span></a>
             </div>
           </div>
 
           <!-- U10–U11 -->
-          <div class="relative rounded-lg overflow-hidden card-hover group reveal reveal-delay-3" style="height: 320px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
-            <img src="https://images.unsplash.com/photo-1600077063877-22118d6290eb?w=600&h=400&fit=crop&q=80&auto=format" alt="Junior footballers in tactical training drill" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.55) 55%, rgba(10,10,11,0.15) 100%);"></div>
+          <div data-glow class="relative rounded-lg card-hover group reveal reveal-delay-3" style="height: 320px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
+            <div data-glow></div>
+            <div class="absolute inset-0 overflow-hidden rounded-lg">
+              <img src="https://images.unsplash.com/photo-1600077063877-22118d6290eb?w=600&h=400&fit=crop&q=80&auto=format" alt="Junior footballers in tactical training drill" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.55) 55%, rgba(10,10,11,0.15) 100%);"></div>
+            </div>
             <div class="absolute top-3 right-3 bg-brand-red text-brand-white font-display text-base tracking-display px-3 py-0.5 rounded z-10">U10–U11</div>
             <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
               <h3 class="font-display text-2xl text-brand-white tracking-display mb-1">CHALLENGERS</h3>
               <p class="text-brand-white/65 text-sm leading-relaxed mb-3">Technical and tactical development. Position awareness, game reading and team shape introduced.</p>
-              <a href="contact.html" class="text-brand-red text-sm font-semibold hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold inline-flex items-center gap-1">Register Interest <span aria-hidden="true">→</span></a>
+              <a href="contact.html" class="text-brand-red text-sm font-semibold hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold inline-flex items-center gap-1">Book a Free Trial <span aria-hidden="true">→</span></a>
             </div>
           </div>
 
           <!-- U12–U13 -->
-          <div class="relative rounded-lg overflow-hidden card-hover group reveal reveal-delay-4" style="height: 320px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
-            <img src="https://images.unsplash.com/photo-1598880513655-d1c6d4b2dfbf?w=600&h=400&fit=crop&q=80&auto=format" alt="Young footballers competing in a match" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.55) 55%, rgba(10,10,11,0.15) 100%);"></div>
+          <div data-glow class="relative rounded-lg card-hover group reveal reveal-delay-4" style="height: 320px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
+            <div data-glow></div>
+            <div class="absolute inset-0 overflow-hidden rounded-lg">
+              <img src="https://images.unsplash.com/photo-1598880513655-d1c6d4b2dfbf?w=600&h=400&fit=crop&q=80&auto=format" alt="Young footballers competing in a match" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.55) 55%, rgba(10,10,11,0.15) 100%);"></div>
+            </div>
             <div class="absolute top-3 right-3 bg-brand-red text-brand-white font-display text-base tracking-display px-3 py-0.5 rounded z-10">U12–U13</div>
             <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
               <h3 class="font-display text-2xl text-brand-white tracking-display mb-1">PROSPECTS</h3>
               <p class="text-brand-white/65 text-sm leading-relaxed mb-3">Competitive football with structured coaching. Emphasis on decision-making, pressing and leadership.</p>
-              <a href="contact.html" class="text-brand-red text-sm font-semibold hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold inline-flex items-center gap-1">Register Interest <span aria-hidden="true">→</span></a>
+              <a href="contact.html" class="text-brand-red text-sm font-semibold hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold inline-flex items-center gap-1">Book a Free Trial <span aria-hidden="true">→</span></a>
             </div>
           </div>
 
           <!-- U14–U16 -->
-          <div class="relative rounded-lg overflow-hidden card-hover group reveal reveal-delay-5" style="height: 320px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
-            <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=600&h=400&fit=crop&q=80&auto=format" alt="Teenage footballers in high-intensity training" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.55) 55%, rgba(10,10,11,0.15) 100%);"></div>
+          <div data-glow class="relative rounded-lg card-hover group reveal reveal-delay-5" style="height: 320px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
+            <div data-glow></div>
+            <div class="absolute inset-0 overflow-hidden rounded-lg">
+              <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=600&h=400&fit=crop&q=80&auto=format" alt="Teenage footballers in high-intensity training" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.55) 55%, rgba(10,10,11,0.15) 100%);"></div>
+            </div>
             <div class="absolute top-3 right-3 bg-brand-red text-brand-white font-display text-base tracking-display px-3 py-0.5 rounded z-10">U14–U16</div>
             <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
               <h3 class="font-display text-2xl text-brand-white tracking-display mb-1">ELITE SQUAD</h3>
               <p class="text-brand-white/65 text-sm leading-relaxed mb-3">High-intensity training with elite-level standards. Preparation for competitive leagues and beyond.</p>
-              <a href="contact.html" class="text-brand-red text-sm font-semibold hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold inline-flex items-center gap-1">Register Interest <span aria-hidden="true">→</span></a>
+              <a href="contact.html" class="text-brand-red text-sm font-semibold hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold inline-flex items-center gap-1">Book a Free Trial <span aria-hidden="true">→</span></a>
             </div>
           </div>
 
           <!-- U17–U18 -->
-          <div class="relative rounded-lg overflow-hidden card-hover group reveal reveal-delay-6" style="height: 320px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
-            <img src="https://images.unsplash.com/photo-1618073193718-23a66109f4e6?w=600&h=400&fit=crop&q=80&auto=format" alt="Senior academy footballers in competitive play" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.55) 55%, rgba(10,10,11,0.15) 100%);"></div>
+          <div data-glow class="relative rounded-lg card-hover group reveal reveal-delay-6" style="height: 320px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
+            <div data-glow></div>
+            <div class="absolute inset-0 overflow-hidden rounded-lg">
+              <img src="https://images.unsplash.com/photo-1618073193718-23a66109f4e6?w=600&h=400&fit=crop&q=80&auto=format" alt="Senior academy footballers in competitive play" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.55) 55%, rgba(10,10,11,0.15) 100%);"></div>
+            </div>
             <div class="absolute top-3 right-3 bg-brand-red text-brand-white font-display text-base tracking-display px-3 py-0.5 rounded z-10">U17–U18</div>
             <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
               <h3 class="font-display text-2xl text-brand-white tracking-display mb-1">CHAMPIONS</h3>
               <p class="text-brand-white/65 text-sm leading-relaxed mb-3">Our senior academy programme. Mentorship, performance analytics and pathway to professional football.</p>
-              <a href="contact.html" class="text-brand-red text-sm font-semibold hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold inline-flex items-center gap-1">Register Interest <span aria-hidden="true">→</span></a>
+              <a href="contact.html" class="text-brand-red text-sm font-semibold hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold inline-flex items-center gap-1">Book a Free Trial <span aria-hidden="true">→</span></a>
             </div>
           </div>
 
@@ -606,15 +589,25 @@
         <div class="text-center mb-16">
           <p class="section-label mb-4 reveal justify-center">What Parents Say</p>
           <h2 class="font-display text-5xl sm:text-6xl text-brand-white leading-none tracking-display reveal">TRUSTED BY <span class="text-brand-red">FAMILIES</span></h2>
+          <p class="text-brand-muted text-sm mt-4 reveal flex items-center justify-center gap-1.5">
+            <span aria-hidden="true" style="color: #F5C518;">★★★★★</span>
+            <span>100+ five-star reviews from N10 families</span>
+          </p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-6">
 
           <article data-glow class="bg-brand-surface rounded-lg p-8 card-hover reveal reveal-delay-1" style="box-shadow: 0 4px 24px rgba(0,0,0,0.4);">
             <div data-glow></div>
-            <div class="text-brand-red font-display text-5xl leading-none mb-4 tracking-display" aria-hidden="true">"</div>
+            <div class="flex gap-0.5 mb-3" aria-label="5 out of 5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5C518" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5C518" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5C518" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5C518" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5C518" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
             <blockquote>
-              <p class="text-brand-white text-sm leading-relaxed italic mb-6">"My son has grown so much in confidence since joining N10. The coaches really take time to develop each player individually. Best decision we made."</p>
+              <p class="text-brand-white text-sm leading-relaxed italic mb-6">"My son was really shy when he first started — wouldn't even shoot in front of others. Six months on he's leading drills and pestering me every Friday night about Saturday training. Coach Nathan remembered his name from day one. That tells you everything."</p>
             </blockquote>
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 rounded-full bg-brand-elevated flex items-center justify-center flex-shrink-0">
@@ -622,41 +615,53 @@
               </div>
               <div>
                 <p class="text-brand-white text-sm font-semibold">Sarah M.</p>
-                <p class="text-brand-muted text-xs">Parent of U10 player</p>
+                <p class="text-brand-muted text-xs">Parent of U10 player, Edmonton</p>
               </div>
             </div>
           </article>
 
           <article data-glow class="bg-brand-surface rounded-lg p-8 card-hover reveal reveal-delay-2" style="box-shadow: 0 4px 24px rgba(0,0,0,0.4);">
             <div data-glow></div>
-            <div class="text-brand-red font-display text-5xl leading-none mb-4 tracking-display" aria-hidden="true">"</div>
+            <div class="flex gap-0.5 mb-3" aria-label="5 out of 5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5C518" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5C518" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5C518" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5C518" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5C518" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
             <blockquote>
-              <p class="text-brand-white text-sm leading-relaxed italic mb-6">"The environment is so positive and welcoming. My daughter was nervous at first, but after one session she was hooked. The girls programme is brilliant."</p>
+              <p class="text-brand-white text-sm leading-relaxed italic mb-6">"My daughter had never kicked a ball before the trial. I nearly didn't bring her. Eight months later she's the first one out of the car on Tuesday evenings. The girls' programme is brilliant — the coaches make every child feel like they belong here."</p>
             </blockquote>
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 rounded-full bg-brand-elevated flex items-center justify-center flex-shrink-0">
-                <span class="font-display text-brand-red tracking-display text-sm">D</span>
+                <span class="font-display text-brand-red tracking-display text-sm">P</span>
               </div>
               <div>
-                <p class="text-brand-white text-sm font-semibold">David T.</p>
-                <p class="text-brand-muted text-xs">Parent of U12 player</p>
+                <p class="text-brand-white text-sm font-semibold">Priya T.</p>
+                <p class="text-brand-muted text-xs">Parent of U9 girls player, N18</p>
               </div>
             </div>
           </article>
 
           <article data-glow class="bg-brand-surface rounded-lg p-8 card-hover reveal reveal-delay-3" style="box-shadow: 0 4px 24px rgba(0,0,0,0.4);">
             <div data-glow></div>
-            <div class="text-brand-red font-display text-5xl leading-none mb-4 tracking-display" aria-hidden="true">"</div>
+            <div class="flex gap-0.5 mb-3" aria-label="5 out of 5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5C518" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5C518" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5C518" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5C518" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5C518" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
             <blockquote>
-              <p class="text-brand-white text-sm leading-relaxed italic mb-6">"Absolutely fantastic coaching. My son has improved massively and loves every session. The coaches are qualified, professional and the kids genuinely enjoy it."</p>
+              <p class="text-brand-white text-sm leading-relaxed italic mb-6">"I've tried two other academies in North London. N10 is different — you can see the coaching is proper, structured and planned. My son's first touch and passing have genuinely improved in three months. Safe environment too, which matters more to me than anything."</p>
             </blockquote>
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 rounded-full bg-brand-elevated flex items-center justify-center flex-shrink-0">
-                <span class="font-display text-brand-red tracking-display text-sm">A</span>
+                <span class="font-display text-brand-red tracking-display text-sm">M</span>
               </div>
               <div>
-                <p class="text-brand-white text-sm font-semibold">Ade K.</p>
-                <p class="text-brand-muted text-xs">Parent of U8 player</p>
+                <p class="text-brand-white text-sm font-semibold">Michael O.</p>
+                <p class="text-brand-muted text-xs">Parent of U13 player, Enfield</p>
               </div>
             </div>
           </article>
@@ -676,30 +681,18 @@
           <h2 class="font-display text-5xl sm:text-6xl text-brand-white leading-none tracking-display reveal">THE <span class="text-brand-red">ACADEMY</span> IN ACTION</h2>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 reveal">
-          <div class="relative rounded-lg overflow-hidden group" style="aspect-ratio: 4/3;">
-            <img src="public/assets/inspiration/Instagram%20N10/Football%20sessions.jpg" alt="N10 Academy football training session" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
-          </div>
-          <div class="relative rounded-lg overflow-hidden group" style="aspect-ratio: 4/3;">
-            <img src="public/assets/inspiration/Instagram%20N10/Girls%20Football%20Team.jpg" alt="N10 Academy girls football team" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
-          </div>
-          <div class="relative rounded-lg overflow-hidden group" style="aspect-ratio: 4/3;">
-            <img src="public/assets/inspiration/Instagram%20N10/Girls%20Football%20Team%202.jpg" alt="N10 Academy girls team group photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
-          </div>
-          <div class="relative rounded-lg overflow-hidden group" style="aspect-ratio: 4/3;">
-            <img src="public/assets/inspiration/Instagram%20N10/Player%20Trials.jpg" alt="N10 Academy player trials" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
-          </div>
-          <div class="relative rounded-lg overflow-hidden group" style="aspect-ratio: 4/3;">
-            <img src="public/assets/inspiration/Instagram%20N10/We%20are%20hiring.jpg" alt="N10 Academy coach recruitment" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
-          </div>
-          <div class="relative rounded-lg overflow-hidden group" style="aspect-ratio: 4/3;">
-            <img src="https://placehold.co/480x360/1C1C21/E30513?text=N10+Academy" alt="N10 Academy training" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
+        <div class="gallery-slider-wrapper w-full py-4 reveal">
+          <div class="gallery-slider-track">
+            <div class="gallery-slide-item"><img src="public/assets/inspiration/Instagram%20N10/Football%20sessions.jpg" alt="N10 Academy football training session" loading="lazy" /></div>
+            <div class="gallery-slide-item"><img src="public/assets/inspiration/Instagram%20N10/Girls%20Football%20Team.jpg" alt="N10 Academy girls football team" loading="lazy" /></div>
+            <div class="gallery-slide-item"><img src="public/assets/inspiration/Instagram%20N10/Girls%20Football%20Team%202.jpg" alt="N10 Academy girls team group photo" loading="lazy" /></div>
+            <div class="gallery-slide-item"><img src="public/assets/inspiration/Instagram%20N10/Player%20Trials.jpg" alt="N10 Academy player trials" loading="lazy" /></div>
+            <div class="gallery-slide-item"><img src="public/assets/inspiration/Instagram%20N10/We%20are%20hiring.jpg" alt="N10 Academy coach recruitment" loading="lazy" /></div>
+            <div class="gallery-slide-item" aria-hidden="true"><img src="public/assets/inspiration/Instagram%20N10/Football%20sessions.jpg" alt="" loading="lazy" /></div>
+            <div class="gallery-slide-item" aria-hidden="true"><img src="public/assets/inspiration/Instagram%20N10/Girls%20Football%20Team.jpg" alt="" loading="lazy" /></div>
+            <div class="gallery-slide-item" aria-hidden="true"><img src="public/assets/inspiration/Instagram%20N10/Girls%20Football%20Team%202.jpg" alt="" loading="lazy" /></div>
+            <div class="gallery-slide-item" aria-hidden="true"><img src="public/assets/inspiration/Instagram%20N10/Player%20Trials.jpg" alt="" loading="lazy" /></div>
+            <div class="gallery-slide-item" aria-hidden="true"><img src="public/assets/inspiration/Instagram%20N10/We%20are%20hiring.jpg" alt="" loading="lazy" /></div>
           </div>
         </div>
 
@@ -714,15 +707,42 @@
 
 
     <!-- ══════════════════════════════════════════
+         SAFEGUARDING STRIP
+    ══════════════════════════════════════════ -->
+    <section class="bg-brand-charcoal border-y border-white/5 py-6 px-6" aria-label="Safeguarding information">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-center">
+          <div class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-brand-white/80 text-xs font-semibold uppercase tracking-widest">DBS-Checked Coaches</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-brand-white/80 text-xs font-semibold uppercase tracking-widest">FA Safeguarding Trained</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-brand-white/80 text-xs font-semibold uppercase tracking-widest">Child Protection Policy in Place</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-brand-white/80 text-xs font-semibold uppercase tracking-widest">Parents Welcome to Watch</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
          FINAL CTA BANNER
     ══════════════════════════════════════════ -->
     <section class="py-14 px-6" style="background: #E30513;" aria-label="Call to action">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="font-display text-5xl sm:text-6xl md:text-7xl text-white leading-none tracking-display mb-4 reveal">READY TO JOIN<br />THE ACADEMY?</h2>
-        <p class="text-white/80 text-base sm:text-lg mb-10 reveal">Book a free trial today. No commitment. Just football.</p>
+        <p class="text-white/80 text-base sm:text-lg mb-10 reveal">Join 200+ families across North London. Book your child's free trial today.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center reveal">
           <a href="contact.html" class="btn-outline text-white border-white/70 hover:bg-white/10 hover:border-white text-center">Book a Trial</a>
-          <a href="programmes.html" style="background: #0A0A0B; color: #F8F8FA; border-color: #0A0A0B;" class="btn-red text-center hover:opacity-90">View Programmes</a>
+          <a href="programmes.html" class="btn-dark text-center">View Programmes</a>
         </div>
       </div>
     </section>
@@ -755,7 +775,7 @@
         </div>
 
         <div>
-          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">SESSIONS</h4>
+          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">PROGRAMMES & TRIALS</h4>
           <ul class="space-y-3">
             <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Weekly Training</a></li>
             <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Book a Trial</a></li>
@@ -776,7 +796,10 @@
       </div>
 
       <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-brand-muted text-xs">© 2026 N10 Academy. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <p class="text-brand-muted text-xs">© 2026 N10 Academy. All rights reserved.</p>
+          <a href="privacy.html" class="text-brand-muted text-xs hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Privacy Policy</a>
+        </div>
         <p class="text-brand-muted text-xs">Uniting Talent. Building Character. Inspiring Futures.</p>
       </div>
     </div>

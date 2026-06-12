@@ -82,9 +82,10 @@ document.addEventListener('pointermove', function (e) {
   var xp = (x / window.innerWidth).toFixed(2);
   var yp = (y / window.innerHeight).toFixed(2);
   document.querySelectorAll('[data-glow]').forEach(function (el) {
-    el.style.setProperty('--x', x.toFixed(2));
+    var rect = el.getBoundingClientRect();
+    el.style.setProperty('--x', (x - rect.left).toFixed(2));
     el.style.setProperty('--xp', xp);
-    el.style.setProperty('--y', y.toFixed(2));
+    el.style.setProperty('--y', (y - rect.top).toFixed(2));
     el.style.setProperty('--yp', yp);
   });
 });

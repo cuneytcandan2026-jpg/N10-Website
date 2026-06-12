@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — N10 Academy</title>
+  <meta name="description" content="N10 Academy privacy policy. How we collect, use and protect personal data in line with UK GDPR." />
+  <meta property="og:title" content="Privacy Policy — N10 Academy" />
+  <meta property="og:description" content="Our privacy policy explains how N10 Academy handles personal data submitted via our website." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red:      '#E30513',
+              redDark:  '#B00410',
+              black:    '#0A0A0B',
+              charcoal: '#111114',
+              surface:  '#1C1C21',
+              elevated: '#252529',
+              gold:     '#F5C518',
+              glow:     '#FF4D1C',
+              white:    '#F8F8FA',
+              muted:    '#9090A0',
+            }
+          },
+          fontFamily: {
+            display: ['"Bebas Neue"', 'Impact', 'sans-serif'],
+            body:    ['Inter', 'system-ui', 'sans-serif'],
+          },
+          letterSpacing: {
+            display: '0.04em',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="public/css/styles.css" />
+</head>
+<body class="font-body">
+
+  <!-- NAV -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center">
+
+      <!-- Logo + Wordmark -->
+      <div class="flex-1 flex items-center">
+        <a href="index.html" class="flex items-center gap-3 group rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-label="N10 Academy home">
+          <img src="public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy crest" class="h-12 w-auto transition-transform duration-300 ease-out group-hover:scale-105" />
+          <div class="flex flex-col justify-center">
+            <span class="font-display text-xl text-brand-white leading-none" style="letter-spacing: 0.1em;">N10 ACADEMY</span>
+            <span class="text-brand-muted font-semibold uppercase mt-1 hidden sm:block" style="font-size: 9px; letter-spacing: 0.14em;">Elite Youth Football Academy</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Centre: Desktop nav links -->
+      <div class="hidden md:flex items-center gap-1">
+        <a href="index.html"      data-nav="index"      class="nav-link">Home</a>
+        <a href="programmes.html" data-nav="programmes" class="nav-link">Programmes</a>
+        <a href="coaches.html"    data-nav="coaches"    class="nav-link">Coaches</a>
+        <a href="about.html"      data-nav="about"      class="nav-link">About Us</a>
+      </div>
+
+      <!-- Right: CTA + Hamburger -->
+      <div class="flex-1 flex items-center justify-end gap-3">
+        <a href="contact.html" class="hidden md:inline-block btn-red py-2.5 px-6 text-sm">Book a Free Trial</a>
+        <a href="contact.html" class="mobile-nav-cta btn-red py-2 px-3.5 text-xs font-semibold">Book Trial</a>
+        <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden flex flex-col justify-center gap-1.5 w-11 h-11 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold rounded">
+          <span class="block h-0.5 bg-brand-white transition-transform duration-300 origin-center" id="bar1"></span>
+          <span class="block h-0.5 bg-brand-white transition-opacity duration-300" id="bar2"></span>
+          <span class="block h-0.5 bg-brand-white transition-transform duration-300 origin-center" id="bar3"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden flex-col bg-brand-charcoal border-t border-white/10 px-6 py-4 gap-0">
+      <a href="index.html"      data-nav="index"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Home</a>
+      <a href="programmes.html" data-nav="programmes" class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Programmes</a>
+      <a href="coaches.html"    data-nav="coaches"    class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Coaches</a>
+      <a href="about.html"      data-nav="about"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">About Us</a>
+      <a href="contact.html" class="btn-red mt-4 text-center w-full block" onclick="closeMobileMenu()">Book a Free Trial</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="page-hero bg-brand-black px-6" aria-label="Privacy policy header">
+      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(227,5,19,0.18) 0%, transparent 65%);" aria-hidden="true"></div>
+      <div class="max-w-4xl mx-auto text-center relative z-10 w-full">
+        <p class="section-label mb-4 reveal justify-center">Legal</p>
+        <h1 class="font-display text-6xl sm:text-7xl md:text-8xl text-brand-white leading-none tracking-display mb-4 reveal">
+          PRIVACY <span class="text-brand-red">POLICY</span>
+        </h1>
+        <p class="text-brand-muted text-base sm:text-lg max-w-xl mx-auto leading-relaxed reveal">
+          How N10 Academy collects, uses and protects your personal information.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- POLICY CONTENT -->
+    <section class="bg-brand-charcoal py-16 px-6">
+      <div class="max-w-3xl mx-auto">
+
+        <div class="bg-brand-surface rounded-lg p-8 mb-6 reveal" style="border-left: 4px solid #F5C518; box-shadow: 0 4px 24px rgba(0,0,0,0.4);">
+          <p class="text-brand-muted text-sm leading-relaxed"><strong class="text-brand-white">Last updated:</strong> June 2026. This policy applies to personal data collected via the N10 Academy website (n10academy.co.uk) and our enquiry process.</p>
+        </div>
+
+        <div class="space-y-10 reveal">
+
+          <!-- 1. Who We Are -->
+          <div>
+            <h2 class="font-display text-3xl text-brand-white tracking-display mb-4">1. WHO WE ARE</h2>
+            <p class="text-brand-muted text-sm leading-relaxed mb-3">N10 Academy is a youth football academy based at Jubilee Park, Houndsfield Road, Edmonton, London N9 7RA.</p>
+            <p class="text-brand-muted text-sm leading-relaxed mb-3">For the purposes of UK GDPR, N10 Academy is the data controller for the personal data described in this policy.</p>
+            <p class="text-brand-muted text-sm leading-relaxed">If you have any questions about this policy or how we handle your data, please contact us:</p>
+            <ul class="mt-3 space-y-1 text-sm">
+              <li><a href="mailto:info@n10academy.co.uk" class="text-brand-red hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">info@n10academy.co.uk</a></li>
+              <li><a href="tel:07539072029" class="text-brand-red hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">07539 072029</a></li>
+            </ul>
+          </div>
+
+          <!-- 2. What We Collect -->
+          <div>
+            <h2 class="font-display text-3xl text-brand-white tracking-display mb-4">2. WHAT DATA WE COLLECT</h2>
+            <p class="text-brand-muted text-sm leading-relaxed mb-4">When you complete our enquiry or trial booking form, we collect the following information:</p>
+            <ul class="space-y-2 mb-4">
+              <li class="flex items-start gap-3 text-brand-muted text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0 mt-1.5" aria-hidden="true"></span>Parent or guardian name</li>
+              <li class="flex items-start gap-3 text-brand-muted text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0 mt-1.5" aria-hidden="true"></span>Phone number</li>
+              <li class="flex items-start gap-3 text-brand-muted text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0 mt-1.5" aria-hidden="true"></span>Email address</li>
+              <li class="flex items-start gap-3 text-brand-muted text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0 mt-1.5" aria-hidden="true"></span>Child's first name</li>
+              <li class="flex items-start gap-3 text-brand-muted text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0 mt-1.5" aria-hidden="true"></span>Child's age</li>
+              <li class="flex items-start gap-3 text-brand-muted text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0 mt-1.5" aria-hidden="true"></span>Preferred programme (optional)</li>
+              <li class="flex items-start gap-3 text-brand-muted text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0 mt-1.5" aria-hidden="true"></span>Any message you choose to include (optional)</li>
+            </ul>
+            <p class="text-brand-muted text-sm leading-relaxed">We do not collect payment information, medical information, or any sensitive personal data via this website.</p>
+          </div>
+
+          <!-- 3. How We Use Your Data -->
+          <div>
+            <h2 class="font-display text-3xl text-brand-white tracking-display mb-4">3. HOW WE USE YOUR DATA</h2>
+            <p class="text-brand-muted text-sm leading-relaxed mb-4">We use the information you provide solely to:</p>
+            <ul class="space-y-2 mb-4">
+              <li class="flex items-start gap-3 text-brand-muted text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0 mt-1.5" aria-hidden="true"></span>Respond to your enquiry and confirm your child's free trial session</li>
+              <li class="flex items-start gap-3 text-brand-muted text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0 mt-1.5" aria-hidden="true"></span>Recommend the most appropriate programme for your child's age and ability</li>
+              <li class="flex items-start gap-3 text-brand-muted text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0 mt-1.5" aria-hidden="true"></span>Communicate with you about your child's enrolment and progress if they join the academy</li>
+            </ul>
+            <p class="text-brand-muted text-sm leading-relaxed">Our legal basis for processing this data is <strong class="text-brand-white">legitimate interests</strong> — we have a legitimate interest in responding to your request to book a trial session, and processing your data is necessary to do so.</p>
+          </div>
+
+          <!-- 4. Who We Share Your Data With -->
+          <div>
+            <h2 class="font-display text-3xl text-brand-white tracking-display mb-4">4. WHO WE SHARE YOUR DATA WITH</h2>
+            <p class="text-brand-muted text-sm leading-relaxed mb-3">We do not sell, rent or share your personal data with any third party for marketing or commercial purposes.</p>
+            <p class="text-brand-muted text-sm leading-relaxed">Your data is only accessed by the N10 Academy coaching team for the purposes described above. We may use trusted third-party services (such as email providers) to handle enquiry notifications, but these parties are required to handle your data in accordance with UK GDPR.</p>
+          </div>
+
+          <!-- 5. How Long We Keep Your Data -->
+          <div>
+            <h2 class="font-display text-3xl text-brand-white tracking-display mb-4">5. HOW LONG WE KEEP YOUR DATA</h2>
+            <p class="text-brand-muted text-sm leading-relaxed mb-3">If your enquiry does not result in enrolment, we will retain your contact details for up to 12 months and then delete them securely.</p>
+            <p class="text-brand-muted text-sm leading-relaxed">If your child joins N10 Academy, we will retain relevant records for as long as they are an active member, plus 12 months thereafter, unless you request earlier deletion.</p>
+          </div>
+
+          <!-- 6. Your Rights -->
+          <div>
+            <h2 class="font-display text-3xl text-brand-white tracking-display mb-4">6. YOUR RIGHTS</h2>
+            <p class="text-brand-muted text-sm leading-relaxed mb-4">Under UK GDPR, you have the right to:</p>
+            <ul class="space-y-2 mb-4">
+              <li class="flex items-start gap-3 text-brand-muted text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0 mt-1.5" aria-hidden="true"></span><strong class="text-brand-white">Access</strong> — request a copy of the personal data we hold about you</li>
+              <li class="flex items-start gap-3 text-brand-muted text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0 mt-1.5" aria-hidden="true"></span><strong class="text-brand-white">Rectification</strong> — ask us to correct inaccurate data</li>
+              <li class="flex items-start gap-3 text-brand-muted text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0 mt-1.5" aria-hidden="true"></span><strong class="text-brand-white">Erasure</strong> — request deletion of your data ("right to be forgotten")</li>
+              <li class="flex items-start gap-3 text-brand-muted text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0 mt-1.5" aria-hidden="true"></span><strong class="text-brand-white">Restriction</strong> — ask us to limit how we use your data</li>
+              <li class="flex items-start gap-3 text-brand-muted text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0 mt-1.5" aria-hidden="true"></span><strong class="text-brand-white">Objection</strong> — object to our processing of your data</li>
+              <li class="flex items-start gap-3 text-brand-muted text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0 mt-1.5" aria-hidden="true"></span><strong class="text-brand-white">Portability</strong> — request your data in a portable format</li>
+            </ul>
+            <p class="text-brand-muted text-sm leading-relaxed">To exercise any of these rights, please contact us at <a href="mailto:info@n10academy.co.uk" class="text-brand-red hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">info@n10academy.co.uk</a>. We will respond within 30 days.</p>
+          </div>
+
+          <!-- 7. Cookies -->
+          <div>
+            <h2 class="font-display text-3xl text-brand-white tracking-display mb-4">7. COOKIES</h2>
+            <p class="text-brand-muted text-sm leading-relaxed">Our website does not use tracking or advertising cookies. We use only essential technical cookies (such as those required by the CDN or font providers) that are necessary for the site to function. No personal data is collected via cookies.</p>
+          </div>
+
+          <!-- 8. Security -->
+          <div>
+            <h2 class="font-display text-3xl text-brand-white tracking-display mb-4">8. DATA SECURITY</h2>
+            <p class="text-brand-muted text-sm leading-relaxed">We take reasonable technical and organisational measures to protect your personal data against unauthorised access, loss or disclosure. Enquiry data is accessible only to the N10 Academy coaching team.</p>
+          </div>
+
+          <!-- 9. Complaints -->
+          <div>
+            <h2 class="font-display text-3xl text-brand-white tracking-display mb-4">9. COMPLAINTS</h2>
+            <p class="text-brand-muted text-sm leading-relaxed mb-3">If you believe we have not handled your personal data correctly, you have the right to lodge a complaint with the UK's data protection authority:</p>
+            <div class="bg-brand-elevated rounded-lg p-4 text-brand-muted text-sm leading-relaxed">
+              <p class="text-brand-white font-semibold mb-1">Information Commissioner's Office (ICO)</p>
+              <p>Wycliffe House, Water Lane, Wilmslow, Cheshire SK9 5AF</p>
+              <p>Website: <span class="text-brand-red">ico.org.uk</span></p>
+              <p>Helpline: 0303 123 1113</p>
+            </div>
+            <p class="text-brand-muted text-sm leading-relaxed mt-3">We would always prefer to resolve any concerns directly — please contact us first at <a href="mailto:info@n10academy.co.uk" class="text-brand-red hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">info@n10academy.co.uk</a>.</p>
+          </div>
+
+          <!-- 10. Changes -->
+          <div>
+            <h2 class="font-display text-3xl text-brand-white tracking-display mb-4">10. CHANGES TO THIS POLICY</h2>
+            <p class="text-brand-muted text-sm leading-relaxed">We may update this privacy policy from time to time. Any changes will be posted on this page with an updated date. We encourage you to review this page periodically.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-black border-t border-white/5 pt-16 pb-8 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div class="lg:col-span-1">
+          <img src="public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy" class="h-14 w-auto mb-4" />
+          <p class="text-brand-muted text-sm leading-relaxed mb-4">Developing champions on and off the pitch. Elite mentality. Positive environment. Real results.</p>
+          <p class="font-display text-sm text-brand-red tracking-display">ELITE MENTALITY</p>
+        </div>
+        <div>
+          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">PAGES</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Home</a></li>
+            <li><a href="about.html"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">About Us</a></li>
+            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Programmes</a></li>
+            <li><a href="coaches.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Coaches</a></li>
+            <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Contact / Book Trial</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">SESSIONS</h4>
+          <ul class="space-y-3">
+            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Weekly Training</a></li>
+            <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Book a Trial</a></li>
+            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Holiday Camps</a></li>
+            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">1-to-1 Coaching</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">CONNECT</h4>
+          <ul class="space-y-3">
+            <li><a href="tel:07539072029"              class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">07539 072029</a></li>
+            <li><a href="mailto:info@n10academy.co.uk" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">info@n10academy.co.uk</a></li>
+            <li><a href="https://instagram.com/n10_academy_official" target="_blank" rel="noopener" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">@n10_academy_official</a></li>
+            <li><p class="text-brand-muted text-sm">Jubilee Park, Edmonton, N9 7RA</p></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <p class="text-brand-muted text-xs">© 2026 N10 Academy. All rights reserved.</p>
+          <a href="privacy.html" class="text-brand-muted text-xs hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Privacy Policy</a>
+        </div>
+        <p class="text-brand-muted text-xs">Uniting Talent. Building Character. Inspiring Futures.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="public/js/main.js"></script>
+</body>
+</html>
