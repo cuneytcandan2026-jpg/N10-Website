@@ -34,11 +34,12 @@
       </div>
 
       <!-- Centre: Desktop nav links -->
-      <div class="hidden md:flex items-center gap-1">
+      <div class="hidden md:flex items-center gap-1" id="nav-links">
         <a href="index.html"      data-nav="index"      class="nav-link">Home</a>
         <a href="programmes.html" data-nav="programmes" class="nav-link">Programmes</a>
         <a href="coaches.html"    data-nav="coaches"    class="nav-link">Coaches</a>
         <a href="about.html"      data-nav="about"      class="nav-link">About Us</a>
+        <a href="coaching.html"   data-nav="coaching"   class="nav-link">1-to-1</a>
       </div>
 
       <!-- Right: CTA + Hamburger -->
@@ -59,41 +60,64 @@
       <a href="programmes.html" data-nav="programmes" class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Programmes</a>
       <a href="coaches.html"    data-nav="coaches"    class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Coaches</a>
       <a href="about.html"      data-nav="about"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">About Us</a>
+      <a href="coaching.html"   data-nav="coaching"   class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">1-to-1</a>
       <a href="contact.html" class="btn-red mt-4 text-center w-full block" onclick="closeMobileMenu()">Book a Free Trial</a>
     </div>
   </nav>
 
   <main>
 
-    <!-- HERO -->
-    <section class="page-hero bg-brand-black px-6" aria-label="Programmes page header">
-      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(227,5,19,0.25) 0%, transparent 65%);" aria-hidden="true"></div>
-      <div class="max-w-4xl mx-auto text-center relative z-10 w-full">
-        <p class="section-label mb-4 reveal justify-center">What We Offer</p>
-        <h1 class="font-display text-6xl sm:text-7xl md:text-8xl text-brand-white leading-none tracking-display mb-4 reveal">
-          OUR <span class="text-brand-red">PROGRAMMES</span>
+    <!-- HERO — VIDEO BACKGROUND -->
+    <section class="relative flex items-center justify-center text-center px-6 overflow-hidden" style="min-height: 85vh; padding-top: 5rem; padding-bottom: 5rem; background: #0A0A0B;" aria-label="Programmes hero">
+
+      <!-- Video background -->
+      <video id="skill-video" autoplay muted playsinline loop
+             class="absolute inset-0 w-full h-full object-cover z-0"
+             aria-hidden="true">
+        <source src="public/Videos/public/videos/football-drill.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Dark overlay -->
+      <div class="absolute inset-0 z-10" style="background: rgba(10,10,11,0.65);" aria-hidden="true"></div>
+
+      <!-- Red glow layers -->
+      <div class="absolute inset-0 z-10 pointer-events-none" style="background: radial-gradient(ellipse 80% 55% at 50% -5%, rgba(227,5,19,0.32) 0%, transparent 65%), radial-gradient(ellipse 50% 40% at 80% 110%, rgba(245,197,24,0.05) 0%, transparent 60%);" aria-hidden="true"></div>
+
+      <!-- Content -->
+      <div class="relative z-20 max-w-4xl mx-auto flex flex-col items-center grain">
+
+        <p class="section-label mb-5 reveal">What We Offer</p>
+
+        <h1 class="font-display text-6xl sm:text-7xl md:text-9xl text-brand-white leading-none tracking-display mb-6 reveal">
+          TRAIN SMART.<br />
+          <span class="text-brand-red">PLAY BETTER.</span>
         </h1>
-        <p class="text-brand-muted text-base sm:text-lg max-w-2xl mx-auto leading-relaxed reveal">
-          Flexible programmes for every age, every ability, every ambition. Every N10 programme begins with a free trial session — no commitment required.
+
+        <p class="text-brand-white/60 text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-8 reveal">
+          Group sessions, 1-to-1 coaching, holiday camps and more — a programme built for every player, every age, every ambition.
         </p>
-      </div>
-    </section>
 
+        <!-- Free trial badge -->
+        <div class="inline-flex items-center gap-3 bg-brand-gold/10 border border-brand-gold/30 rounded-lg px-5 py-3 mb-8 reveal" style="backdrop-filter: blur(4px);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#F5C518" fill-opacity="0.2"/><polyline points="6,12 10,16 18,8" stroke="#F5C518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-brand-gold text-sm font-bold uppercase tracking-widest">Free Trial on Every Programme</span>
+        </div>
 
-    <!-- PROGRAMME INTRO NOTE -->
-    <section class="bg-brand-charcoal py-12 px-6 border-b border-white/5">
-      <div class="max-w-3xl mx-auto text-center reveal">
-        <p class="text-brand-muted text-sm leading-relaxed">Every N10 Academy programme is designed to develop the complete player — technically, tactically, physically and mentally. We tailor our coaching to each individual, ensuring every child gets the attention they deserve.</p>
-        <div class="mt-6 inline-flex items-center gap-3 px-5 py-3 rounded-lg" style="background: rgba(245,197,24,0.1); border: 1px solid rgba(245,197,24,0.2);">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F5C518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <p class="text-brand-gold text-sm font-semibold">Free trial session available for all programmes — <a href="contact.html" class="underline hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">enquire to book yours</a></p>
+        <div class="flex flex-col sm:flex-row gap-4 reveal reveal-delay-1">
+          <a href="contact.html" class="btn-red btn-hero-cta text-center">Book a Free Trial</a>
+          <a href="#programmes" class="btn-outline text-center">See All Programmes</a>
         </div>
       </div>
+
+      <!-- Scroll chevron -->
+      <a href="#programmes" aria-label="Scroll to programmes" class="absolute bottom-8 left-1/2 -translate-x-1/2 bounce text-brand-muted hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold rounded z-20">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </a>
     </section>
 
 
     <!-- PROGRAMME CARDS -->
-    <section class="bg-brand-black py-16 px-6">
+    <section id="programmes" class="bg-brand-black py-16 px-6">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
           <p class="section-label mb-4 reveal justify-center">Programmes</p>
@@ -170,7 +194,7 @@
                   </ul>
                 </div>
               </div>
-              <a href="contact.html" class="btn-gold text-center w-full block">Book a Trial</a>
+              <a href="coaching.html" class="btn-gold text-center w-full block">Learn More &amp; Book</a>
             </div>
           </article>
 
@@ -498,7 +522,7 @@
             <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Weekly Training</a></li>
             <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Book a Trial</a></li>
             <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Holiday Camps</a></li>
-            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">1-to-1 Coaching</a></li>
+            <li><a href="coaching.html"   class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">1-to-1 Coaching</a></li>
           </ul>
         </div>
         <div>

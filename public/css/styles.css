@@ -18,16 +18,37 @@ body { background: #0A0A0B; color: #F8F8FA; font-family: 'Inter', system-ui, san
 /* ── Scroll reveals ── */
 .reveal {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1);
+  transform: translateY(18px);
+  transition: opacity 0.4s cubic-bezier(0.22,1,0.36,1), transform 0.4s cubic-bezier(0.22,1,0.36,1);
 }
 .reveal.revealed { opacity: 1; transform: translateY(0); }
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
-.reveal-delay-5 { transition-delay: 0.5s; }
-.reveal-delay-6 { transition-delay: 0.6s; }
+.reveal-delay-1 { transition-delay: 0.05s; }
+.reveal-delay-2 { transition-delay: 0.1s; }
+.reveal-delay-3 { transition-delay: 0.15s; }
+.reveal-delay-4 { transition-delay: 0.2s; }
+.reveal-delay-5 { transition-delay: 0.2s; }
+.reveal-delay-6 { transition-delay: 0.2s; }
+
+/* ── Stats: animated wavy underline (framer-motion pathLength equivalent) ── */
+.stat-underline path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.55s;
+}
+.stat-card.reveal-delay-1.revealed .stat-underline path { stroke-dashoffset: 0; transition-delay: 0.4s; }
+.stat-card.reveal-delay-2.revealed .stat-underline path { stroke-dashoffset: 0; transition-delay: 0.45s; }
+.stat-card.reveal-delay-3.revealed .stat-underline path { stroke-dashoffset: 0; transition-delay: 0.5s; }
+.stat-card.reveal-delay-4.revealed .stat-underline path { stroke-dashoffset: 0; transition-delay: 0.55s; }
+
+/* ── Stats: card hover lift ── */
+.stat-card {
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.stat-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(227,5,19,0.25) !important;
+  box-shadow: 0 8px 32px rgba(227,5,19,0.12), 0 2px 8px rgba(0,0,0,0.4);
+}
 
 /* ── Nav — always-solid premium header ── */
 #navbar {
@@ -300,6 +321,46 @@ body { background: #0A0A0B; color: #F8F8FA; font-family: 'Inter', system-ui, san
 .nav-active { color: #F8F8FA !important; }
 .nav-link.nav-active::after { transform: scaleX(1); }
 #mobile-menu .nav-active { color: #E30513 !important; }
+
+/* ── Tubelight nav pill ── */
+#nav-links { position: relative; }
+
+#nav-tubelight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 6px;
+  background: rgba(227, 5, 19, 0.07);
+  border: 1px solid rgba(227, 5, 19, 0.18);
+  pointer-events: none;
+  will-change: left, width;
+  transition:
+    left 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+    width 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.25s ease;
+  opacity: 0;
+}
+#nav-tubelight.visible { opacity: 1; }
+
+/* The glow bar at the top edge of the pill */
+#nav-tubelight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 2px;
+  background: #E30513;
+  border-radius: 0 0 6px 6px;
+  box-shadow:
+    0 0 6px 2px rgba(227, 5, 19, 0.6),
+    0 0 16px 5px rgba(227, 5, 19, 0.25),
+    0 0 36px 8px rgba(227, 5, 19, 0.1);
+}
+
+/* Suppress underline on active desktop link — tubelight pill replaces it */
+#nav-links .nav-link.nav-active::after { transform: scaleX(0); }
 
 /* ── FAQ accordion ── */
 .faq-panel {

@@ -56,7 +56,7 @@ window.closeMobileMenu = function () {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.06, rootMargin: '0px 0px 80px 0px' });
   revealEls.forEach(function (el) { observer.observe(el); });
 })();
 
@@ -73,6 +73,53 @@ window.closeMobileMenu = function () {
       if (icon) icon.textContent = isOpen ? '×' : '+';
     });
   });
+})();
+
+// ── Tubelight nav pill ──
+(function () {
+  var container = document.getElementById('nav-links');
+  if (!container) return;
+
+  var pill = document.createElement('div');
+  pill.id = 'nav-tubelight';
+  pill.setAttribute('aria-hidden', 'true');
+  container.insertBefore(pill, container.firstChild);
+
+  var links = container.querySelectorAll('.nav-link');
+  var activeLink = container.querySelector('.nav-active');
+
+  function movePill(link) {
+    var cRect = container.getBoundingClientRect();
+    var lRect = link.getBoundingClientRect();
+    pill.style.left = (lRect.left - cRect.left) + 'px';
+    pill.style.width = lRect.width + 'px';
+  }
+
+  if (activeLink) {
+    requestAnimationFrame(function () {
+      movePill(activeLink);
+      pill.classList.add('visible');
+    });
+  }
+
+  links.forEach(function (link) {
+    link.addEventListener('mouseenter', function () {
+      if (!pill.classList.contains('visible')) pill.classList.add('visible');
+      movePill(link);
+    });
+  });
+
+  container.addEventListener('mouseleave', function () {
+    if (activeLink) {
+      movePill(activeLink);
+    } else {
+      pill.classList.remove('visible');
+    }
+  });
+
+  window.addEventListener('resize', function () {
+    if (activeLink) movePill(activeLink);
+  }, { passive: true });
 })();
 
 // ── Spotlight glow card pointer tracking ──

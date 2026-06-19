@@ -34,11 +34,12 @@
       </div>
 
       <!-- Centre: Desktop nav links -->
-      <div class="hidden md:flex items-center gap-1">
+      <div class="hidden md:flex items-center gap-1" id="nav-links">
         <a href="index.html"      data-nav="index"      class="nav-link">Home</a>
         <a href="programmes.html" data-nav="programmes" class="nav-link">Programmes</a>
         <a href="coaches.html"    data-nav="coaches"    class="nav-link">Coaches</a>
         <a href="about.html"      data-nav="about"      class="nav-link">About Us</a>
+        <a href="coaching.html"   data-nav="coaching"   class="nav-link">1-to-1</a>
       </div>
 
       <!-- Right: CTA + Hamburger -->
@@ -59,6 +60,7 @@
       <a href="programmes.html" data-nav="programmes" class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Programmes</a>
       <a href="coaches.html"    data-nav="coaches"    class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Coaches</a>
       <a href="about.html"      data-nav="about"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">About Us</a>
+      <a href="coaching.html"   data-nav="coaching"   class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">1-to-1</a>
       <a href="contact.html" class="btn-red mt-4 text-center w-full block" onclick="closeMobileMenu()">Book a Free Trial</a>
     </div>
   </nav>
@@ -66,8 +68,13 @@
   <main>
 
     <!-- HERO -->
-    <section class="page-hero bg-brand-black px-6" aria-label="About page header">
-      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(227,5,19,0.25) 0%, transparent 65%);" aria-hidden="true"></div>
+    <section class="page-hero px-6" aria-label="About page header" style="position:relative; overflow:hidden; min-height: 420px;">
+      <!-- Background image -->
+      <div class="absolute inset-0" aria-hidden="true">
+        <img src="public/images/backgrounds/About%20us.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-center" style="object-position: center 30%;" />
+        <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(10,10,11,0.55) 0%, rgba(10,10,11,0.75) 60%, rgba(10,10,11,0.95) 100%);"></div>
+        <div class="absolute inset-0" style="background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(227,5,19,0.3) 0%, transparent 65%);"></div>
+      </div>
       <div class="max-w-4xl mx-auto text-center relative z-10 w-full">
         <p class="section-label mb-4 reveal justify-center">Our Story</p>
         <h1 class="font-display text-6xl sm:text-7xl md:text-8xl text-brand-white leading-none tracking-display mb-4 reveal">
@@ -84,7 +91,7 @@
     <section class="bg-brand-charcoal py-16 px-6">
       <div class="max-w-5xl mx-auto">
         <p class="section-label mb-6 reveal">The N10 Story</p>
-        <div class="grid md:grid-cols-5 gap-12 items-start">
+        <div class="grid md:grid-cols-5 gap-12 items-center">
           <div class="md:col-span-3">
             <div class="border-l-4 border-brand-red pl-6 mb-8 reveal">
               <h2 class="font-display text-4xl sm:text-5xl text-brand-white leading-none tracking-display mb-4">
@@ -102,15 +109,68 @@
             </p>
           </div>
           <div class="md:col-span-2 reveal">
-            <div class="relative rounded-lg overflow-hidden">
-              <img src="public/assets/inspiration/Instagram%20N10/Football%20sessions.jpg" alt="N10 Academy founding story — players in training at Jubilee Park" class="w-full object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-black/60 via-transparent to-transparent" aria-hidden="true"></div>
-              <div class="absolute bottom-6 left-6 right-6">
-                <p class="font-display text-xl text-brand-white tracking-display">"UNITING TALENT."</p>
-                <p class="font-display text-xl text-brand-red tracking-display">"BUILDING CHARACTER."</p>
+            <p class="section-label mb-3">Watch Our Story</p>
+            <div class="relative rounded-lg overflow-hidden" style="box-shadow: 0 8px 32px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.07);">
+              <video
+                id="story-video"
+                controls
+                preload="metadata"
+                poster="public/images/backgrounds/Teamphoto.jpg"
+                class="w-full block"
+                style="display: block; background: #0a0a0b;"
+                aria-label="N10 Academy — the story of where it all began"
+              >
+                <source src="public/Videos/public/videos/N10 Video.mp4" type="video/mp4" />
+                Your browser does not support video playback.
+              </video>
+
+              <!-- Play overlay — hidden once video starts -->
+              <div id="story-play-overlay"
+                class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                style="background: linear-gradient(to top, rgba(10,10,11,0.55) 0%, rgba(10,10,11,0.15) 100%);"
+                onclick="var v=document.getElementById('story-video');v.play();this.style.opacity='0';this.style.pointerEvents='none';"
+                role="button"
+                aria-label="Play N10 Academy story video"
+              >
+                <div class="flex flex-col items-center gap-3 select-none" style="transform: translateY(-8px);">
+                  <!-- Pulsing ring -->
+                  <div class="relative flex items-center justify-center">
+                    <div class="absolute w-24 h-24 rounded-full animate-ping" style="background: rgba(227,5,19,0.2); animation-duration: 1.8s;"></div>
+                    <div class="relative w-20 h-20 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110 active:scale-95"
+                         style="background: #E30513; box-shadow: 0 0 0 6px rgba(227,5,19,0.25), 0 8px 40px rgba(227,5,19,0.5);">
+                      <svg width="30" height="30" viewBox="0 0 24 24" fill="white" aria-hidden="true" style="margin-left: 3px;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    </div>
+                  </div>
+                  <span class="font-display text-brand-white tracking-display text-2xl"
+                        style="text-shadow: 0 1px 6px rgba(0,0,0,0.9); letter-spacing: 0.12em;">WATCH OUR STORY</span>
+                </div>
               </div>
             </div>
+
+            <div class="mt-4 pl-1">
+              <p class="font-display text-lg text-brand-white tracking-display">"UNITING TALENT."</p>
+              <p class="font-display text-lg text-brand-red tracking-display">"BUILDING CHARACTER."</p>
+            </div>
           </div>
+
+          <script>
+            (function () {
+              var v = document.getElementById('story-video');
+              var o = document.getElementById('story-play-overlay');
+              if (!v || !o) return;
+              v.addEventListener('play', function () {
+                o.style.transition = 'opacity 0.3s ease';
+                o.style.opacity = '0';
+                o.style.pointerEvents = 'none';
+              });
+              v.addEventListener('pause', function () {
+                if (v.currentTime === 0 || v.ended) {
+                  o.style.opacity = '1';
+                  o.style.pointerEvents = 'auto';
+                }
+              });
+            })();
+          </script>
         </div>
       </div>
     </section>
@@ -148,24 +208,72 @@
 
 
     <!-- STATS BAR -->
-    <section id="about-stats" class="bg-brand-charcoal border-y border-white/5 py-10 px-6">
-      <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div class="reveal reveal-delay-1">
-          <p class="font-display text-5xl text-brand-red tracking-display leading-none">200+</p>
-          <p class="text-brand-muted text-xs uppercase tracking-widest mt-2 font-semibold">Players Trained</p>
+    <section id="about-stats" class="relative bg-brand-charcoal border-y border-white/5 py-14 px-6 overflow-hidden" aria-label="Academy statistics">
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
+           style="background:radial-gradient(ellipse 70% 120% at 50% 50%,rgba(227,5,19,0.055) 0%,transparent 68%)"></div>
+
+      <div class="relative max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+
+        <div class="stat-card reveal reveal-delay-1 flex flex-col items-center justify-center text-center px-5 py-9 rounded-xl"
+             style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);">
+          <p class="font-display text-6xl md:text-7xl tracking-display leading-none stat-counter"
+             style="color:#E30513;text-shadow:0 0 32px rgba(227,5,19,0.35);"
+             data-target="200" data-suffix="+">200+</p>
+          <div class="relative mt-5 pb-3 w-full">
+            <p class="text-brand-muted text-xs uppercase tracking-widest font-semibold">Players Trained</p>
+            <svg class="stat-underline absolute -bottom-0.5 left-0 w-full overflow-visible" height="10"
+                 viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true">
+              <path pathLength="1" d="M0,5 Q25,1 50,5 Q75,9 100,5"
+                    stroke="rgba(227,5,19,0.6)" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
         </div>
-        <div class="reveal reveal-delay-2">
-          <p class="font-display text-5xl text-brand-red tracking-display leading-none">5+</p>
-          <p class="text-brand-muted text-xs uppercase tracking-widest mt-2 font-semibold">Years Active</p>
+
+        <div class="stat-card reveal reveal-delay-2 flex flex-col items-center justify-center text-center px-5 py-9 rounded-xl"
+             style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);">
+          <p class="font-display text-6xl md:text-7xl tracking-display leading-none stat-counter"
+             style="color:#E30513;text-shadow:0 0 32px rgba(227,5,19,0.35);"
+             data-target="5" data-suffix="+">5+</p>
+          <div class="relative mt-5 pb-3 w-full">
+            <p class="text-brand-muted text-xs uppercase tracking-widest font-semibold">Years Active</p>
+            <svg class="stat-underline absolute -bottom-0.5 left-0 w-full overflow-visible" height="10"
+                 viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true">
+              <path pathLength="1" d="M0,5 Q25,9 50,5 Q75,1 100,5"
+                    stroke="rgba(227,5,19,0.6)" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
         </div>
-        <div class="reveal reveal-delay-3">
-          <p class="font-display text-5xl text-brand-red tracking-display leading-none">6</p>
-          <p class="text-brand-muted text-xs uppercase tracking-widest mt-2 font-semibold">Age Groups</p>
+
+        <div class="stat-card reveal reveal-delay-3 flex flex-col items-center justify-center text-center px-5 py-9 rounded-xl"
+             style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);">
+          <p class="font-display text-6xl md:text-7xl tracking-display leading-none stat-counter"
+             style="color:#E30513;text-shadow:0 0 32px rgba(227,5,19,0.35);"
+             data-target="6" data-suffix="">6</p>
+          <div class="relative mt-5 pb-3 w-full">
+            <p class="text-brand-muted text-xs uppercase tracking-widest font-semibold">Age Groups</p>
+            <svg class="stat-underline absolute -bottom-0.5 left-0 w-full overflow-visible" height="10"
+                 viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true">
+              <path pathLength="1" d="M0,5 Q25,1 50,5 Q75,9 100,5"
+                    stroke="rgba(227,5,19,0.6)" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
         </div>
-        <div class="reveal reveal-delay-4">
-          <p class="font-display text-5xl text-brand-red tracking-display leading-none">100%</p>
-          <p class="text-brand-muted text-xs uppercase tracking-widest mt-2 font-semibold">FA-Qualified Staff</p>
+
+        <div class="stat-card reveal reveal-delay-4 flex flex-col items-center justify-center text-center px-5 py-9 rounded-xl"
+             style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);">
+          <p class="font-display text-6xl md:text-7xl tracking-display leading-none stat-counter"
+             style="color:#E30513;text-shadow:0 0 32px rgba(227,5,19,0.35);"
+             data-target="100" data-suffix="%">100%</p>
+          <div class="relative mt-5 pb-3 w-full">
+            <p class="text-brand-muted text-xs uppercase tracking-widest font-semibold">FA-Qualified Staff</p>
+            <svg class="stat-underline absolute -bottom-0.5 left-0 w-full overflow-visible" height="10"
+                 viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true">
+              <path pathLength="1" d="M0,5 Q25,9 50,5 Q75,1 100,5"
+                    stroke="rgba(227,5,19,0.6)" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
         </div>
+
       </div>
     </section>
 
@@ -184,7 +292,7 @@
           <div data-glow class="relative rounded-lg card-hover group reveal reveal-delay-1" style="height: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
             <div data-glow></div>
             <div class="absolute inset-0 overflow-hidden rounded-lg">
-              <img src="https://images.unsplash.com/photo-1779809140671-a7d62f0063e6?w=600&h=400&fit=crop&q=80&auto=format" alt="Coach and player in honest, professional interaction" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <img src="public/images/backgrounds/C16E2015-B516-4C26-AB11-F205D210908F.JPG" alt="N10 Academy player on the pitch — integrity in action" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" style="object-position: center 20%;" />
               <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.5) 50%, rgba(10,10,11,0.1) 100%);"></div>
             </div>
             <div class="absolute top-4 left-4 w-10 h-10 rounded-lg flex items-center justify-center z-10" style="background: rgba(227,5,19,0.25); border: 1px solid rgba(227,5,19,0.4); backdrop-filter: blur(4px);">
@@ -200,7 +308,7 @@
           <div data-glow class="relative rounded-lg card-hover group reveal reveal-delay-2" style="height: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
             <div data-glow></div>
             <div class="absolute inset-0 overflow-hidden rounded-lg">
-              <img src="https://images.unsplash.com/photo-1598880513655-d1c6d4b2dfbf?w=600&h=400&fit=crop&q=80&auto=format" alt="Players showing respect and sportsmanship" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <img src="public/images/backgrounds/C5C294E1-8716-448A-8AF3-D3344A426B5B.JPG" alt="N10 Academy squad showing respect and teamwork" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.5) 50%, rgba(10,10,11,0.1) 100%);"></div>
             </div>
             <div class="absolute top-4 left-4 w-10 h-10 rounded-lg flex items-center justify-center z-10" style="background: rgba(227,5,19,0.25); border: 1px solid rgba(227,5,19,0.4); backdrop-filter: blur(4px);">
@@ -216,7 +324,7 @@
           <div data-glow class="relative rounded-lg card-hover group reveal reveal-delay-3" style="height: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
             <div data-glow></div>
             <div class="absolute inset-0 overflow-hidden rounded-lg">
-              <img src="https://images.unsplash.com/photo-1618073193718-23a66109f4e6?w=600&h=400&fit=crop&q=80&auto=format" alt="Player pushing to achieve excellence on the pitch" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <img src="public/images/backgrounds/E643E6EF-FF1D-4149-928B-985FE3F29946.JPG" alt="N10 Academy senior squad — pursuit of excellence" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.5) 50%, rgba(10,10,11,0.1) 100%);"></div>
             </div>
             <div class="absolute top-4 left-4 w-10 h-10 rounded-lg flex items-center justify-center z-10" style="background: rgba(227,5,19,0.25); border: 1px solid rgba(227,5,19,0.4); backdrop-filter: blur(4px);">
@@ -232,7 +340,7 @@
           <div data-glow class="relative rounded-lg card-hover group reveal reveal-delay-4" style="height: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
             <div data-glow></div>
             <div class="absolute inset-0 overflow-hidden rounded-lg">
-              <img src="https://images.unsplash.com/photo-1622659097509-4d56de14539e?w=600&h=400&fit=crop&q=80&auto=format" alt="Young players of all abilities training together" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <img src="public/images/backgrounds/BD7C0CD2-341D-4487-B508-EA3FFE7A34EB.JPG" alt="Young girl at N10 Academy — football is for everyone" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" style="object-position: center 35%;" />
               <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.5) 50%, rgba(10,10,11,0.1) 100%);"></div>
             </div>
             <div class="absolute top-4 left-4 w-10 h-10 rounded-lg flex items-center justify-center z-10" style="background: rgba(227,5,19,0.25); border: 1px solid rgba(227,5,19,0.4); backdrop-filter: blur(4px);">
@@ -248,7 +356,7 @@
           <div data-glow class="relative rounded-lg card-hover group reveal reveal-delay-5" style="height: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
             <div data-glow></div>
             <div class="absolute inset-0 overflow-hidden rounded-lg">
-              <img src="https://images.unsplash.com/photo-1622659097972-68f1d8c1829f?w=600&h=400&fit=crop&q=80&auto=format" alt="Player developing football skills in structured training" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <img src="public/images/backgrounds/IMG_1167.JPG" alt="N10 Academy players in structured training session" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.5) 50%, rgba(10,10,11,0.1) 100%);"></div>
             </div>
             <div class="absolute top-4 left-4 w-10 h-10 rounded-lg flex items-center justify-center z-10" style="background: rgba(227,5,19,0.25); border: 1px solid rgba(227,5,19,0.4); backdrop-filter: blur(4px);">
@@ -264,7 +372,7 @@
           <div data-glow class="relative rounded-lg card-hover group reveal reveal-delay-6" style="height: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);">
             <div data-glow></div>
             <div class="absolute inset-0 overflow-hidden rounded-lg">
-              <img src="https://images.unsplash.com/photo-1780265358334-2ee1c0723955?w=600&h=400&fit=crop&q=80&auto=format" alt="N10 Academy community of players, parents and coaches" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <img src="public/images/backgrounds/3AF9B34A-0553-4C7E-A957-7963D470D43B.JPG" alt="N10 Academy community — players united together" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,11,0.97) 0%, rgba(10,10,11,0.5) 50%, rgba(10,10,11,0.1) 100%);"></div>
             </div>
             <div class="absolute top-4 left-4 w-10 h-10 rounded-lg flex items-center justify-center z-10" style="background: rgba(227,5,19,0.25); border: 1px solid rgba(227,5,19,0.4); backdrop-filter: blur(4px);">
@@ -285,7 +393,7 @@
       <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div class="reveal order-2 md:order-1">
           <div class="relative rounded-lg overflow-hidden">
-            <img src="public/assets/inspiration/Instagram%20N10/Girls%20Football%20Team.jpg" alt="N10 Academy coaching in action" class="w-full object-cover" />
+            <img src="public/images/backgrounds/Coach and team.jpeg" alt="N10 Academy coaching in action" class="w-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-brand-black/60 via-transparent to-transparent" aria-hidden="true"></div>
             <div class="absolute inset-0" style="background: rgba(227,5,19,0.1); mix-blend-mode: multiply;" aria-hidden="true"></div>
           </div>
@@ -556,7 +664,7 @@
             <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Weekly Training</a></li>
             <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Book a Trial</a></li>
             <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Holiday Camps</a></li>
-            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">1-to-1 Coaching</a></li>
+            <li><a href="coaching.html"   class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">1-to-1 Coaching</a></li>
           </ul>
         </div>
         <div>
@@ -580,5 +688,34 @@
   </footer>
 
   <script src="public/js/main.js"></script>
+  <script>
+    (function () {
+      var counters = document.querySelectorAll('.stat-counter');
+      if (!counters.length) return;
+      var done = new Set();
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var el = entry.target;
+          var key = el.dataset.target + el.dataset.suffix;
+          if (done.has(key)) return;
+          done.add(key);
+          var target = parseInt(el.dataset.target, 10);
+          var suffix = el.dataset.suffix || '';
+          var duration = 1400;
+          var startTime = null;
+          function step(now) {
+            if (!startTime) startTime = now;
+            var progress = Math.min((now - startTime) / duration, 1);
+            var ease = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.round(ease * target) + suffix;
+            if (progress < 1) requestAnimationFrame(step);
+          }
+          setTimeout(function () { requestAnimationFrame(step); }, 200);
+        });
+      }, { threshold: 0.5 });
+      counters.forEach(function (el) { observer.observe(el); });
+    })();
+  </script>
 </body>
 </html>

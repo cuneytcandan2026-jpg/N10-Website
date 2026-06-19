@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1-to-1 Football Coaching | N10 Academy</title>
+  <meta name="description" content="Personalised one-to-one football coaching with FA qualified Coach Nathan Emanuel. Develop technique, confidence, football intelligence and match performance." />
+  <meta property="og:title" content="1-to-1 Football Coaching | N10 Academy" />
+  <meta property="og:description" content="Personalised one-to-one football coaching with FA qualified Coach Nathan Emanuel. Develop technique, confidence, football intelligence and match performance." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="public/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="public/css/styles.css" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+    a[href*="wa.me"].btn-outline { border-color: #25D366; color: #25D366; }
+    a[href*="wa.me"].btn-outline:hover { background: rgba(37,211,102,0.12); border-color: #25D366; color: #25D366; box-shadow: 0 0 24px rgba(37,211,102,0.25); }
+  </style>
+</head>
+<body class="font-body">
+
+  <!-- BOOKING URL CONFIG — paste your Calendly or Cal.com embed URL here when ready -->
+  <!-- Example: var BOOKING_URL = 'https://calendly.com/coachnathanemanuel/1to1'; -->
+  <script>var BOOKING_URL = '';</script>
+
+  <!-- NAV -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center">
+
+      <!-- Logo + Wordmark -->
+      <div class="flex-1 flex items-center">
+        <a href="index.html" class="flex items-center gap-3 group rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-label="N10 Academy home">
+          <img src="public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy crest" class="h-12 w-auto transition-transform duration-300 ease-out group-hover:scale-105" />
+          <div class="flex flex-col justify-center">
+            <span class="font-display text-xl text-brand-white leading-none" style="letter-spacing: 0.1em;">N10 ACADEMY</span>
+            <span class="text-brand-muted font-semibold uppercase mt-1 hidden sm:block" style="font-size: 9px; letter-spacing: 0.14em;">Elite Youth Football Academy</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Centre: Desktop nav links -->
+      <div class="hidden md:flex items-center gap-1" id="nav-links">
+        <a href="index.html"      data-nav="index"      class="nav-link">Home</a>
+        <a href="programmes.html" data-nav="programmes" class="nav-link">Programmes</a>
+        <a href="coaches.html"    data-nav="coaches"    class="nav-link">Coaches</a>
+        <a href="about.html"      data-nav="about"      class="nav-link">About Us</a>
+        <a href="coaching.html"   data-nav="coaching"   class="nav-link">1-to-1</a>
+      </div>
+
+      <!-- Right: CTA + Hamburger -->
+      <div class="flex-1 flex items-center justify-end gap-3">
+        <a href="contact.html" class="hidden md:inline-block btn-red py-2.5 px-6 text-sm">Book a Free Trial</a>
+        <a href="contact.html" class="mobile-nav-cta btn-red py-2 px-3.5 text-xs font-semibold">Book Trial</a>
+        <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden flex flex-col justify-center gap-1.5 w-11 h-11 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold rounded">
+          <span class="block h-0.5 bg-brand-white transition-transform duration-300 origin-center" id="bar1"></span>
+          <span class="block h-0.5 bg-brand-white transition-opacity duration-300" id="bar2"></span>
+          <span class="block h-0.5 bg-brand-white transition-transform duration-300 origin-center" id="bar3"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden flex-col bg-brand-charcoal border-t border-white/10 px-6 py-4 gap-0">
+      <a href="index.html"      data-nav="index"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Home</a>
+      <a href="programmes.html" data-nav="programmes" class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Programmes</a>
+      <a href="coaches.html"    data-nav="coaches"    class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Coaches</a>
+      <a href="about.html"      data-nav="about"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">About Us</a>
+      <a href="coaching.html"   data-nav="coaching"   class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">1-to-1</a>
+      <a href="contact.html" class="btn-red mt-4 text-center w-full block" onclick="closeMobileMenu()">Book a Free Trial</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════════
+         1. HERO
+    ═══════════════════════════════════════════════════════ -->
+    <section class="bg-brand-black pt-20 min-h-screen flex items-center relative overflow-hidden">
+
+      <!-- Radial red glow -->
+      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(227,5,19,0.22) 0%, transparent 65%);" aria-hidden="true"></div>
+      <!-- Secondary gold accent -->
+      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 40% 30% at 80% 60%, rgba(245,197,24,0.04) 0%, transparent 60%);" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 w-full">
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+          <!-- Left: Coach photo -->
+          <div class="reveal order-2 md:order-1">
+            <div class="relative rounded-lg overflow-hidden" style="aspect-ratio: 3/4; max-height: 600px;">
+              <img
+                src="public/images/backgrounds/Coach and team.jpeg"
+                alt="N10 Academy coach with team — 1-to-1 football coaching"
+                class="w-full h-full object-cover object-top"
+              />
+              <!-- Dark gradient overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-black/70 via-brand-black/20 to-transparent" aria-hidden="true"></div>
+              <!-- Red colour tint -->
+              <div class="absolute inset-0" style="background: rgba(227,5,19,0.08); mix-blend-mode: multiply;" aria-hidden="true"></div>
+              <!-- Bottom badge -->
+              <div class="absolute bottom-6 left-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest" style="background: rgba(245,197,24,0.15); border: 1px solid rgba(245,197,24,0.35); color: #F5C518; backdrop-filter: blur(4px);">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  FA Qualified · DBS Checked
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Copy -->
+          <div class="order-1 md:order-2">
+            <p class="section-label mb-5 reveal">Individual Sessions · Coach Nathan Emanuel</p>
+
+            <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl text-brand-white leading-none tracking-display mb-4 reveal">
+              PERSONALISED<br />
+              <span class="text-brand-red">1-TO-1</span><br />
+              COACHING
+            </h1>
+
+            <p class="text-brand-white/60 text-xs uppercase tracking-widest font-semibold mb-5 reveal">Elevate Your Game. Unlock Your Potential.</p>
+
+            <p class="text-brand-muted text-base sm:text-lg leading-relaxed mb-8 reveal">
+              Focused individual coaching sessions designed to improve technique, confidence, game understanding and performance — built around your player, nobody else.
+            </p>
+
+            <!-- Trust indicators -->
+            <div class="grid grid-cols-2 gap-3 mb-8 reveal reveal-delay-1">
+              <div class="flex items-center gap-2.5 bg-brand-surface/60 rounded-lg px-4 py-3 border border-white/8">
+                <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span class="text-brand-white text-xs font-semibold leading-tight">FA Qualified Coach</span>
+              </div>
+              <div class="flex items-center gap-2.5 bg-brand-surface/60 rounded-lg px-4 py-3 border border-white/8">
+                <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+                <span class="text-brand-white text-xs font-semibold leading-tight">Personalised Development</span>
+              </div>
+              <div class="flex items-center gap-2.5 bg-brand-surface/60 rounded-lg px-4 py-3 border border-white/8">
+                <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
+                <span class="text-brand-white text-xs font-semibold leading-tight">All Positions Welcome</span>
+              </div>
+              <div class="flex items-center gap-2.5 bg-brand-surface/60 rounded-lg px-4 py-3 border border-white/8">
+                <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <span class="text-brand-white text-xs font-semibold leading-tight">All Ages &amp; Abilities</span>
+              </div>
+            </div>
+
+            <!-- CTAs -->
+            <div class="flex flex-col sm:flex-row gap-4 reveal reveal-delay-2">
+              <a href="#booking" class="btn-red text-center">Book a Session</a>
+              <a href="https://wa.me/447539072029" target="_blank" rel="noopener noreferrer" class="btn-outline text-center flex items-center justify-center gap-2">
+                <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.833.741 5.491 2.037 7.8L0 32l8.418-2.007A15.938 15.938 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 01-6.77-1.853l-.485-.29-5.004 1.193 1.224-4.869-.317-.5A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.899c-.397-.199-2.35-1.16-2.714-1.292-.364-.133-.629-.199-.893.199-.265.397-1.026 1.292-1.258 1.557-.232.265-.464.298-.861.099-.397-.199-1.676-.618-3.192-1.97-1.18-1.053-1.976-2.353-2.208-2.75-.232-.397-.025-.612.174-.81.179-.178.397-.464.596-.696.199-.232.265-.397.397-.663.133-.265.066-.497-.033-.696-.1-.199-.894-2.154-1.225-2.95-.322-.773-.649-.668-.893-.68l-.762-.013c-.265 0-.696.1-.1.06-.364.364-1.393 1.36-1.393 3.315s1.426 3.845 1.624 4.11c.199.265 2.806 4.285 6.797 6.01.95.41 1.692.655 2.27.838.954.303 1.823.26 2.509.158.765-.114 2.35-.96 2.681-1.887.332-.928.332-1.723.232-1.887-.099-.165-.364-.265-.762-.464z"/></svg>
+                Speak to Nathan
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         2. WHY 1-TO-1 COACHING
+    ═══════════════════════════════════════════════════════ -->
+    <section class="bg-brand-charcoal py-16 px-6">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="text-center mb-14">
+          <p class="section-label mb-4 reveal justify-center">The Difference</p>
+          <h2 class="font-display text-5xl sm:text-6xl text-brand-white leading-none tracking-display reveal">
+            FOCUSED COACHING BUILT<br class="hidden sm:block" /> AROUND <span class="text-brand-red">YOUR DEVELOPMENT</span>
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Card 1 -->
+          <div data-glow class="bg-brand-surface rounded-lg card-hover reveal reveal-delay-1" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5); border-top: 4px solid #E30513;">
+            <div data-glow></div>
+            <div class="p-7">
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-5" style="background: rgba(227,5,19,0.12); border: 1px solid rgba(227,5,19,0.25);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </div>
+              <h3 class="font-display text-2xl text-brand-white tracking-display mb-3">PERSONALISED SESSIONS</h3>
+              <p class="text-brand-muted text-sm leading-relaxed">Every session is tailored around the player's ability, position, goals and areas for improvement.</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div data-glow class="bg-brand-surface rounded-lg card-hover reveal reveal-delay-2" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5); border-top: 4px solid #E30513;">
+            <div data-glow></div>
+            <div class="p-7">
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-5" style="background: rgba(227,5,19,0.12); border: 1px solid rgba(227,5,19,0.25);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/></svg>
+              </div>
+              <h3 class="font-display text-2xl text-brand-white tracking-display mb-3">INDIVIDUAL ATTENTION</h3>
+              <p class="text-brand-muted text-sm leading-relaxed">Dedicated coaching time to improve technique, decision-making, confidence and football intelligence.</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div data-glow class="bg-brand-surface rounded-lg card-hover reveal reveal-delay-3" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5); border-top: 4px solid #E30513;">
+            <div data-glow></div>
+            <div class="p-7">
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-5" style="background: rgba(227,5,19,0.12); border: 1px solid rgba(227,5,19,0.25);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
+              </div>
+              <h3 class="font-display text-2xl text-brand-white tracking-display mb-3">ALL POSITIONS WELCOME</h3>
+              <p class="text-brand-muted text-sm leading-relaxed">Support for players across different positions, age groups and ability levels — no player is too young or too advanced.</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div data-glow class="bg-brand-surface rounded-lg card-hover reveal reveal-delay-4" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5); border-top: 4px solid #F5C518;">
+            <div data-glow></div>
+            <div class="p-7">
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-5" style="background: rgba(245,197,24,0.1); border: 1px solid rgba(245,197,24,0.25);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F5C518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <h3 class="font-display text-2xl text-brand-white tracking-display mb-3">REAL PROGRESS</h3>
+              <p class="text-brand-muted text-sm leading-relaxed">Clear feedback, focused development goals and practical guidance to help players improve over time.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         3. WHAT WE CAN WORK ON
+    ═══════════════════════════════════════════════════════ -->
+    <section class="bg-brand-black py-16 px-6">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="text-center mb-14">
+          <p class="section-label mb-4 reveal justify-center">Session Focus Areas</p>
+          <h2 class="font-display text-5xl sm:text-6xl text-brand-white leading-none tracking-display reveal">
+            WHAT CAN 1-TO-1 COACHING<br class="hidden sm:block" /> <span class="text-brand-red">HELP WITH?</span>
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+
+          <!-- 1 -->
+          <div data-glow class="flex items-start gap-4 bg-brand-surface rounded-lg p-5 card-hover reveal reveal-delay-1" style="box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+            <div data-glow></div>
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(227,5,19,0.12); border: 1px solid rgba(227,5,19,0.2);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div>
+              <h4 class="text-brand-white font-semibold text-sm mb-1">Ball Mastery &amp; Close Control</h4>
+              <p class="text-brand-muted text-xs leading-relaxed">Develop confidence on the ball in tight spaces and under pressure.</p>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div data-glow class="flex items-start gap-4 bg-brand-surface rounded-lg p-5 card-hover reveal reveal-delay-1" style="box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+            <div data-glow></div>
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(227,5,19,0.12); border: 1px solid rgba(227,5,19,0.2);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </div>
+            <div>
+              <h4 class="text-brand-white font-semibold text-sm mb-1">Passing, Receiving &amp; First Touch</h4>
+              <p class="text-brand-muted text-xs leading-relaxed">Clean ball reception, quick distribution and accuracy across distances.</p>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div data-glow class="flex items-start gap-4 bg-brand-surface rounded-lg p-5 card-hover reveal reveal-delay-2" style="box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+            <div data-glow></div>
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(227,5,19,0.12); border: 1px solid rgba(227,5,19,0.2);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div>
+              <h4 class="text-brand-white font-semibold text-sm mb-1">Dribbling &amp; 1v1 Attacking</h4>
+              <p class="text-brand-muted text-xs leading-relaxed">Beat opponents with speed of thought, body feints and technical skill.</p>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div data-glow class="flex items-start gap-4 bg-brand-surface rounded-lg p-5 card-hover reveal reveal-delay-2" style="box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+            <div data-glow></div>
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(227,5,19,0.12); border: 1px solid rgba(227,5,19,0.2);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div>
+              <h4 class="text-brand-white font-semibold text-sm mb-1">Shooting &amp; Finishing</h4>
+              <p class="text-brand-muted text-xs leading-relaxed">Composure in front of goal, technique and converting chances consistently.</p>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div data-glow class="flex items-start gap-4 bg-brand-surface rounded-lg p-5 card-hover reveal reveal-delay-3" style="box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+            <div data-glow></div>
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(227,5,19,0.12); border: 1px solid rgba(227,5,19,0.2);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h4 class="text-brand-white font-semibold text-sm mb-1">Defending &amp; Positioning</h4>
+              <p class="text-brand-muted text-xs leading-relaxed">Reading the game, winning the ball back and holding defensive shape.</p>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div data-glow class="flex items-start gap-4 bg-brand-surface rounded-lg p-5 card-hover reveal reveal-delay-3" style="box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+            <div data-glow></div>
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(227,5,19,0.12); border: 1px solid rgba(227,5,19,0.2);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div>
+              <h4 class="text-brand-white font-semibold text-sm mb-1">Speed, Agility &amp; Movement</h4>
+              <p class="text-brand-muted text-xs leading-relaxed">Explosive bursts, change of direction and sharp physical movement on the pitch.</p>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div data-glow class="flex items-start gap-4 bg-brand-surface rounded-lg p-5 card-hover reveal reveal-delay-4" style="box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+            <div data-glow></div>
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(227,5,19,0.12); border: 1px solid rgba(227,5,19,0.2);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <div>
+              <h4 class="text-brand-white font-semibold text-sm mb-1">Match Awareness &amp; Decision-Making</h4>
+              <p class="text-brand-muted text-xs leading-relaxed">Understand the game better, make faster decisions and read play before it develops.</p>
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div data-glow class="flex items-start gap-4 bg-brand-surface rounded-lg p-5 card-hover reveal reveal-delay-4" style="box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+            <div data-glow></div>
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(227,5,19,0.12); border: 1px solid rgba(227,5,19,0.2);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <div>
+              <h4 class="text-brand-white font-semibold text-sm mb-1">Confidence &amp; Mindset</h4>
+              <p class="text-brand-muted text-xs leading-relaxed">Build self-belief, resilience and the mental approach to perform under pressure.</p>
+            </div>
+          </div>
+
+          <!-- 9 -->
+          <div data-glow class="flex items-start gap-4 bg-brand-surface rounded-lg p-5 card-hover reveal reveal-delay-5" style="box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+            <div data-glow></div>
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(227,5,19,0.12); border: 1px solid rgba(227,5,19,0.2);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <div>
+              <h4 class="text-brand-white font-semibold text-sm mb-1">Position-Specific Development</h4>
+              <p class="text-brand-muted text-xs leading-relaxed">Deep work on the skills, movements and responsibilities for your specific role.</p>
+            </div>
+          </div>
+
+          <!-- 10 -->
+          <div data-glow class="flex items-start gap-4 bg-brand-surface rounded-lg p-5 card-hover reveal reveal-delay-5" style="box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+            <div data-glow></div>
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(245,197,24,0.1); border: 1px solid rgba(245,197,24,0.2);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5C518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+            <div>
+              <h4 class="text-brand-white font-semibold text-sm mb-1">Academy, Trial &amp; Team Preparation</h4>
+              <p class="text-brand-muted text-xs leading-relaxed">Prepare for upcoming trials, new teams or academy assessments with targeted sessions.</p>
+            </div>
+          </div>
+
+          <!-- 11 -->
+          <div data-glow class="flex items-start gap-4 bg-brand-surface rounded-lg p-5 card-hover reveal reveal-delay-6" style="box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+            <div data-glow></div>
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(245,197,24,0.1); border: 1px solid rgba(245,197,24,0.2);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5C518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <div>
+              <h4 class="text-brand-white font-semibold text-sm mb-1">Player Feedback &amp; Development Guidance</h4>
+              <p class="text-brand-muted text-xs leading-relaxed">Honest, constructive feedback and a clear picture of where the player is heading.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Supporting copy -->
+        <p class="text-center text-brand-muted text-sm leading-relaxed max-w-2xl mx-auto reveal">
+          Every session is adapted around the player's age, position, current level and individual development goals.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         4. MEET COACH NATHAN
+    ═══════════════════════════════════════════════════════ -->
+    <section class="bg-brand-charcoal py-16 px-6">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="text-center mb-16">
+          <p class="section-label mb-4 reveal justify-center">Your Coach</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
+
+          <!-- Portrait -->
+          <div class="reveal">
+            <div class="relative rounded-lg overflow-hidden">
+              <img
+                src="public/assets/inspiration/Instagram%20N10/Player%20Trials.jpg"
+                alt="Coach Nathan Emanuel — Head Coach and Founder, N10 Academy"
+                class="w-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-black/60 via-transparent to-transparent" aria-hidden="true"></div>
+              <div class="absolute inset-0" style="background: rgba(227,5,19,0.08); mix-blend-mode: multiply;" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Details -->
+          <div class="reveal">
+            <div class="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest" style="background: rgba(245,197,24,0.15); border: 1px solid rgba(245,197,24,0.3); color: #F5C518;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              Head Coach &amp; Founder
+            </div>
+
+            <h2 class="font-display text-5xl sm:text-6xl text-brand-white leading-none tracking-display mb-1">COACH NATHAN</h2>
+            <p class="font-display text-xl text-brand-white/50 tracking-display mb-1">EMANUEL</p>
+            <p class="text-brand-red font-semibold text-xs uppercase tracking-widest mb-4">Football Coach · Scout · Mentor</p>
+            <p class="text-brand-muted text-xs italic mb-6">Developing Players. Building Character. Inspiring Futures.</p>
+
+            <p class="text-brand-muted text-sm leading-relaxed mb-4">
+              Coach Nathan is an FA qualified football coach, scout and mentor with experience across grassroots, academy and semi-professional football. Playing background includes Arsenal and Crystal Palace academy levels, Kentish Town FC and Clapton FC in semi-professional football, and county and district level.
+            </p>
+            <p class="text-brand-muted text-sm leading-relaxed mb-6">
+              His coaching career spans KEFA Football Academy, Enfield District U13's Boys and Girls, and Middlesex County U13's Boys. Currently active as a scout at Stevenage FC, with prior scouting experience at AFC Wimbledon. A school teacher and mental health care manager by background, Nathan's approach focuses on player development, discipline, confidence and creating positive environments where young players can improve both on and off the pitch.
+            </p>
+
+            <!-- Credential tags -->
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-brand-elevated text-brand-muted text-xs px-3 py-1 rounded-full border border-white/10">FA Level 1 Coach</span>
+              <span class="bg-brand-elevated text-brand-muted text-xs px-3 py-1 rounded-full border border-white/10">FA Level 2 Scout / Talent ID</span>
+              <span class="bg-brand-elevated text-brand-muted text-xs px-3 py-1 rounded-full border border-white/10">FA Safeguarding Children</span>
+              <span class="bg-brand-elevated text-brand-muted text-xs px-3 py-1 rounded-full border border-white/10">FA Welfare Officer</span>
+              <span class="bg-brand-elevated text-brand-muted text-xs px-3 py-1 rounded-full border border-white/10">Diploma in Sports Psychology</span>
+              <span class="bg-brand-elevated text-brand-muted text-xs px-3 py-1 rounded-full border border-white/10">Diploma in Child Psychology</span>
+              <span class="bg-brand-elevated text-brand-muted text-xs px-3 py-1 rounded-full border border-white/10">ICES: Sports Agent Certified</span>
+              <span class="bg-brand-elevated text-brand-muted text-xs px-3 py-1 rounded-full border border-white/10">DBS Checked</span>
+            </div>
+
+            <!-- Key skills -->
+            <div class="mb-8">
+              <p class="text-brand-muted text-xs font-semibold uppercase tracking-widest mb-3">Key Skills</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs px-3 py-1.5 rounded font-medium" style="background: rgba(227,5,19,0.1); border: 1px solid rgba(227,5,19,0.2); color: #E30513;">Player Development</span>
+                <span class="text-xs px-3 py-1.5 rounded font-medium" style="background: rgba(227,5,19,0.1); border: 1px solid rgba(227,5,19,0.2); color: #E30513;">Scouting &amp; Talent ID</span>
+                <span class="text-xs px-3 py-1.5 rounded font-medium" style="background: rgba(227,5,19,0.1); border: 1px solid rgba(227,5,19,0.2); color: #E30513;">Leadership &amp; Motivation</span>
+                <span class="text-xs px-3 py-1.5 rounded font-medium" style="background: rgba(227,5,19,0.1); border: 1px solid rgba(227,5,19,0.2); color: #E30513;">Game Analysis &amp; Tactics</span>
+                <span class="text-xs px-3 py-1.5 rounded font-medium" style="background: rgba(227,5,19,0.1); border: 1px solid rgba(227,5,19,0.2); color: #E30513;">Safeguarding &amp; Welfare</span>
+                <span class="text-xs px-3 py-1.5 rounded font-medium" style="background: rgba(227,5,19,0.1); border: 1px solid rgba(227,5,19,0.2); color: #E30513;">Mentoring &amp; Discipline</span>
+              </div>
+            </div>
+
+            <!-- Quote -->
+            <blockquote class="border-l-4 border-brand-red pl-6 mb-8">
+              <p class="text-brand-white text-base leading-relaxed italic">"My job isn't just to teach football. It's to give every young player belief in themselves — on the pitch and in life."</p>
+              <footer class="text-brand-muted text-sm mt-2">— Coach Nathan Emanuel</footer>
+            </blockquote>
+
+            <a href="coaches.html" class="btn-outline">Meet Coach Nathan</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         5. HOW IT WORKS
+    ═══════════════════════════════════════════════════════ -->
+    <section class="bg-brand-black py-16 px-6">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="text-center mb-14">
+          <p class="section-label mb-4 reveal justify-center">Getting Started</p>
+          <h2 class="font-display text-5xl sm:text-6xl text-brand-white leading-none tracking-display reveal">
+            YOUR 1-TO-1 <span class="text-brand-red">COACHING JOURNEY</span>
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-8">
+
+          <!-- Step 1 -->
+          <div class="text-center reveal reveal-delay-1">
+            <div class="w-16 h-16 rounded-full bg-brand-red flex items-center justify-center mx-auto mb-6">
+              <span class="font-display text-brand-white text-2xl tracking-display">01</span>
+            </div>
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-brand-red/40 to-transparent mb-6 hidden sm:block" aria-hidden="true"></div>
+            <h3 class="font-display text-2xl text-brand-white tracking-display mb-3">CHOOSE A TIME</h3>
+            <p class="text-brand-muted text-sm leading-relaxed">Select an available date and session time that works for you using our booking calendar.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center reveal reveal-delay-2">
+            <div class="w-16 h-16 rounded-full bg-brand-surface flex items-center justify-center mx-auto mb-6" style="border: 2px solid #E30513;">
+              <span class="font-display text-brand-red text-2xl tracking-display">02</span>
+            </div>
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-brand-red/40 to-transparent mb-6 hidden sm:block" aria-hidden="true"></div>
+            <h3 class="font-display text-2xl text-brand-white tracking-display mb-3">TELL US ABOUT THE PLAYER</h3>
+            <p class="text-brand-muted text-sm leading-relaxed">Share the player's age, position, experience and development goals so Coach Nathan can prepare.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center reveal reveal-delay-3">
+            <div class="w-16 h-16 rounded-full bg-brand-gold flex items-center justify-center mx-auto mb-6">
+              <span class="font-display text-brand-black text-2xl tracking-display">03</span>
+            </div>
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-brand-gold/40 to-transparent mb-6 hidden sm:block" aria-hidden="true"></div>
+            <h3 class="font-display text-2xl text-brand-white tracking-display mb-3">TRAIN WITH PURPOSE</h3>
+            <p class="text-brand-muted text-sm leading-relaxed">Receive a focused coaching session built around clear areas for improvement — no filler, no wasted time.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         6. BOOK YOUR SESSION
+    ═══════════════════════════════════════════════════════ -->
+    <section id="booking" class="bg-brand-charcoal py-16 px-6">
+      <div class="max-w-5xl mx-auto">
+
+        <div class="text-center mb-12">
+          <p class="section-label mb-4 reveal justify-center">Book Now</p>
+          <h2 class="font-display text-5xl sm:text-6xl text-brand-white leading-none tracking-display mb-4 reveal">
+            BOOK YOUR <span class="text-brand-red">1-TO-1 SESSION</span>
+          </h2>
+          <p class="text-brand-muted text-base max-w-xl mx-auto reveal">
+            Choose an available session time and book directly with Coach Nathan.
+          </p>
+        </div>
+
+        <!-- Booking embed (shown when BOOKING_URL is set) -->
+        <div id="booking-embed" class="reveal" style="display: none;">
+          <div id="calendly-widget" style="min-width: 320px; height: 700px;" class="rounded-lg overflow-hidden"></div>
+        </div>
+
+        <!-- Placeholder (shown when BOOKING_URL is empty) -->
+        <div id="booking-placeholder" class="reveal">
+          <div class="bg-brand-surface rounded-lg p-10 text-center" style="border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
+            <!-- Calendar icon -->
+            <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" style="background: rgba(227,5,19,0.1); border: 2px solid rgba(227,5,19,0.2);">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/></svg>
+            </div>
+            <h3 class="font-display text-3xl text-brand-white tracking-display mb-3">BOOKING CALENDAR COMING SHORTLY</h3>
+            <p class="text-brand-muted text-sm leading-relaxed max-w-md mx-auto mb-8">
+              Our online booking system will be live soon. In the meantime, please contact Coach Nathan directly to arrange your session — he'll confirm availability and get you booked in.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <a href="tel:07539072029" class="btn-red text-center">
+                <span class="flex items-center justify-center gap-2">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 10.5a19.79 19.79 0 0 1-3-8.59 2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  Call 07539 072029
+                </span>
+              </a>
+              <a href="https://wa.me/447539072029" target="_blank" rel="noopener noreferrer" class="btn-outline text-center flex items-center justify-center gap-2">
+                <svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.833.741 5.491 2.037 7.8L0 32l8.418-2.007A15.938 15.938 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 01-6.77-1.853l-.485-.29-5.004 1.193 1.224-4.869-.317-.5A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.899c-.397-.199-2.35-1.16-2.714-1.292-.364-.133-.629-.199-.893.199-.265.397-1.026 1.292-1.258 1.557-.232.265-.464.298-.861.099-.397-.199-1.676-.618-3.192-1.97-1.18-1.053-1.976-2.353-2.208-2.75-.232-.397-.025-.612.174-.81.179-.178.397-.464.596-.696.199-.232.265-.397.397-.663.133-.265.066-.497-.033-.696-.1-.199-.894-2.154-1.225-2.95-.322-.773-.649-.668-.893-.68l-.762-.013c-.265 0-.696.1-.1.06-.364.364-1.393 1.36-1.393 3.315s1.426 3.845 1.624 4.11c.199.265 2.806 4.285 6.797 6.01.95.41 1.692.655 2.27.838.954.303 1.823.26 2.509.158.765-.114 2.35-.96 2.681-1.887.332-.928.332-1.723.232-1.887-.099-.165-.364-.265-.762-.464z"/></svg>
+                Speak to Nathan
+              </a>
+            </div>
+            <!-- What booking will capture note -->
+            <div class="bg-brand-elevated rounded-lg p-5 text-left max-w-lg mx-auto" style="border: 1px solid rgba(255,255,255,0.06);">
+              <p class="text-brand-muted text-xs font-semibold uppercase tracking-widest mb-3">When you get in touch, please share:</p>
+              <ul class="space-y-1.5 text-brand-muted text-xs leading-relaxed">
+                <li class="flex items-start gap-2"><span class="text-brand-red flex-shrink-0 mt-0.5">·</span>Parent / guardian name and contact details</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red flex-shrink-0 mt-0.5">·</span>Player name, age and current club or team</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red flex-shrink-0 mt-0.5">·</span>Player's position and experience level</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red flex-shrink-0 mt-0.5">·</span>Areas the player wants to work on</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red flex-shrink-0 mt-0.5">·</span>Any relevant injury or medical information</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red flex-shrink-0 mt-0.5">·</span>Preferred dates and times</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-brand-muted text-xs text-center mt-6 leading-relaxed reveal">
+          Bookings are subject to confirmation. Please contact Coach Nathan directly for group sessions, academy trials or specialist requests.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Booking embed init script -->
+    <script>
+      (function () {
+        if (BOOKING_URL) {
+          document.getElementById('booking-placeholder').style.display = 'none';
+          var embed = document.getElementById('booking-embed');
+          embed.style.display = 'block';
+          var widget = document.getElementById('calendly-widget');
+          widget.setAttribute('data-url', BOOKING_URL);
+          widget.classList.add('calendly-inline-widget');
+          var s = document.createElement('script');
+          s.src = 'https://assets.calendly.com/assets/external/widget.js';
+          s.async = true;
+          document.head.appendChild(s);
+        }
+      })();
+    </script>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         7. WHAT TO BRING
+    ═══════════════════════════════════════════════════════ -->
+    <section class="bg-brand-black py-16 px-6">
+      <div class="max-w-3xl mx-auto">
+
+        <div class="text-center mb-10">
+          <p class="section-label mb-4 reveal justify-center">Session Prep</p>
+          <h2 class="font-display text-4xl sm:text-5xl text-brand-white leading-none tracking-display reveal">
+            WHAT TO <span class="text-brand-red">BRING</span>
+          </h2>
+        </div>
+
+        <div class="bg-brand-surface rounded-lg p-8 reveal" style="border-left: 4px solid #F5C518; box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
+          <ul class="space-y-4">
+            <li class="flex items-center gap-4">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(34,197,94,0.12);">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <span class="text-brand-white font-semibold text-sm">Plenty of Fluids</span>
+                <p class="text-brand-muted text-xs mt-0.5">Bring a water bottle — stay hydrated throughout the session.</p>
+              </div>
+            </li>
+            <li class="flex items-center gap-4">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(34,197,94,0.12);">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <span class="text-brand-white font-semibold text-sm">Correct Football Attire</span>
+                <p class="text-brand-muted text-xs mt-0.5">Comfortable sportswear appropriate for the conditions.</p>
+              </div>
+            </li>
+            <li class="flex items-center gap-4">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(34,197,94,0.12);">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <span class="text-brand-white font-semibold text-sm">Football Boots or Suitable Trainers</span>
+                <p class="text-brand-muted text-xs mt-0.5">Appropriate footwear for the pitch surface.</p>
+              </div>
+            </li>
+            <li class="flex items-center gap-4">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(34,197,94,0.12);">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <span class="text-brand-white font-semibold text-sm">Shin Pads</span>
+                <p class="text-brand-muted text-xs mt-0.5">Where appropriate for the session format.</p>
+              </div>
+            </li>
+            <li class="flex items-center gap-4">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(245,197,24,0.12);">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F5C518" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <span class="text-brand-white font-semibold text-sm">Right Attitude &amp; Willingness to Learn</span>
+                <p class="text-brand-muted text-xs mt-0.5">Come ready to work hard, be coachable and enjoy the session.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         8. FAQ
+    ═══════════════════════════════════════════════════════ -->
+    <section class="bg-brand-charcoal py-16 px-6">
+      <div class="max-w-3xl mx-auto">
+
+        <div class="text-center mb-12">
+          <p class="section-label mb-4 reveal justify-center">Common Questions</p>
+          <h2 class="font-display text-5xl sm:text-6xl text-brand-white leading-none tracking-display reveal">
+            FREQUENTLY ASKED <span class="text-brand-red">QUESTIONS</span>
+          </h2>
+        </div>
+
+        <div class="space-y-2 reveal">
+
+          <div class="faq-item bg-brand-surface rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-expanded="false">
+              <span class="text-brand-white font-semibold text-sm">How long is a one-to-one coaching session?</span>
+              <span class="faq-icon flex-shrink-0">+</span>
+            </button>
+            <div class="faq-panel">
+              <div class="px-6 pb-5">
+                <p class="text-brand-muted text-sm leading-relaxed">Sessions are generally booked hourly, with the exact format confirmed when booking. The focus within that time is entirely on the individual player.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-brand-surface rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-expanded="false">
+              <span class="text-brand-white font-semibold text-sm">Who are sessions suitable for?</span>
+              <span class="faq-icon flex-shrink-0">+</span>
+            </button>
+            <div class="faq-panel">
+              <div class="px-6 pb-5">
+                <p class="text-brand-muted text-sm leading-relaxed">Sessions are suitable for players of different ages and ability levels, with training adapted to individual needs. Whether the player is just starting out or preparing for a trial, sessions are structured around where they are right now.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-brand-surface rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-expanded="false">
+              <span class="text-brand-white font-semibold text-sm">Can siblings or friends train together?</span>
+              <span class="faq-icon flex-shrink-0">+</span>
+            </button>
+            <div class="faq-panel">
+              <div class="px-6 pb-5">
+                <p class="text-brand-muted text-sm leading-relaxed">Yes. Please contact Coach Nathan directly to discuss shared or small-group sessions — these can be arranged based on availability and the players' age and ability.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-brand-surface rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-expanded="false">
+              <span class="text-brand-white font-semibold text-sm">Where do sessions take place?</span>
+              <span class="faq-icon flex-shrink-0">+</span>
+            </button>
+            <div class="faq-panel">
+              <div class="px-6 pb-5">
+                <p class="text-brand-muted text-sm leading-relaxed">Location details will be confirmed when booking. Sessions typically take place in Edmonton, North London. Please contact Coach Nathan directly if you have any location-specific requirements.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-brand-surface rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-expanded="false">
+              <span class="text-brand-white font-semibold text-sm">What happens if I need to cancel or reschedule?</span>
+              <span class="faq-icon flex-shrink-0">+</span>
+            </button>
+            <div class="faq-panel">
+              <div class="px-6 pb-5">
+                <p class="text-brand-muted text-sm leading-relaxed">Please contact Coach Nathan as early as possible if you need to cancel or reschedule. Cancellation and rescheduling terms may apply depending on notice given.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         9. FINAL CTA
+    ═══════════════════════════════════════════════════════ -->
+    <section class="py-16 px-6" style="background: #E30513;">
+      <div class="max-w-3xl mx-auto text-center">
+
+        <h2 class="font-display text-5xl sm:text-6xl text-white leading-none tracking-display mb-4 reveal">
+          READY TO ELEVATE<br />YOUR GAME?
+        </h2>
+        <p class="text-white/80 text-base leading-relaxed max-w-xl mx-auto mb-10 reveal">
+          Book a personalised session with Coach Nathan and start building confidence, ability and football understanding.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10 reveal reveal-delay-1">
+          <a href="#booking" class="btn-outline text-white border-white/70 hover:bg-white/10 hover:border-white text-center">Book Your Session</a>
+          <a href="mailto:coachnathanemanuel@outlook.com" class="btn-dark text-center">Contact Coach Nathan</a>
+        </div>
+
+        <!-- Contact details -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 reveal reveal-delay-2">
+          <a href="tel:07539072029" class="flex items-center gap-2 text-white/80 text-sm hover:text-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 10.5a19.79 19.79 0 0 1-3-8.59 2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            07539 072029
+          </a>
+          <span class="hidden sm:block text-white/30" aria-hidden="true">·</span>
+          <a href="mailto:coachnathanemanuel@outlook.com" class="flex items-center gap-2 text-white/80 text-sm hover:text-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            coachnathanemanuel@outlook.com
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-black border-t border-white/5 pt-16 pb-8 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div class="lg:col-span-1">
+          <img src="public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy" class="h-14 w-auto mb-4" />
+          <p class="text-brand-muted text-sm leading-relaxed mb-4">Developing champions on and off the pitch. Elite mentality. Positive environment. Real results.</p>
+          <p class="font-display text-sm text-brand-red tracking-display">ELITE MENTALITY</p>
+        </div>
+        <div>
+          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">PAGES</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Home</a></li>
+            <li><a href="about.html"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">About Us</a></li>
+            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Programmes</a></li>
+            <li><a href="coaches.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Coaches</a></li>
+            <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Contact / Book Trial</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">PROGRAMMES &amp; TRIALS</h4>
+          <ul class="space-y-3">
+            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Weekly Training</a></li>
+            <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Book a Trial</a></li>
+            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Holiday Camps</a></li>
+            <li><a href="coaching.html"   class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">1-to-1 Coaching</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">CONNECT</h4>
+          <ul class="space-y-3">
+            <li><a href="tel:07539072029"              class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">07539 072029</a></li>
+            <li><a href="mailto:coachnathanemanuel@outlook.com" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">coachnathanemanuel@outlook.com</a></li>
+            <li><a href="https://instagram.com/n10_academy_official" target="_blank" rel="noopener" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">@n10_academy_official</a></li>
+            <li><p class="text-brand-muted text-sm">Jubilee Park, Edmonton, N9 7RA</p></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <p class="text-brand-muted text-xs">© 2026 N10 Academy. All rights reserved.</p>
+          <a href="privacy.html" class="text-brand-muted text-xs hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Privacy Policy</a>
+        </div>
+        <p class="text-brand-muted text-xs">Uniting Talent. Building Character. Inspiring Futures.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="public/js/main.js"></script>
+</body>
+</html>
