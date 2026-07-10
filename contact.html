@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="public/apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book a Trial — N10 Academy</title>
   <meta name="description" content="Book a free trial at N10 Academy, Jubilee Park, Edmonton. Contact Coach Nathan on 07539 072029 or fill in our enquiry form." />
@@ -96,13 +99,13 @@
           </div>
         </a>
 
-        <a href="mailto:info@n10academy.co.uk" class="bg-brand-surface rounded-lg p-6 card-hover flex flex-col items-center text-center gap-3 reveal reveal-delay-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" style="box-shadow: 0 4px 24px rgba(0,0,0,0.4);">
+        <a href="mailto:Talk2_N10@outlook.com" class="bg-brand-surface rounded-lg p-6 card-hover flex flex-col items-center text-center gap-3 reveal reveal-delay-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" style="box-shadow: 0 4px 24px rgba(0,0,0,0.4);">
           <div class="w-12 h-12 rounded-full bg-brand-red/10 flex items-center justify-center">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
           <div>
             <p class="text-brand-white font-semibold text-sm">Email</p>
-            <p class="text-brand-muted text-sm">info@n10academy.co.uk</p>
+            <p class="text-brand-muted text-sm">Talk2_N10@outlook.com</p>
           </div>
         </a>
 
@@ -144,7 +147,13 @@
             <p class="text-green-400 font-semibold text-sm">✓ Enquiry sent! We'll be in touch within 24 hours.</p>
           </div>
 
-          <form id="contact-form" class="bg-brand-surface rounded-lg p-8" style="box-shadow: 0 8px 48px rgba(0,0,0,0.5);">
+          <div id="form-error" class="hidden mb-6 bg-red-900/30 border border-red-500/40 rounded-lg p-4">
+            <p class="text-red-400 font-semibold text-sm">✗ Something went wrong. Please try again, or call us directly.</p>
+          </div>
+
+          <form id="contact-form" action="https://formspree.io/f/xlgyqpnz" method="POST" class="bg-brand-surface rounded-lg p-8" style="box-shadow: 0 8px 48px rgba(0,0,0,0.5);">
+            <input type="hidden" name="_subject" value="New enquiry from N10 Academy website" />
+            <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <div class="grid sm:grid-cols-2 gap-4 mb-4">
               <div>
                 <label for="parent-name" class="block text-brand-white text-xs font-semibold uppercase tracking-widest mb-2">Parent / Guardian Name *</label>
@@ -469,7 +478,7 @@
           <h4 class="font-display text-lg text-brand-white tracking-display mb-5">CONNECT</h4>
           <ul class="space-y-3">
             <li><a href="tel:07539072029"              class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">07539 072029</a></li>
-            <li><a href="mailto:info@n10academy.co.uk" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">info@n10academy.co.uk</a></li>
+            <li><a href="mailto:Talk2_N10@outlook.com" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Talk2_N10@outlook.com</a></li>
             <li><a href="https://instagram.com/n10_academy_official" target="_blank" rel="noopener" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">@n10_academy_official</a></li>
             <li><p class="text-brand-muted text-sm">Jubilee Park, Edmonton, N9 7RA</p></li>
           </ul>

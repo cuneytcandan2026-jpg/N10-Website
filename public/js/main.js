@@ -141,19 +141,42 @@ document.addEventListener('pointermove', function (e) {
 (function () {
   const form = document.getElementById('contact-form');
   if (!form) return;
+  const btn = form.querySelector('[type="submit"]');
+  const successMsg = document.getElementById('form-success');
+  const errorMsg = document.getElementById('form-error');
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const btn = form.querySelector('[type="submit"]');
-    const successMsg = document.getElementById('form-success');
+    if (errorMsg) errorMsg.classList.add('hidden');
+    const originalBtnText = btn ? btn.textContent : '';
     if (btn) {
-      btn.textContent = 'Enquiry Sent!';
+      btn.textContent = 'Sending...';
       btn.disabled = true;
-      btn.style.background = '#1a7a3c';
-      btn.style.borderColor = '#1a7a3c';
     }
-    if (successMsg) successMsg.classList.remove('hidden');
-    form.querySelectorAll('input, select, textarea').forEach(function (el) {
-      el.disabled = true;
-    });
+
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: { Accept: 'application/json' },
+    })
+      .then(function (response) {
+        if (!response.ok) throw new Error('Submission failed');
+        if (btn) {
+          btn.textContent = 'Enquiry Sent!';
+          btn.style.background = '#1a7a3c';
+          btn.style.borderColor = '#1a7a3c';
+        }
+        if (successMsg) successMsg.classList.remove('hidden');
+        form.querySelectorAll('input, select, textarea').forEach(function (el) {
+          el.disabled = true;
+        });
+      })
+      .catch(function () {
+        if (btn) {
+          btn.textContent = originalBtnText;
+          btn.disabled = false;
+        }
+        if (errorMsg) errorMsg.classList.remove('hidden');
+      });
   });
 })();
