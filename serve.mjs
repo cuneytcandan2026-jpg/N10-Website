@@ -35,8 +35,15 @@ http.createServer((req, res) => {
 
   fs.stat(filePath, (err, stat) => {
     if (err) {
-      res.writeHead(err.code === 'ENOENT' ? 404 : 500);
-      res.end(err.code === 'ENOENT' ? '404 Not Found' : '500 Server Error');
+      if (err.code === 'ENOENT') {
+        fs.readFile(path.join(__dirname, '404.html'), (err404, body) => {
+          res.writeHead(404, { 'Content-Type': 'text/html' });
+          res.end(err404 ? '404 Not Found' : body);
+        });
+        return;
+      }
+      res.writeHead(500);
+      res.end('500 Server Error');
       return;
     }
 

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="public/apple-touch-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — N10 Academy</title>
+  <meta name="description" content="The page you're looking for can't be found. Return to N10 Academy's homepage, programmes or contact page." />
+  <meta name="robots" content="noindex, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="public/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="public/css/styles.css" />
+</head>
+<body class="font-body">
+
+  <!-- NAV -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center">
+
+      <!-- Logo + Wordmark -->
+      <div class="flex-1 flex items-center">
+        <a href="index.html" class="flex items-center gap-3 group rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-label="N10 Academy home">
+          <img width="327" height="301" src="public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy crest" class="h-12 w-auto transition-transform duration-300 ease-out group-hover:scale-105" />
+          <div class="flex flex-col justify-center">
+            <span class="font-display text-xl text-brand-white leading-none" style="letter-spacing: 0.1em;">N10 ACADEMY</span>
+            <span class="text-brand-muted font-semibold uppercase mt-1 hidden sm:block" style="font-size: 9px; letter-spacing: 0.14em;">Elite Youth Football Academy</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Centre: Desktop nav links -->
+      <div class="hidden md:flex items-center gap-1" id="nav-links">
+        <a href="index.html"      data-nav="index"      class="nav-link">Home</a>
+        <a href="programmes.html" data-nav="programmes" class="nav-link">Programmes</a>
+        <a href="coaches.html"    data-nav="coaches"    class="nav-link">Coaches</a>
+        <a href="coaching.html"   data-nav="coaching"   class="nav-link">1-to-1</a>
+        <a href="about.html"      data-nav="about"      class="nav-link">About Us</a>
+      </div>
+
+      <!-- Right: CTA + Hamburger -->
+      <div class="flex-1 flex items-center justify-end gap-3">
+        <a href="contact.html" class="hidden md:inline-block btn-red py-2.5 px-6 text-sm">Book a Free Trial</a>
+        <a href="contact.html" class="mobile-nav-cta btn-red py-2 px-3.5 text-xs font-semibold">Book Trial</a>
+        <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden flex flex-col justify-center gap-1.5 w-11 h-11 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold rounded">
+          <span class="block h-0.5 bg-brand-white transition-transform duration-300 origin-center" id="bar1"></span>
+          <span class="block h-0.5 bg-brand-white transition-opacity duration-300" id="bar2"></span>
+          <span class="block h-0.5 bg-brand-white transition-transform duration-300 origin-center" id="bar3"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden flex-col bg-brand-charcoal border-t border-white/10 px-6 py-4 gap-0">
+      <a href="index.html"      data-nav="index"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Home</a>
+      <a href="programmes.html" data-nav="programmes" class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Programmes</a>
+      <a href="coaches.html"    data-nav="coaches"    class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Coaches</a>
+      <a href="coaching.html"   data-nav="coaching"   class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">1-to-1</a>
+      <a href="about.html"      data-nav="about"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">About Us</a>
+      <a href="contact.html" class="btn-red mt-4 text-center w-full block" onclick="closeMobileMenu()">Book a Free Trial</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="min-h-screen flex items-center justify-center px-6 pt-24 pb-16 text-center" style="background: #0A0A0B;" aria-label="Page not found">
+      <div class="max-w-xl mx-auto">
+        <p class="section-label mb-4 justify-center">Error 404</p>
+        <h1 class="font-display text-6xl sm:text-7xl text-brand-white leading-none tracking-display mb-6">
+          PAGE NOT <span class="text-brand-red">FOUND</span>
+        </h1>
+        <p class="text-brand-muted text-base leading-relaxed mb-10">
+          The page you're looking for doesn't exist or may have moved. Here are a few places to pick back up.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="index.html" class="btn-red text-center">Back to Homepage</a>
+          <a href="programmes.html" class="btn-outline text-center">View Programmes</a>
+          <a href="contact.html" class="btn-outline text-center">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-black border-t border-white/5 pt-16 pb-8 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div class="lg:col-span-1">
+          <img width="327" height="301" src="public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy" class="h-14 w-auto mb-4" />
+          <p class="text-brand-muted text-sm leading-relaxed mb-4">Developing champions on and off the pitch in Edmonton, serving families across Enfield and North London. Elite mentality. Positive environment. Real results.</p>
+          <p class="font-display text-sm text-brand-red tracking-display">ELITE MENTALITY</p>
+        </div>
+        <div>
+          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">PAGES</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Home</a></li>
+            <li><a href="about.html"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">About Us</a></li>
+            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Programmes</a></li>
+            <li><a href="coaches.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Coaches</a></li>
+            <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Contact / Book Trial</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">PROGRAMMES & TRIALS</h4>
+          <ul class="space-y-3">
+            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Weekly Training</a></li>
+            <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Book a Trial</a></li>
+            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Holiday Camps</a></li>
+            <li><a href="coaching.html"   class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">1-to-1 Coaching</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display text-lg text-brand-white tracking-display mb-5">CONNECT</h4>
+          <ul class="space-y-3">
+            <li><a href="tel:07539072029"              class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">07539 072029</a></li>
+            <li><a href="mailto:Talk2_N10@outlook.com" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Talk2_N10@outlook.com</a></li>
+            <li><a href="https://instagram.com/n10_academy_official" target="_blank" rel="noopener" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">@n10_academy_official</a></li>
+            <li><p class="text-brand-muted text-sm">Jubilee Park, Edmonton, N9 7RA</p></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <p class="text-brand-muted text-xs">© 2026 N10 Academy. All rights reserved.</p>
+          <a href="privacy.html" class="text-brand-muted text-xs hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Privacy Policy</a>
+        </div>
+        <p class="text-brand-muted text-xs">Uniting Talent. Building Character. Inspiring Futures.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="public/js/main.js"></script>
+</body>
+</html>

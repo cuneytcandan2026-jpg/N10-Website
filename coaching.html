@@ -6,11 +6,20 @@
   <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="public/apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1-to-1 Football Coaching | N10 Academy</title>
+  <title>1-to-1 Football Coaching — N10 Academy</title>
   <meta name="description" content="Personalised one-to-one football coaching with FA qualified Coach Nathan Emanuel. Develop technique, confidence, football intelligence and match performance." />
-  <meta property="og:title" content="1-to-1 Football Coaching | N10 Academy" />
+  <link rel="canonical" href="https://n10academy.co.uk/coaching.html" />
+  <meta property="og:title" content="1-to-1 Football Coaching — N10 Academy" />
   <meta property="og:description" content="Personalised one-to-one football coaching with FA qualified Coach Nathan Emanuel. Develop technique, confidence, football intelligence and match performance." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://n10academy.co.uk/coaching.html" />
+  <meta property="og:image" content="https://n10academy.co.uk/public/images/og-image.jpg" />
+  <meta property="og:image:width" content="327" />
+  <meta property="og:image:height" content="301" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1-to-1 Football Coaching — N10 Academy" />
+  <meta name="twitter:description" content="Personalised one-to-one football coaching with FA qualified Coach Nathan Emanuel. Develop technique, confidence, football intelligence and match performance." />
+  <meta name="twitter:image" content="https://n10academy.co.uk/public/images/og-image.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,6 +27,70 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="public/js/tailwind.config.js"></script>
   <link rel="stylesheet" href="public/css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://n10academy.co.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "1-to-1 Coaching", "item": "https://n10academy.co.uk/coaching.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long is a one-to-one coaching session?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sessions are generally booked hourly, with the exact format confirmed when booking. The focus within that time is entirely on the individual player." }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are sessions suitable for?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sessions are suitable for players of different ages and ability levels, with training adapted to individual needs. Whether the player is just starting out or preparing for a trial, sessions are structured around where they are right now." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can siblings or friends train together?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Please contact Coach Nathan directly to discuss shared or small-group sessions, which can be arranged based on availability and the players' age and ability." }
+      },
+      {
+        "@type": "Question",
+        "name": "Where do sessions take place?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Location details will be confirmed when booking. Sessions typically take place in Edmonton, North London. Please contact Coach Nathan directly if you have any location-specific requirements." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I need to cancel or reschedule?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Please contact Coach Nathan as early as possible if you need to cancel or reschedule. Cancellation and rescheduling terms may apply depending on notice given." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nathan Emanuel",
+    "jobTitle": "Head Coach & Founder",
+    "worksFor": { "@type": "Organization", "name": "N10 Academy", "url": "https://n10academy.co.uk/" },
+    "description": "FA-qualified 1-to-1 football coach with academy-level playing experience at Arsenal and Crystal Palace, coaching experience including KEFA Football Academy, Enfield District U13's and Middlesex County U13's, and current scouting work for Stevenage FC. Holds FA safeguarding and welfare qualifications alongside diplomas in sports and child psychology.",
+    "url": "https://n10academy.co.uk/coaching.html",
+    "hasCredential": [
+      { "@type": "EducationalOccupationalCredential", "credentialCategory": "FA Level 1 Coach" },
+      { "@type": "EducationalOccupationalCredential", "credentialCategory": "FA Level 2 Scout / Talent ID" },
+      { "@type": "EducationalOccupationalCredential", "credentialCategory": "FA Safeguarding" },
+      { "@type": "EducationalOccupationalCredential", "credentialCategory": "DBS Checked" },
+      { "@type": "EducationalOccupationalCredential", "credentialCategory": "Diploma in Sports Psychology" },
+      { "@type": "EducationalOccupationalCredential", "credentialCategory": "Diploma in Child Psychology" },
+      { "@type": "EducationalOccupationalCredential", "credentialCategory": "ICES Sports Agent Certified" }
+    ]
+  }
+  </script>
 
   <style>
     html { scroll-behavior: smooth; }
@@ -99,8 +172,7 @@
               <img width="1200" height="900"
                 src="public/images/backgrounds/Coach and team.webp"
                 alt="N10 Academy coach with team — 1-to-1 football coaching"
-                class="w-full h-full object-cover object-top"
-              />
+                class="w-full h-full object-cover object-top" loading="lazy" />
               <!-- Dark gradient overlay -->
               <div class="absolute inset-0 bg-gradient-to-t from-brand-black/70 via-brand-black/20 to-transparent" aria-hidden="true"></div>
               <!-- Red colour tint -->
@@ -128,7 +200,7 @@
             <p class="text-brand-white/60 text-xs uppercase tracking-widest font-semibold mb-5 reveal">Elevate Your Game. Unlock Your Potential.</p>
 
             <p class="text-brand-muted text-base sm:text-lg leading-relaxed mb-8 reveal">
-              Focused individual coaching sessions designed to improve technique, confidence, game understanding and performance — built around your player, nobody else.
+              Focused individual coaching sessions designed to improve technique, confidence, game understanding and performance, built around your player, nobody else.
             </p>
 
             <!-- Trust indicators -->
@@ -213,7 +285,7 @@
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
               </div>
               <h3 class="font-display text-2xl text-brand-white tracking-display mb-3">ALL POSITIONS WELCOME</h3>
-              <p class="text-brand-muted text-sm leading-relaxed">Support for players across different positions, age groups and ability levels — no player is too young or too advanced.</p>
+              <p class="text-brand-muted text-sm leading-relaxed">Support for players across different positions, age groups and ability levels: no player is too young or too advanced.</p>
             </div>
           </div>
 
@@ -411,6 +483,7 @@
                 src="public/images/coaches/Coach%205.webp"
                 alt="Coach Nathan Emanuel — Head Coach and Founder, N10 Academy"
                 class="w-full object-cover"
+                loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-black/60 via-transparent to-transparent" aria-hidden="true"></div>
               <div class="absolute inset-0" style="background: rgba(227,5,19,0.08); mix-blend-mode: multiply;" aria-hidden="true"></div>
@@ -430,13 +503,13 @@
             <p class="text-brand-muted text-xs italic mb-6">Developing Players. Building Character. Inspiring Futures.</p>
 
             <p class="text-brand-muted text-sm leading-relaxed mb-4">
-              Coach Nathan's football journey runs through academy and semi-professional level, giving him a rounded, first-hand understanding of what it takes to develop as a player. He came through the academy set-ups at Arsenal and Crystal Palace before playing semi-professionally for Kentish Town and Clapton FC — experience that shapes how he coaches technique, game understanding and mentality in every 1-to-1 session.
+              Coach Nathan's football journey runs through academy and semi-professional level, giving him a rounded, first-hand understanding of what it takes to develop as a player. He came through the academy set-ups at Arsenal and Crystal Palace before playing semi-professionally for Kentish Town and Clapton FC, experience that shapes how he coaches technique, game understanding and mentality in every 1-to-1 session.
             </p>
             <p class="text-brand-muted text-sm leading-relaxed mb-4">
-              His coaching career includes KEFA Football Academy, Enfield District U13's Boys, Enfield District U13's Girls and Middlesex County U13's Boys, working closely with both boys and girls at representative level. Nathan is also a current scout for Stevenage FC, with previous scouting experience at AFC Wimbledon, and holds the FA Level 2 Scout/Talent ID qualification — meaning every session is shaped by a genuine eye for what selectors and coaches are looking for.
+              His coaching career includes KEFA Football Academy, Enfield District U13's Boys, Enfield District U13's Girls and Middlesex County U13's Boys, working closely with both boys and girls at representative level. Nathan is also a current scout for Stevenage FC, with previous scouting experience at AFC Wimbledon, and holds the FA Level 2 Scout/Talent ID qualification, meaning every session is shaped by a genuine eye for what selectors and coaches are looking for.
             </p>
             <p class="text-brand-muted text-sm leading-relaxed mb-6">
-              He holds FA qualifications in safeguarding children, safeguarding adults, welfare and disability football, alongside diplomas in child psychology, counselling children and adolescents, and behaviour mentoring. Combined with his professional background as a school teacher and a mental health care manager, this means every child — whatever their needs or starting point — is coached in a safe, considered and supportive environment.
+              He holds FA qualifications in safeguarding children, safeguarding adults, welfare and disability football, alongside diplomas in child psychology, counselling children and adolescents, and behaviour mentoring. Combined with his professional background as a school teacher and a mental health care manager, this means every child, whatever their needs or starting point, is coached in a safe, considered and supportive environment.
             </p>
 
             <!-- Credential tags -->
@@ -521,7 +594,7 @@
             </div>
             <div class="h-px w-full bg-gradient-to-r from-transparent via-brand-gold/40 to-transparent mb-6 hidden sm:block" aria-hidden="true"></div>
             <h3 class="font-display text-2xl text-brand-white tracking-display mb-3">TRAIN WITH PURPOSE</h3>
-            <p class="text-brand-muted text-sm leading-relaxed">Receive a focused coaching session built around clear areas for improvement — no filler, no wasted time.</p>
+            <p class="text-brand-muted text-sm leading-relaxed">Receive a focused coaching session built around clear areas for improvement: no filler, no wasted time.</p>
           </div>
 
         </div>
@@ -560,7 +633,7 @@
             </div>
             <h3 class="font-display text-3xl text-brand-white tracking-display mb-3">BOOKING CALENDAR COMING SHORTLY</h3>
             <p class="text-brand-muted text-sm leading-relaxed max-w-md mx-auto mb-8">
-              Our online booking system will be live soon. In the meantime, please contact Coach Nathan directly to arrange your session — he'll confirm availability and get you booked in.
+              Our online booking system will be live soon. In the meantime, please contact Coach Nathan directly to arrange your session, and he'll confirm availability and get you booked in.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a href="tel:07539072029" class="btn-red text-center">
@@ -636,7 +709,7 @@
               </div>
               <div>
                 <span class="text-brand-white font-semibold text-sm">Plenty of Fluids</span>
-                <p class="text-brand-muted text-xs mt-0.5">Bring a water bottle — stay hydrated throughout the session.</p>
+                <p class="text-brand-muted text-xs mt-0.5">Bring a water bottle and stay hydrated throughout the session.</p>
               </div>
             </li>
             <li class="flex items-center gap-4">
@@ -728,7 +801,7 @@
             </button>
             <div class="faq-panel">
               <div class="px-6 pb-5">
-                <p class="text-brand-muted text-sm leading-relaxed">Yes. Please contact Coach Nathan directly to discuss shared or small-group sessions — these can be arranged based on availability and the players' age and ability.</p>
+                <p class="text-brand-muted text-sm leading-relaxed">Yes. Please contact Coach Nathan directly to discuss shared or small-group sessions, which can be arranged based on availability and the players' age and ability.</p>
               </div>
             </div>
           </div>
@@ -805,7 +878,7 @@
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         <div class="lg:col-span-1">
           <img width="327" height="301" src="public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy" class="h-14 w-auto mb-4" />
-          <p class="text-brand-muted text-sm leading-relaxed mb-4">Developing champions on and off the pitch. Elite mentality. Positive environment. Real results.</p>
+          <p class="text-brand-muted text-sm leading-relaxed mb-4">Developing champions on and off the pitch in Edmonton, serving families across Enfield and North London. Elite mentality. Positive environment. Real results.</p>
           <p class="font-display text-sm text-brand-red tracking-display">ELITE MENTALITY</p>
         </div>
         <div>
@@ -841,10 +914,10 @@
         <p class="font-display text-sm text-brand-muted tracking-display text-center mb-6">SPONSORS</p>
         <div class="flex flex-wrap items-center justify-center gap-6">
           <a href="https://ao.com/" target="_blank" rel="noopener noreferrer" class="bg-brand-white rounded-xl px-5 py-3 shadow-md shadow-black/20 transition-transform duration-200 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-label="AO.com — visit sponsor website">
-            <img src="public/images/sponsors/ao-com.webp" alt="AO.com" width="400" height="339" class="h-10 w-auto" />
+            <img src="public/images/sponsors/ao-com.webp" alt="AO.com" width="400" height="339" class="h-10 w-auto" loading="lazy" />
           </a>
           <a href="https://www.woodlaneinvestments.com/" target="_blank" rel="noopener noreferrer" class="bg-brand-white rounded-xl px-5 py-3 shadow-md shadow-black/20 transition-transform duration-200 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-label="Wood Lane Investments — visit sponsor website">
-            <img src="public/images/sponsors/wood-lane.webp" alt="Wood Lane Investments" width="400" height="172" class="h-10 w-auto" />
+            <img src="public/images/sponsors/wood-lane.webp" alt="Wood Lane Investments" width="400" height="172" class="h-10 w-auto" loading="lazy" />
           </a>
         </div>
       </div>
