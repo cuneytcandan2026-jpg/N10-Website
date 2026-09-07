@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DW24YN524V"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DW24YN524V');
-  </script>
+  <!-- Google Analytics 4 — loaded only after cookie consent (see public/js/consent.js) -->
+  <script src="public/js/consent.js" defer></script>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png" />
@@ -146,7 +140,7 @@
       <div class="max-w-3xl mx-auto">
 
         <div class="bg-brand-surface rounded-lg p-8 mb-6 reveal" style="border-left: 4px solid #F5C518; box-shadow: 0 4px 24px rgba(0,0,0,0.4);">
-          <p class="text-brand-muted text-sm leading-relaxed"><strong class="text-brand-white">Last updated:</strong> June 2026. This policy applies to personal data collected via the N10 Academy website (n10academy.co.uk) and our enquiry process.</p>
+          <p class="text-brand-muted text-sm leading-relaxed"><strong class="text-brand-white">Last updated:</strong> September 2026. This policy applies to personal data collected via the N10 Academy website (n10academy.co.uk) and our enquiry process.</p>
         </div>
 
         <div class="space-y-10 reveal">
@@ -222,8 +216,16 @@
 
           <!-- 7. Cookies -->
           <div>
-            <h2 class="font-display text-3xl text-brand-white tracking-display mb-4">7. COOKIES</h2>
-            <p class="text-brand-muted text-sm leading-relaxed">Our website does not use tracking or advertising cookies. We use only essential technical cookies (such as those required by the CDN or font providers) that are necessary for the site to function. No personal data is collected via cookies.</p>
+            <h2 class="font-display text-3xl text-brand-white tracking-display mb-4">7. COOKIES &amp; ANALYTICS</h2>
+            <p class="text-brand-muted text-sm leading-relaxed mb-3"><strong class="text-brand-white">Essential cookies.</strong> We use a small amount of essential local storage that is required for the site to work &mdash; for example to remember your cookie choice. This does not identify you and is always active.</p>
+            <p class="text-brand-muted text-sm leading-relaxed mb-3"><strong class="text-brand-white">Analytics cookies.</strong> Only if you select &ldquo;Accept&rdquo; on the cookie banner, we use Google Analytics 4 (provided by Google Ireland Limited) to understand how visitors find and use the site so we can improve it. It sets the following first-party cookies:</p>
+            <ul class="space-y-2 mb-3">
+              <li class="flex items-start gap-3 text-brand-muted text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0 mt-1.5" aria-hidden="true"></span><strong class="text-brand-white">_ga</strong> &mdash; distinguishes one visitor from another. Expires after 2 years.</li>
+              <li class="flex items-start gap-3 text-brand-muted text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-red flex-shrink-0 mt-1.5" aria-hidden="true"></span><strong class="text-brand-white">_ga_DW24YN524V</strong> &mdash; keeps the analytics session state. Expires after 2 years.</li>
+            </ul>
+            <p class="text-brand-muted text-sm leading-relaxed mb-3">The data collected (device type, approximate location derived from your IP address, pages viewed and how you reached the site) is processed by Google on our behalf. Google Analytics 4 does not log or store IP addresses, and the data is not used to identify you personally or shared for advertising. Analytics data is retained for no longer than 14 months.</p>
+            <p class="text-brand-muted text-sm leading-relaxed mb-3">Our legal basis for analytics cookies is your <strong class="text-brand-white">consent</strong>. No analytics cookies are set unless you give it.</p>
+            <p class="text-brand-muted text-sm leading-relaxed">You can change or withdraw your choice at any time using the <strong class="text-brand-white">&ldquo;Cookie settings&rdquo;</strong> link at the bottom-left of every page, or by clearing cookies in your browser. You can also install <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener" class="text-brand-red hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Google&rsquo;s opt-out browser add-on</a>.</p>
           </div>
 
           <!-- 8. Security -->
