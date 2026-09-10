@@ -100,5 +100,5 @@ The booking form in Calendly / Cal.com can be extended to capture additional inf
 ### Notes
 
 - The booking placeholder will show automatically if `BOOKING_URL` is empty — no broken widgets or errors.
-- For group sessions, academy trials or specialist requests, direct parents to the contact details shown on the page: 07539 072029 / coachnathanemanuel@outlook.com
+- For group sessions, academy trials or specialist requests, direct parents to the contact details shown on the page: 07443 694846 / coachnathanemanuel@outlook.com
 - If you switch from Calendly to Cal.com (or vice versa), simply update the `BOOKING_URL` value — no other code changes needed.
