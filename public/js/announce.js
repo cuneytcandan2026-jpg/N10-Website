@@ -2,6 +2,9 @@
    N10 Academy — site announcement bar
    Slim, dismissible strip pinned above the fixed nav. Dismissal is
    remembered per announcement version (bump VERSION to show it again).
+   Loaded as a plain <script> at the top of <body> so the bar and its
+   offset exist before first paint (no layout shift). The offset is a CSS
+   variable because the nav has not been parsed yet when this runs.
    ────────────────────────────────────────────────────────────── */
 (function () {
   'use strict';
@@ -31,6 +34,8 @@
         'border-radius:6px;opacity:.7;transition:opacity .18s ease,background-color .18s ease}',
       '.n10ann-close:hover{opacity:1;background:rgba(10,10,11,.10)}',
       '.n10ann-close:focus-visible{outline:2px solid #0A0A0B;outline-offset:1px;opacity:1}',
+      'html.n10ann-on body{padding-top:var(--n10ann-h,0px)}',
+      'html.n10ann-on #navbar{top:var(--n10ann-h,0px)}',
       '@media (max-width:640px){.n10ann-inner{padding:7px 40px 7px 12px}.n10ann-text{font-size:12px}}'
     ].join('');
     var el = document.createElement('style');
@@ -56,29 +61,38 @@
       '</div>';
     document.body.insertBefore(bar, document.body.firstChild);
 
-    var nav = document.getElementById('navbar');
+    var root = document.documentElement;
+    var ro = null;
 
     function applyOffset() {
-      var h = bar.offsetHeight;
-      if (nav) nav.style.top = h + 'px';
-      document.body.style.paddingTop = h + 'px';
+      root.style.setProperty('--n10ann-h', bar.offsetHeight + 'px');
+      root.classList.add('n10ann-on');
     }
     function clearOffset() {
-      if (nav) nav.style.top = '';
-      document.body.style.paddingTop = '';
+      root.classList.remove('n10ann-on');
+      root.style.removeProperty('--n10ann-h');
     }
     applyOffset();
-    window.addEventListener('resize', applyOffset, { passive: true });
+    // Height changes on resize and when the web font swaps in.
+    if (window.ResizeObserver) {
+      ro = new ResizeObserver(applyOffset);
+      ro.observe(bar);
+    } else {
+      window.addEventListener('resize', applyOffset, { passive: true });
+    }
 
     bar.querySelector('.n10ann-close').addEventListener('click', function () {
       try { localStorage.setItem(KEY, VERSION); } catch (e) {}
+      if (ro) ro.disconnect();
       window.removeEventListener('resize', applyOffset);
       bar.remove();
       clearOffset();
     });
   }
 
-  if (document.readyState === 'loading') {
+  if (document.body) {
+    build();
+  } else if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', build);
   } else {
     build();

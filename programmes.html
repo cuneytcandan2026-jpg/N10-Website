@@ -3,7 +3,6 @@
 <head>
   <!-- Google Analytics 4 — loaded only after cookie consent (see public/js/consent.js) -->
   <script src="public/js/consent.js" defer></script>
-  <script src="public/js/announce.js" defer></script>
   <meta charset="UTF-8" />
   <meta name="google-site-verification" content="rpKdxMQsWCwtw3UrACFqNj3BdKieDD2jk_-TH5gU7BU" />
   <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png" />
@@ -25,12 +24,6 @@
   <meta name="twitter:description" content="Flexible football programmes for every age and ability. Free trial available for all N10 Academy programmes." />
   <meta name="twitter:image" content="https://n10academy.co.uk/public/images/og-image.jpg" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="public/js/tailwind.config.js"></script>
-  <link rel="stylesheet" href="public/css/styles.css" />
 
   <script type="application/ld+json">
   {
@@ -42,8 +35,13 @@
     ]
   }
   </script>
+  <link rel="preload" href="public/images/backgrounds/football-drill-poster.webp" as="image" fetchpriority="high" />
+  <link rel="preload" href="public/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="public/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="public/css/site.css" />
 </head>
 <body class="font-body">
+  <script src="public/js/announce.js"></script>
 
   <!-- NAV -->
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50" aria-label="Main navigation">
@@ -98,10 +96,10 @@
     <section class="relative flex items-center justify-center text-center px-6 overflow-hidden" style="min-height: 85vh; padding-top: 5rem; padding-bottom: 5rem; background: #0A0A0B;" aria-label="Programmes hero">
 
       <!-- Video background -->
-      <video id="skill-video" autoplay muted playsinline loop
+      <video id="skill-video" poster="public/images/backgrounds/football-drill-poster.webp" autoplay muted playsinline loop preload="none" data-defer
              class="absolute inset-0 w-full h-full object-cover z-0"
              aria-hidden="true">
-        <source src="public/Videos/public/videos/football-drill.mp4" type="video/mp4" />
+        <source data-src="public/Videos/public/videos/football-drill.mp4" type="video/mp4" />
       </video>
 
       <!-- Dark overlay -->
@@ -113,24 +111,24 @@
       <!-- Content -->
       <div class="relative z-20 max-w-4xl mx-auto flex flex-col items-center grain">
 
-        <p class="section-label mb-5 reveal">What We Offer</p>
+        <p class="section-label mb-5">What We Offer</p>
 
-        <h1 class="font-display text-6xl sm:text-7xl md:text-9xl text-brand-white leading-none tracking-display mb-6 reveal">
+        <h1 class="font-display text-6xl sm:text-7xl md:text-9xl text-brand-white leading-none tracking-display mb-6">
           TRAIN SMART.<br />
           <span class="text-brand-red">PLAY BETTER.</span>
         </h1>
 
-        <p class="text-brand-white/60 text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-8 reveal">
+        <p class="text-brand-white/60 text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-8">
           Group sessions, 1-to-1 coaching, holiday camps and more: a programme built for every player, every age, every ambition.
         </p>
 
         <!-- Free trial badge -->
-        <div class="inline-flex items-center gap-3 bg-brand-gold/10 border border-brand-gold/30 rounded-lg px-5 py-3 mb-8 reveal" style="backdrop-filter: blur(4px);">
+        <div class="inline-flex items-center gap-3 bg-brand-gold/10 border border-brand-gold/30 rounded-lg px-5 py-3 mb-8" style="backdrop-filter: blur(4px);">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#F5C518" fill-opacity="0.2"/><polyline points="6,12 10,16 18,8" stroke="#F5C518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span class="text-brand-gold text-sm font-bold uppercase tracking-widest">Free Trial on Every Programme</span>
         </div>
 
-        <div class="flex flex-col sm:flex-row gap-4 reveal reveal-delay-1">
+        <div class="flex flex-col sm:flex-row gap-4">
           <a href="contact.html" class="btn-red btn-hero-cta text-center">Book a Free Trial</a>
           <a href="#programmes" class="btn-outline text-center">See All Programmes</a>
         </div>
@@ -531,7 +529,7 @@
     <div class="max-w-7xl mx-auto">
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         <div class="lg:col-span-1">
-          <img width="327" height="301" src="public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy" class="h-14 w-auto mb-4" />
+          <img loading="lazy" decoding="async" width="327" height="301" src="public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy" class="h-14 w-auto mb-4" />
           <p class="text-brand-muted text-sm leading-relaxed mb-4">Developing champions on and off the pitch in Edmonton, serving families across Enfield and North London. Elite mentality. Positive environment. Real results.</p>
           <p class="font-display text-sm text-brand-red tracking-display">ELITE MENTALITY</p>
         </div>

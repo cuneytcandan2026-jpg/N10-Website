@@ -3,7 +3,6 @@
 <head>
   <!-- Google Analytics 4 — loaded only after cookie consent (see public/js/consent.js) -->
   <script src="public/js/consent.js" defer></script>
-  <script src="public/js/announce.js" defer></script>
   <meta charset="UTF-8" />
   <meta name="google-site-verification" content="rpKdxMQsWCwtw3UrACFqNj3BdKieDD2jk_-TH5gU7BU" />
   <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png" />
@@ -25,12 +24,6 @@
   <meta name="twitter:description" content="Personalised one-to-one football coaching with FA qualified Coach Nathan Emanuel. Develop technique, confidence, football intelligence and match performance." />
   <meta name="twitter:image" content="https://n10academy.co.uk/public/images/og-image.jpg" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="public/js/tailwind.config.js"></script>
-  <link rel="stylesheet" href="public/css/styles.css" />
 
   <script type="application/ld+json">
   {
@@ -101,8 +94,12 @@
     a[href*="wa.me"].btn-outline { border-color: #25D366; color: #25D366; }
     a[href*="wa.me"].btn-outline:hover { background: rgba(37,211,102,0.12); border-color: #25D366; color: #25D366; box-shadow: 0 0 24px rgba(37,211,102,0.25); }
   </style>
+  <link rel="preload" href="public/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="public/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="public/css/site.css" />
 </head>
 <body class="font-body">
+  <script src="public/js/announce.js"></script>
 
   <!-- BOOKING URL CONFIG — paste your Calendly or Cal.com embed URL here when ready -->
   <!-- Example: var BOOKING_URL = 'https://calendly.com/coachnathanemanuel/1to1'; -->
@@ -171,12 +168,12 @@
         <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           <!-- Left: Coach photo -->
-          <div class="reveal order-2 md:order-1">
+          <div class="order-2 md:order-1">
             <div class="relative rounded-lg overflow-hidden" style="aspect-ratio: 3/4; max-height: 600px;">
               <img width="1200" height="900"
                 src="public/images/backgrounds/Coach and team.webp"
                 alt="N10 Academy coach with team — 1-to-1 football coaching"
-                class="w-full h-full object-cover object-top" loading="lazy" />
+                class="w-full h-full object-cover object-top" />
               <!-- Dark gradient overlay -->
               <div class="absolute inset-0 bg-gradient-to-t from-brand-black/70 via-brand-black/20 to-transparent" aria-hidden="true"></div>
               <!-- Red colour tint -->
@@ -193,22 +190,22 @@
 
           <!-- Right: Copy -->
           <div class="order-1 md:order-2">
-            <p class="section-label mb-5 reveal">Individual Sessions · Coach Nathan Emanuel</p>
+            <p class="section-label mb-5">Individual Sessions · Coach Nathan Emanuel</p>
 
-            <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl text-brand-white leading-none tracking-display mb-4 reveal">
+            <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl text-brand-white leading-none tracking-display mb-4">
               PERSONALISED<br />
               <span class="text-brand-red">1-TO-1</span><br />
               COACHING
             </h1>
 
-            <p class="text-brand-white/60 text-xs uppercase tracking-widest font-semibold mb-5 reveal">Elevate Your Game. Unlock Your Potential.</p>
+            <p class="text-brand-white/60 text-xs uppercase tracking-widest font-semibold mb-5">Elevate Your Game. Unlock Your Potential.</p>
 
-            <p class="text-brand-muted text-base sm:text-lg leading-relaxed mb-8 reveal">
+            <p class="text-brand-muted text-base sm:text-lg leading-relaxed mb-8">
               Focused individual coaching sessions designed to improve technique, confidence, game understanding and performance, built around your player, nobody else.
             </p>
 
             <!-- Trust indicators -->
-            <div class="grid grid-cols-2 gap-3 mb-8 reveal reveal-delay-1">
+            <div class="grid grid-cols-2 gap-3 mb-8">
               <div class="flex items-center gap-2.5 bg-brand-surface/60 rounded-lg px-4 py-3 border border-white/8">
                 <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E30513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 <span class="text-brand-white text-xs font-semibold leading-tight">FA Qualified Coach</span>
@@ -228,7 +225,7 @@
             </div>
 
             <!-- CTAs -->
-            <div class="flex flex-col sm:flex-row gap-4 reveal reveal-delay-2">
+            <div class="flex flex-col sm:flex-row gap-4">
               <a href="#booking" class="btn-red text-center">Book a Session</a>
               <a href="https://wa.me/447443694846" target="_blank" rel="noopener noreferrer" class="btn-outline text-center flex items-center justify-center gap-2">
                 <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.833.741 5.491 2.037 7.8L0 32l8.418-2.007A15.938 15.938 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 01-6.77-1.853l-.485-.29-5.004 1.193 1.224-4.869-.317-.5A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.899c-.397-.199-2.35-1.16-2.714-1.292-.364-.133-.629-.199-.893.199-.265.397-1.026 1.292-1.258 1.557-.232.265-.464.298-.861.099-.397-.199-1.676-.618-3.192-1.97-1.18-1.053-1.976-2.353-2.208-2.75-.232-.397-.025-.612.174-.81.179-.178.397-.464.596-.696.199-.232.265-.397.397-.663.133-.265.066-.497-.033-.696-.1-.199-.894-2.154-1.225-2.95-.322-.773-.649-.668-.893-.68l-.762-.013c-.265 0-.696.1-.1.06-.364.364-1.393 1.36-1.393 3.315s1.426 3.845 1.624 4.11c.199.265 2.806 4.285 6.797 6.01.95.41 1.692.655 2.27.838.954.303 1.823.26 2.509.158.765-.114 2.35-.96 2.681-1.887.332-.928.332-1.723.232-1.887-.099-.165-.364-.265-.762-.464z"/></svg>
@@ -483,7 +480,7 @@
           <!-- Portrait -->
           <div class="reveal">
             <div class="relative rounded-lg overflow-hidden">
-              <img width="1125" height="1500"
+              <img width="800" height="1067"
                 src="public/images/coaches/Coach%205.webp"
                 alt="Coach Nathan Emanuel — Head Coach and Founder, N10 Academy"
                 class="w-full object-cover"
@@ -881,7 +878,7 @@
     <div class="max-w-7xl mx-auto">
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         <div class="lg:col-span-1">
-          <img width="327" height="301" src="public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy" class="h-14 w-auto mb-4" />
+          <img loading="lazy" decoding="async" width="327" height="301" src="public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy" class="h-14 w-auto mb-4" />
           <p class="text-brand-muted text-sm leading-relaxed mb-4">Developing champions on and off the pitch in Edmonton, serving families across Enfield and North London. Elite mentality. Positive environment. Real results.</p>
           <p class="font-display text-sm text-brand-red tracking-display">ELITE MENTALITY</p>
         </div>

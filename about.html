@@ -3,7 +3,6 @@
 <head>
   <!-- Google Analytics 4 — loaded only after cookie consent (see public/js/consent.js) -->
   <script src="public/js/consent.js" defer></script>
-  <script src="public/js/announce.js" defer></script>
   <meta charset="UTF-8" />
   <meta name="google-site-verification" content="rpKdxMQsWCwtw3UrACFqNj3BdKieDD2jk_-TH5gU7BU" />
   <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png" />
@@ -25,12 +24,6 @@
   <meta name="twitter:description" content="Founded on the belief every young player deserves a positive, high-quality football environment. Learn the N10 Academy story." />
   <meta name="twitter:image" content="https://n10academy.co.uk/public/images/og-image.jpg" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="public/js/tailwind.config.js"></script>
-  <link rel="stylesheet" href="public/css/styles.css" />
 
   <script type="application/ld+json">
   {
@@ -42,8 +35,12 @@
     ]
   }
   </script>
+  <link rel="preload" href="public/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="public/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="public/css/site.css" />
 </head>
 <body class="font-body">
+  <script src="public/js/announce.js"></script>
 
   <!-- NAV -->
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50" aria-label="Main navigation">
@@ -98,16 +95,16 @@
     <section class="page-hero px-6" aria-label="About page header" style="position:relative; overflow:hidden; min-height: 420px;">
       <!-- Background image -->
       <div class="absolute inset-0" aria-hidden="true">
-        <img width="895" height="810" src="public/images/backgrounds/About%20us.webp" alt="" class="absolute inset-0 w-full h-full object-cover object-center" style="object-position: center 30%;" />
+        <img width="800" height="724" fetchpriority="high" src="public/images/backgrounds/About%20us.webp" alt="" class="absolute inset-0 w-full h-full object-cover object-center" style="object-position: center 30%;" />
         <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(10,10,11,0.55) 0%, rgba(10,10,11,0.75) 60%, rgba(10,10,11,0.95) 100%);"></div>
         <div class="absolute inset-0" style="background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(227,5,19,0.3) 0%, transparent 65%);"></div>
       </div>
       <div class="max-w-4xl mx-auto text-center relative z-10 w-full">
-        <p class="section-label mb-4 reveal justify-center">Our Story</p>
-        <h1 class="font-display text-6xl sm:text-7xl md:text-8xl text-brand-white leading-none tracking-display mb-4 reveal">
+        <p class="section-label mb-4 justify-center">Our Story</p>
+        <h1 class="font-display text-6xl sm:text-7xl md:text-8xl text-brand-white leading-none tracking-display mb-4">
           ABOUT <span class="text-brand-red">N10 ACADEMY</span>
         </h1>
-        <p class="text-brand-muted text-base sm:text-lg max-w-2xl mx-auto leading-relaxed reveal">
+        <p class="text-brand-muted text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
           Building the next generation of football talent in North London. More than a football club: a community.
         </p>
       </div>
@@ -671,7 +668,7 @@
     <div class="max-w-7xl mx-auto">
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         <div class="lg:col-span-1">
-          <img width="327" height="301" src="public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy" class="h-14 w-auto mb-4" />
+          <img loading="lazy" decoding="async" width="327" height="301" src="public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy" class="h-14 w-auto mb-4" />
           <p class="text-brand-muted text-sm leading-relaxed mb-4">Developing champions on and off the pitch in Edmonton, serving families across Enfield and North London. Elite mentality. Positive environment. Real results.</p>
           <p class="font-display text-sm text-brand-red tracking-display">ELITE MENTALITY</p>
         </div>

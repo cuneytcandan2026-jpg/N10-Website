@@ -180,3 +180,25 @@ document.addEventListener('pointermove', function (e) {
       });
   });
 })();
+
+// ── Deferred background videos ──
+// <video data-defer> keeps its poster on screen and only fetches the
+// <source data-src> after the page has loaded, so the video doesn't
+// compete with fonts, CSS and the hero image for bandwidth.
+(function () {
+  var vids = document.querySelectorAll('video[data-defer]');
+  if (!vids.length) return;
+  function start() {
+    vids.forEach(function (v) {
+      v.querySelectorAll('source[data-src]').forEach(function (s) {
+        s.src = s.getAttribute('data-src');
+        s.removeAttribute('data-src');
+      });
+      v.load();
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+    });
+  }
+  if (document.readyState === 'complete') start();
+  else window.addEventListener('load', start);
+})();

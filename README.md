@@ -12,6 +12,23 @@ node serve.mjs
 
 Runs at `http://localhost:3000`.
 
+### Styles — rebuild after changing classes
+
+Tailwind is compiled into `public/css/site.css` rather than loaded from the CDN, so the
+browser never has to generate the CSS at page load. Whenever you add or change a Tailwind
+class in any `.html` file, or edit `public/css/styles.css`, rebuild the stylesheet:
+
+```bash
+npm install   # first time only
+npm run build:css
+```
+
+The build reads `tailwind.config.cjs` (brand colours and fonts) and `src/tailwind.css`,
+which pulls in `public/css/styles.css`. Classes that are only ever added by JavaScript must
+appear somewhere in an `.html` or `public/js/*.js` file, or Tailwind will strip them out.
+
+Fonts (Inter and Bebas Neue) are served from `public/fonts/` instead of Google Fonts.
+
 Take screenshots (saves to `./temporary screenshots/`):
 
 ```bash

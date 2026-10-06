@@ -1,4 +1,7 @@
-tailwind.config = {
+// Build config for the static stylesheet (public/css/tailwind.css).
+// Rebuild after changing classes in any page: npm run build:css
+module.exports = {
+  content: ['./*.html', './public/js/**/*.js'],
   theme: {
     extend: {
       colors: {
