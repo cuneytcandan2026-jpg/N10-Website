@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <!-- Google Analytics 4 — loaded only after cookie consent (see public/js/consent.js) -->
   <script src="public/js/consent.js" defer></script>
@@ -9,18 +9,20 @@
   <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="public/apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Programmes — N10 Academy</title>
-  <meta name="description" content="Explore N10 Academy's football programmes: weekly group training, 1-to-1 coaching, holiday camps, technical skills and match preparation for U4–U16." />
+  <title>Youth Football Programmes U4–U16 in Edmonton | N10 Academy</title>
+  <meta name="description" content="Group training, 1-to-1 coaching, holiday camps and skills sessions for U4–U16 in Edmonton and Tottenham. Days, times and venues. First trial free." />
   <link rel="canonical" href="https://n10academy.co.uk/programmes.html" />
-  <meta property="og:title" content="Programmes — N10 Academy" />
+  <meta property="og:title" content="Youth Football Programmes U4–U16 in Edmonton | N10 Academy" />
   <meta property="og:description" content="Flexible football programmes for every age and ability. Free trial available for all N10 Academy programmes." />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="N10 Academy" />
+  <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://n10academy.co.uk/programmes.html" />
   <meta property="og:image" content="https://n10academy.co.uk/public/images/og-image.jpg" />
   <meta property="og:image:width" content="327" />
   <meta property="og:image:height" content="301" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Programmes — N10 Academy" />
+  <meta name="twitter:title" content="Youth Football Programmes U4–U16 in Edmonton | N10 Academy" />
   <meta name="twitter:description" content="Flexible football programmes for every age and ability. Free trial available for all N10 Academy programmes." />
   <meta name="twitter:image" content="https://n10academy.co.uk/public/images/og-image.jpg" />
 
@@ -28,10 +30,228 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://n10academy.co.uk/" },
-      { "@type": "ListItem", "position": 2, "name": "Programmes", "item": "https://n10academy.co.uk/programmes.html" }
+    "@graph": [
+      {
+        "@type": "SportsOrganization",
+        "@id": "https://n10academy.co.uk/#organization",
+        "name": "N10 Academy",
+        "url": "https://n10academy.co.uk/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://n10academy.co.uk/programmes.html#webpage",
+        "url": "https://n10academy.co.uk/programmes.html",
+        "name": "Youth Football Programmes U4–U16 in Edmonton",
+        "isPartOf": {
+          "@id": "https://n10academy.co.uk/#website"
+        },
+        "about": {
+          "@id": "https://n10academy.co.uk/#organization"
+        },
+        "inLanguage": "en-GB",
+        "breadcrumb": {
+          "@id": "https://n10academy.co.uk/programmes.html#breadcrumb"
+        },
+        "mainEntity": {
+          "@id": "https://n10academy.co.uk/programmes.html#programme-list"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://n10academy.co.uk/programmes.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://n10academy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Programmes",
+            "item": "https://n10academy.co.uk/programmes.html"
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://n10academy.co.uk/programmes.html#programme-list",
+        "name": "N10 Academy football programmes",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@id": "https://n10academy.co.uk/programmes.html#weekly-training"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@id": "https://n10academy.co.uk/coaching.html#one-to-one-coaching"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@id": "https://n10academy.co.uk/programmes.html#holiday-camps"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@id": "https://n10academy.co.uk/programmes.html#technical-skills"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@id": "https://n10academy.co.uk/programmes.html#match-preparation"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://n10academy.co.uk/programmes.html#weekly-training",
+        "name": "Weekly group football training",
+        "serviceType": "Youth football coaching",
+        "description": "Weekly group training for boys and girls in their own age group, covering first touch, passing, shooting and team shape. Saturday sessions at Jubilee Park, Edmonton, with first team training on Thursdays at Tottenham Powerleague.",
+        "provider": {
+          "@id": "https://n10academy.co.uk/#organization"
+        },
+        "areaServed": [
+          {
+            "@type": "Place",
+            "name": "Edmonton, London"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "London Borough of Enfield"
+          },
+          {
+            "@type": "Place",
+            "name": "North London"
+          }
+        ],
+        "audience": {
+          "@type": "PeopleAudience",
+          "audienceType": "Boys and girls U4–U16"
+        },
+        "offers": {
+          "@type": "Offer",
+          "name": "Free trial session",
+          "price": "0",
+          "priceCurrency": "GBP",
+          "description": "Every child's first trial session is free.",
+          "availableAtOrFrom": {
+            "@id": "https://n10academy.co.uk/contact.html#jubilee-park"
+          }
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://n10academy.co.uk/programmes.html#holiday-camps",
+        "name": "Football holiday camps",
+        "serviceType": "Youth football coaching",
+        "description": "Multi-day football camps during school holidays with small groups, structured coaching and match play.",
+        "provider": {
+          "@id": "https://n10academy.co.uk/#organization"
+        },
+        "areaServed": [
+          {
+            "@type": "Place",
+            "name": "Edmonton, London"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "London Borough of Enfield"
+          },
+          {
+            "@type": "Place",
+            "name": "North London"
+          }
+        ],
+        "audience": {
+          "@type": "PeopleAudience",
+          "audienceType": "Boys and girls U4–U16"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://n10academy.co.uk/programmes.html#technical-skills",
+        "name": "Technical skills sessions",
+        "serviceType": "Youth football coaching",
+        "description": "60-minute sessions focused on a specific skill such as finishing, dribbling under pressure or set pieces.",
+        "provider": {
+          "@id": "https://n10academy.co.uk/#organization"
+        },
+        "areaServed": [
+          {
+            "@type": "Place",
+            "name": "Edmonton, London"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "London Borough of Enfield"
+          },
+          {
+            "@type": "Place",
+            "name": "North London"
+          }
+        ],
+        "audience": {
+          "@type": "PeopleAudience",
+          "audienceType": "Players U8 and over"
+        },
+        "offers": {
+          "@type": "Offer",
+          "name": "Free trial session",
+          "price": "0",
+          "priceCurrency": "GBP",
+          "description": "Every child's first trial session is free."
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://n10academy.co.uk/programmes.html#match-preparation",
+        "name": "Match preparation sessions",
+        "serviceType": "Youth football coaching",
+        "description": "75-minute sessions for players who already play for a club or school team, covering team shape, pressing, transitions, set pieces and pre-match mental preparation.",
+        "provider": {
+          "@id": "https://n10academy.co.uk/#organization"
+        },
+        "areaServed": [
+          {
+            "@type": "Place",
+            "name": "Edmonton, London"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "London Borough of Enfield"
+          },
+          {
+            "@type": "Place",
+            "name": "North London"
+          }
+        ],
+        "audience": {
+          "@type": "PeopleAudience",
+          "audienceType": "Players U12 and over"
+        },
+        "offers": {
+          "@type": "Offer",
+          "name": "Free trial session",
+          "price": "0",
+          "priceCurrency": "GBP",
+          "description": "Every child's first trial session is free."
+        }
+      }
     ]
   }
   </script>
@@ -49,7 +269,7 @@
 
       <!-- Logo + Wordmark -->
       <div class="flex-1 flex items-center">
-        <a href="index.html" class="flex items-center gap-3 group rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-label="N10 Academy home">
+        <a href="/" class="flex items-center gap-3 group rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-label="N10 Academy home">
           <img width="327" height="301" src="public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy crest" class="h-12 w-auto transition-transform duration-300 ease-out group-hover:scale-105" />
           <div class="flex flex-col justify-center">
             <span class="font-display text-xl text-brand-white leading-none" style="letter-spacing: 0.1em;">N10 ACADEMY</span>
@@ -60,7 +280,7 @@
 
       <!-- Centre: Desktop nav links -->
       <div class="hidden md:flex items-center gap-1" id="nav-links">
-        <a href="index.html"      data-nav="index"      class="nav-link">Home</a>
+        <a href="/"      data-nav="index"      class="nav-link">Home</a>
         <a href="programmes.html" data-nav="programmes" class="nav-link">Programmes</a>
         <a href="coaches.html"    data-nav="coaches"    class="nav-link">Coaches</a>
         <a href="coaching.html"   data-nav="coaching"   class="nav-link">1-to-1</a>
@@ -81,7 +301,7 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden flex-col bg-brand-charcoal border-t border-white/10 px-6 py-4 gap-0">
-      <a href="index.html"      data-nav="index"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Home</a>
+      <a href="/"      data-nav="index"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Home</a>
       <a href="programmes.html" data-nav="programmes" class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Programmes</a>
       <a href="coaches.html"    data-nav="coaches"    class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Coaches</a>
       <a href="coaching.html"   data-nav="coaching"   class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">1-to-1</a>
@@ -111,9 +331,8 @@
       <!-- Content -->
       <div class="relative z-20 max-w-4xl mx-auto flex flex-col items-center grain">
 
-        <p class="section-label mb-5">What We Offer</p>
-
         <h1 class="font-display text-6xl sm:text-7xl md:text-9xl text-brand-white leading-none tracking-display mb-6">
+          <span class="section-label mb-5" style="display: flex; justify-content: center; line-height: 1.5;">Kids' Football Programmes · U4–U16 · Edmonton</span>
           TRAIN SMART.<br />
           <span class="text-brand-red">PLAY BETTER.</span>
         </h1>
@@ -152,7 +371,7 @@
         <div class="grid lg:grid-cols-2 gap-8">
 
           <!-- 1: Weekly Group Training -->
-          <article data-glow class="bg-brand-surface rounded-lg card-hover reveal reveal-delay-1" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
+          <article id="weekly-training" data-glow class="bg-brand-surface rounded-lg card-hover reveal reveal-delay-1" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
             <div data-glow></div>
             <div class="h-2 w-full rounded-t-lg" style="background: #E30513;"></div>
             <div class="p-8">
@@ -188,7 +407,7 @@
           </article>
 
           <!-- 2: 1-to-1 Coaching -->
-          <article data-glow class="bg-brand-surface rounded-lg card-hover reveal reveal-delay-2" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
+          <article id="one-to-one" data-glow class="bg-brand-surface rounded-lg card-hover reveal reveal-delay-2" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
             <div data-glow></div>
             <div class="h-2 w-full rounded-t-lg" style="background: #F5C518;"></div>
             <div class="p-8">
@@ -224,7 +443,7 @@
           </article>
 
           <!-- 3: Holiday Camps -->
-          <article data-glow class="bg-brand-surface rounded-lg card-hover reveal reveal-delay-3" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
+          <article id="holiday-camps" data-glow class="bg-brand-surface rounded-lg card-hover reveal reveal-delay-3" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
             <div data-glow></div>
             <div class="h-2 w-full rounded-t-lg" style="background: #9090A0;"></div>
             <div class="p-8">
@@ -260,7 +479,7 @@
           </article>
 
           <!-- 4: Technical Skills Training -->
-          <article data-glow class="bg-brand-surface rounded-lg card-hover reveal reveal-delay-4" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
+          <article id="technical-skills" data-glow class="bg-brand-surface rounded-lg card-hover reveal reveal-delay-4" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
             <div data-glow></div>
             <div class="h-2 w-full rounded-t-lg" style="background: #FF4D1C;"></div>
             <div class="p-8">
@@ -299,7 +518,7 @@
 
         <!-- 5th card: Match Preparation (full width) -->
         <div class="mt-8 reveal">
-          <article data-glow class="bg-brand-surface rounded-lg card-hover" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
+          <article id="match-preparation" data-glow class="bg-brand-surface rounded-lg card-hover" style="box-shadow: 0 4px 32px rgba(0,0,0,0.5);">
             <div data-glow></div>
             <div class="h-2 w-full rounded-t-lg" style="background: linear-gradient(90deg, #E30513, #F5C518);"></div>
             <div class="p-8 lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start">
@@ -536,7 +755,7 @@
         <div>
           <h4 class="font-display text-lg text-brand-white tracking-display mb-5">PAGES</h4>
           <ul class="space-y-3">
-            <li><a href="index.html"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Home</a></li>
+            <li><a href="/"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Home</a></li>
             <li><a href="about.html"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">About Us</a></li>
             <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Programmes</a></li>
             <li><a href="coaches.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Coaches</a></li>
@@ -546,9 +765,9 @@
         <div>
           <h4 class="font-display text-lg text-brand-white tracking-display mb-5">PROGRAMMES & TRIALS</h4>
           <ul class="space-y-3">
-            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Weekly Training</a></li>
+            <li><a href="programmes.html#weekly-training" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Weekly Training</a></li>
             <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Book a Trial</a></li>
-            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Holiday Camps</a></li>
+            <li><a href="programmes.html#holiday-camps" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Holiday Camps</a></li>
             <li><a href="coaching.html"   class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">1-to-1 Coaching</a></li>
           </ul>
         </div>

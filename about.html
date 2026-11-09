@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <!-- Google Analytics 4 — loaded only after cookie consent (see public/js/consent.js) -->
   <script src="public/js/consent.js" defer></script>
@@ -9,18 +9,20 @@
   <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="public/apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us — N10 Academy</title>
-  <meta name="description" content="Learn about N10 Academy's story, mission, coaching philosophy and commitment to developing young footballers in Edmonton, North London." />
+  <title>About N10 Academy | Youth Football in Edmonton since 2021</title>
+  <meta name="description" content="How N10 Academy began at Jubilee Park, Edmonton, and how we coach boys and girls U4–U16: mission, values, player pathway and safeguarding." />
   <link rel="canonical" href="https://n10academy.co.uk/about.html" />
-  <meta property="og:title" content="About Us — N10 Academy" />
+  <meta property="og:title" content="About N10 Academy | Youth Football in Edmonton since 2021" />
   <meta property="og:description" content="Founded on the belief every young player deserves a positive, high-quality football environment. Learn the N10 Academy story." />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="N10 Academy" />
+  <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://n10academy.co.uk/about.html" />
   <meta property="og:image" content="https://n10academy.co.uk/public/images/og-image.jpg" />
   <meta property="og:image:width" content="327" />
   <meta property="og:image:height" content="301" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="About Us — N10 Academy" />
+  <meta name="twitter:title" content="About N10 Academy | Youth Football in Edmonton since 2021" />
   <meta name="twitter:description" content="Founded on the belief every young player deserves a positive, high-quality football environment. Learn the N10 Academy story." />
   <meta name="twitter:image" content="https://n10academy.co.uk/public/images/og-image.jpg" />
 
@@ -28,10 +30,47 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://n10academy.co.uk/" },
-      { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://n10academy.co.uk/about.html" }
+    "@graph": [
+      {
+        "@type": "SportsOrganization",
+        "@id": "https://n10academy.co.uk/#organization",
+        "name": "N10 Academy",
+        "url": "https://n10academy.co.uk/"
+      },
+      {
+        "@type": "AboutPage",
+        "@id": "https://n10academy.co.uk/about.html#webpage",
+        "url": "https://n10academy.co.uk/about.html",
+        "name": "About N10 Academy",
+        "isPartOf": {
+          "@id": "https://n10academy.co.uk/#website"
+        },
+        "about": {
+          "@id": "https://n10academy.co.uk/#organization"
+        },
+        "inLanguage": "en-GB",
+        "breadcrumb": {
+          "@id": "https://n10academy.co.uk/about.html#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://n10academy.co.uk/about.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://n10academy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Us",
+            "item": "https://n10academy.co.uk/about.html"
+          }
+        ]
+      }
     ]
   }
   </script>
@@ -48,7 +87,7 @@
 
       <!-- Logo + Wordmark -->
       <div class="flex-1 flex items-center">
-        <a href="index.html" class="flex items-center gap-3 group rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-label="N10 Academy home">
+        <a href="/" class="flex items-center gap-3 group rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-label="N10 Academy home">
           <img width="327" height="301" src="public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy crest" class="h-12 w-auto transition-transform duration-300 ease-out group-hover:scale-105" />
           <div class="flex flex-col justify-center">
             <span class="font-display text-xl text-brand-white leading-none" style="letter-spacing: 0.1em;">N10 ACADEMY</span>
@@ -59,7 +98,7 @@
 
       <!-- Centre: Desktop nav links -->
       <div class="hidden md:flex items-center gap-1" id="nav-links">
-        <a href="index.html"      data-nav="index"      class="nav-link">Home</a>
+        <a href="/"      data-nav="index"      class="nav-link">Home</a>
         <a href="programmes.html" data-nav="programmes" class="nav-link">Programmes</a>
         <a href="coaches.html"    data-nav="coaches"    class="nav-link">Coaches</a>
         <a href="coaching.html"   data-nav="coaching"   class="nav-link">1-to-1</a>
@@ -80,7 +119,7 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden flex-col bg-brand-charcoal border-t border-white/10 px-6 py-4 gap-0">
-      <a href="index.html"      data-nav="index"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Home</a>
+      <a href="/"      data-nav="index"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Home</a>
       <a href="programmes.html" data-nav="programmes" class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Programmes</a>
       <a href="coaches.html"    data-nav="coaches"    class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Coaches</a>
       <a href="coaching.html"   data-nav="coaching"   class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">1-to-1</a>
@@ -675,7 +714,7 @@
         <div>
           <h4 class="font-display text-lg text-brand-white tracking-display mb-5">PAGES</h4>
           <ul class="space-y-3">
-            <li><a href="index.html"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Home</a></li>
+            <li><a href="/"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Home</a></li>
             <li><a href="about.html"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">About Us</a></li>
             <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Programmes</a></li>
             <li><a href="coaches.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Coaches</a></li>
@@ -685,9 +724,9 @@
         <div>
           <h4 class="font-display text-lg text-brand-white tracking-display mb-5">PROGRAMMES & TRIALS</h4>
           <ul class="space-y-3">
-            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Weekly Training</a></li>
+            <li><a href="programmes.html#weekly-training" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Weekly Training</a></li>
             <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Book a Trial</a></li>
-            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Holiday Camps</a></li>
+            <li><a href="programmes.html#holiday-camps" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Holiday Camps</a></li>
             <li><a href="coaching.html"   class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">1-to-1 Coaching</a></li>
           </ul>
         </div>

@@ -7,6 +7,8 @@
 /* ── Base ── */
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+/* Deep-linked cards/sections clear the fixed nav + announcement bar */
+article[id], #training-location { scroll-margin-top: 10rem; }
 body { background: #0A0A0B; color: #F8F8FA; font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; }
 
 /* ── Grain texture ── */

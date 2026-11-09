@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <!-- Google Analytics 4 — loaded only after cookie consent (see public/js/consent.js) -->
   <script src="public/js/consent.js" defer></script>
@@ -9,18 +9,20 @@
   <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="public/apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1-to-1 Football Coaching — N10 Academy</title>
-  <meta name="description" content="Personalised one-to-one football coaching with FA qualified Coach Nathan Emanuel. Develop technique, confidence, football intelligence and match performance." />
+  <title>1-to-1 Football Coaching in Edmonton, London | N10 Academy</title>
+  <meta name="description" content="One-to-one football coaching in Edmonton, North London with FA-qualified Coach Nathan Emanuel. Tailored sessions for all ages and abilities." />
   <link rel="canonical" href="https://n10academy.co.uk/coaching.html" />
-  <meta property="og:title" content="1-to-1 Football Coaching — N10 Academy" />
+  <meta property="og:title" content="1-to-1 Football Coaching in Edmonton, London | N10 Academy" />
   <meta property="og:description" content="Personalised one-to-one football coaching with FA qualified Coach Nathan Emanuel. Develop technique, confidence, football intelligence and match performance." />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="N10 Academy" />
+  <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://n10academy.co.uk/coaching.html" />
   <meta property="og:image" content="https://n10academy.co.uk/public/images/og-image.jpg" />
   <meta property="og:image:width" content="327" />
   <meta property="og:image:height" content="301" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1-to-1 Football Coaching — N10 Academy" />
+  <meta name="twitter:title" content="1-to-1 Football Coaching in Edmonton, London | N10 Academy" />
   <meta name="twitter:description" content="Personalised one-to-one football coaching with FA qualified Coach Nathan Emanuel. Develop technique, confidence, football intelligence and match performance." />
   <meta name="twitter:image" content="https://n10academy.co.uk/public/images/og-image.jpg" />
 
@@ -28,67 +30,139 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://n10academy.co.uk/" },
-      { "@type": "ListItem", "position": 2, "name": "1-to-1 Coaching", "item": "https://n10academy.co.uk/coaching.html" }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "How long is a one-to-one coaching session?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sessions are generally booked hourly, with the exact format confirmed when booking. The focus within that time is entirely on the individual player." }
+        "@type": "SportsOrganization",
+        "@id": "https://n10academy.co.uk/#organization",
+        "name": "N10 Academy",
+        "url": "https://n10academy.co.uk/"
       },
       {
-        "@type": "Question",
-        "name": "Who are sessions suitable for?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sessions are suitable for players of different ages and ability levels, with training adapted to individual needs. Whether the player is just starting out or preparing for a trial, sessions are structured around where they are right now." }
+        "@type": "Person",
+        "@id": "https://n10academy.co.uk/coaches.html#nathan-emanuel",
+        "name": "Nathan Emanuel",
+        "url": "https://n10academy.co.uk/coaches.html"
       },
       {
-        "@type": "Question",
-        "name": "Can siblings or friends train together?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Please contact Coach Nathan directly to discuss shared or small-group sessions, which can be arranged based on availability and the players' age and ability." }
+        "@type": "WebPage",
+        "@id": "https://n10academy.co.uk/coaching.html#webpage",
+        "url": "https://n10academy.co.uk/coaching.html",
+        "name": "1-to-1 Football Coaching in Edmonton, London",
+        "isPartOf": {
+          "@id": "https://n10academy.co.uk/#website"
+        },
+        "about": {
+          "@id": "https://n10academy.co.uk/#organization"
+        },
+        "inLanguage": "en-GB",
+        "breadcrumb": {
+          "@id": "https://n10academy.co.uk/coaching.html#breadcrumb"
+        },
+        "mainEntity": {
+          "@id": "https://n10academy.co.uk/coaching.html#one-to-one-coaching"
+        }
       },
       {
-        "@type": "Question",
-        "name": "Where do sessions take place?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Location details will be confirmed when booking. Sessions typically take place in Edmonton, North London. Please contact Coach Nathan directly if you have any location-specific requirements." }
+        "@type": "BreadcrumbList",
+        "@id": "https://n10academy.co.uk/coaching.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://n10academy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "1-to-1 Coaching",
+            "item": "https://n10academy.co.uk/coaching.html"
+          }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "What happens if I need to cancel or reschedule?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Please contact Coach Nathan as early as possible if you need to cancel or reschedule. Cancellation and rescheduling terms may apply depending on notice given." }
+        "@type": "Service",
+        "@id": "https://n10academy.co.uk/coaching.html#one-to-one-coaching",
+        "name": "1-to-1 football coaching",
+        "serviceType": "Private football coaching",
+        "description": "Personalised one-to-one football coaching with Coach Nathan Emanuel, tailored to the player's age, position, current level and development goals. Sessions are generally booked hourly and typically take place in Edmonton, North London.",
+        "provider": {
+          "@id": "https://n10academy.co.uk/coaches.html#nathan-emanuel"
+        },
+        "brand": {
+          "@id": "https://n10academy.co.uk/#organization"
+        },
+        "areaServed": [
+          {
+            "@type": "Place",
+            "name": "Edmonton, London"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "London Borough of Enfield"
+          },
+          {
+            "@type": "Place",
+            "name": "North London"
+          }
+        ],
+        "audience": {
+          "@type": "PeopleAudience",
+          "audienceType": "Players of all ages, positions and abilities"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://n10academy.co.uk/coaching.html#faq",
+        "isPartOf": {
+          "@id": "https://n10academy.co.uk/coaching.html#webpage"
+        },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How long is a one-to-one coaching session?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sessions are generally booked hourly, with the exact format confirmed when booking. The focus within that time is entirely on the individual player."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who are sessions suitable for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sessions are suitable for players of different ages and ability levels, with training adapted to individual needs. Whether the player is just starting out or preparing for a trial, sessions are structured around where they are right now."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can siblings or friends train together?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Please contact Coach Nathan directly to discuss shared or small-group sessions, which can be arranged based on availability and the players' age and ability."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where do sessions take place?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Location details will be confirmed when booking. Sessions typically take place in Edmonton, North London. Please contact Coach Nathan directly if you have any location-specific requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if I need to cancel or reschedule?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Please contact Coach Nathan as early as possible if you need to cancel or reschedule. Cancellation and rescheduling terms may apply depending on notice given."
+            }
+          }
+        ]
       }
     ]
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Nathan Emanuel",
-    "jobTitle": "Head Coach & Founder",
-    "worksFor": { "@type": "Organization", "name": "N10 Academy", "url": "https://n10academy.co.uk/" },
-    "description": "FA-qualified 1-to-1 football coach with academy-level playing experience at Arsenal and Crystal Palace, coaching experience including KEFA Football Academy, Enfield District U13's and Middlesex County U13's, and current scouting work for Stevenage FC. Holds FA safeguarding and welfare qualifications alongside diplomas in sports and child psychology.",
-    "url": "https://n10academy.co.uk/coaching.html",
-    "hasCredential": [
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "FA Level 1 Coach" },
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "FA Level 2 Scout / Talent ID" },
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "FA Safeguarding" },
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "DBS Checked" },
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "Diploma in Sports Psychology" },
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "Diploma in Child Psychology" },
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "ICES Sports Agent Certified" }
-    ]
-  }
-  </script>
-
   <style>
     html { scroll-behavior: smooth; }
     a[href*="wa.me"].btn-outline { border-color: #25D366; color: #25D366; }
@@ -111,7 +185,7 @@
 
       <!-- Logo + Wordmark -->
       <div class="flex-1 flex items-center">
-        <a href="index.html" class="flex items-center gap-3 group rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-label="N10 Academy home">
+        <a href="/" class="flex items-center gap-3 group rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-label="N10 Academy home">
           <img width="327" height="301" src="public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy crest" class="h-12 w-auto transition-transform duration-300 ease-out group-hover:scale-105" />
           <div class="flex flex-col justify-center">
             <span class="font-display text-xl text-brand-white leading-none" style="letter-spacing: 0.1em;">N10 ACADEMY</span>
@@ -122,7 +196,7 @@
 
       <!-- Centre: Desktop nav links -->
       <div class="hidden md:flex items-center gap-1" id="nav-links">
-        <a href="index.html"      data-nav="index"      class="nav-link">Home</a>
+        <a href="/"      data-nav="index"      class="nav-link">Home</a>
         <a href="programmes.html" data-nav="programmes" class="nav-link">Programmes</a>
         <a href="coaches.html"    data-nav="coaches"    class="nav-link">Coaches</a>
         <a href="coaching.html"   data-nav="coaching"   class="nav-link">1-to-1</a>
@@ -143,7 +217,7 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden flex-col bg-brand-charcoal border-t border-white/10 px-6 py-4 gap-0">
-      <a href="index.html"      data-nav="index"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Home</a>
+      <a href="/"      data-nav="index"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Home</a>
       <a href="programmes.html" data-nav="programmes" class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Programmes</a>
       <a href="coaches.html"    data-nav="coaches"    class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Coaches</a>
       <a href="coaching.html"   data-nav="coaching"   class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">1-to-1</a>
@@ -190,9 +264,8 @@
 
           <!-- Right: Copy -->
           <div class="order-1 md:order-2">
-            <p class="section-label mb-5">Individual Sessions · Coach Nathan Emanuel</p>
-
             <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl text-brand-white leading-none tracking-display mb-4">
+              <span class="section-label mb-5" style="display: flex; line-height: 1.5;">Coach Nathan Emanuel · Edmonton, North London</span>
               PERSONALISED<br />
               <span class="text-brand-red">1-TO-1</span><br />
               COACHING
@@ -885,7 +958,7 @@
         <div>
           <h4 class="font-display text-lg text-brand-white tracking-display mb-5">PAGES</h4>
           <ul class="space-y-3">
-            <li><a href="index.html"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Home</a></li>
+            <li><a href="/"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Home</a></li>
             <li><a href="about.html"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">About Us</a></li>
             <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Programmes</a></li>
             <li><a href="coaches.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Coaches</a></li>
@@ -895,9 +968,9 @@
         <div>
           <h4 class="font-display text-lg text-brand-white tracking-display mb-5">PROGRAMMES &amp; TRIALS</h4>
           <ul class="space-y-3">
-            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Weekly Training</a></li>
+            <li><a href="programmes.html#weekly-training" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Weekly Training</a></li>
             <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Book a Trial</a></li>
-            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Holiday Camps</a></li>
+            <li><a href="programmes.html#holiday-camps" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Holiday Camps</a></li>
             <li><a href="coaching.html"   class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">1-to-1 Coaching</a></li>
           </ul>
         </div>

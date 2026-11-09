@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <!-- Google Analytics 4 — loaded only after cookie consent (see public/js/consent.js) -->
   <script src="public/js/consent.js" defer></script>
@@ -9,18 +9,20 @@
   <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="public/apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book a Trial — N10 Academy</title>
-  <meta name="description" content="Book a free trial at N10 Academy, Jubilee Park, Edmonton. Contact Coach Nathan on 07443 694846 or fill in our enquiry form." />
+  <title>Book a Free Football Trial in Edmonton | N10 Academy</title>
+  <meta name="description" content="Book a free football trial at Jubilee Park, Edmonton N9. Training times, venues, what to bring and parent FAQs. Call or WhatsApp 07443 694846." />
   <link rel="canonical" href="https://n10academy.co.uk/contact.html" />
-  <meta property="og:title" content="Book a Trial — N10 Academy" />
+  <meta property="og:title" content="Book a Free Football Trial in Edmonton | N10 Academy" />
   <meta property="og:description" content="Book a free trial session at N10 Academy in Edmonton, North London. Boys and girls U4–U16 welcome." />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="N10 Academy" />
+  <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://n10academy.co.uk/contact.html" />
   <meta property="og:image" content="https://n10academy.co.uk/public/images/og-image.jpg" />
   <meta property="og:image:width" content="327" />
   <meta property="og:image:height" content="301" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Book a Trial — N10 Academy" />
+  <meta name="twitter:title" content="Book a Free Football Trial in Edmonton | N10 Academy" />
   <meta name="twitter:description" content="Book a free trial session at N10 Academy in Edmonton, North London. Boys and girls U4–U16 welcome." />
   <meta name="twitter:image" content="https://n10academy.co.uk/public/images/og-image.jpg" />
 
@@ -28,75 +30,206 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://n10academy.co.uk/" },
-      { "@type": "ListItem", "position": 2, "name": "Contact / Book a Trial", "item": "https://n10academy.co.uk/contact.html" }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SportsActivityLocation",
-    "name": "N10 Academy",
-    "url": "https://n10academy.co.uk/contact.html",
-    "telephone": "+447443694846",
-    "email": "Talk2_N10@outlook.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Jubilee Park, Houndsfield Road",
-      "addressLocality": "Edmonton, London",
-      "postalCode": "N9 7RA",
-      "addressCountry": "GB"
-    },
-    "areaServed": ["Edmonton", "Enfield", "North London"],
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "11:00", "description": "Development session, U4–U7 — Jubilee Park, Edmonton N9 7RA" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "12:00", "closes": "14:00", "description": "First team training — Jubilee Park, Edmonton N9 7RA" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "17:00", "closes": "19:00", "description": "First team training — Tottenham Powerleague, 80 Willoughby Lane, London N17 0RT" }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "What age groups do you accept?",
-        "acceptedAnswer": { "@type": "Answer", "text": "We welcome boys and girls from U4 all the way through to U16. Each age group has a programme specifically designed for their stage of development, from introduction to football at U4–U5 through to our senior academy at U14–U16." }
+        "@type": "SportsOrganization",
+        "@id": "https://n10academy.co.uk/#organization",
+        "name": "N10 Academy",
+        "alternateName": "N10 Football Academy",
+        "url": "https://n10academy.co.uk/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://n10academy.co.uk/public/images/og-image.jpg",
+          "width": 327,
+          "height": 301
+        },
+        "image": "https://n10academy.co.uk/public/images/og-image.jpg",
+        "description": "Youth football academy based at Jubilee Park, Edmonton, North London. Group training, 1-to-1 coaching and free trial sessions for boys and girls from U4 to U16.",
+        "sport": "Football",
+        "foundingDate": "2021",
+        "founder": {
+          "@id": "https://n10academy.co.uk/coaches.html#nathan-emanuel"
+        },
+        "telephone": "+447443694846",
+        "email": "Talk2_N10@outlook.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jubilee Park, Houndsfield Road",
+          "addressLocality": "Edmonton",
+          "addressRegion": "London",
+          "postalCode": "N9 7RA",
+          "addressCountry": "GB"
+        },
+        "location": [
+          {
+            "@type": "Place",
+            "@id": "https://n10academy.co.uk/contact.html#jubilee-park",
+            "name": "Jubilee Park",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Jubilee Park, Houndsfield Road",
+              "addressLocality": "Edmonton",
+              "addressRegion": "London",
+              "postalCode": "N9 7RA",
+              "addressCountry": "GB"
+            },
+            "hasMap": "https://maps.google.com/?q=Jubilee+Park+Houndsfield+Road+Edmonton+N9+7RA"
+          },
+          {
+            "@type": "Place",
+            "@id": "https://n10academy.co.uk/contact.html#tottenham-powerleague",
+            "name": "Tottenham Powerleague",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "80 Willoughby Lane",
+              "addressLocality": "Tottenham",
+              "addressRegion": "London",
+              "postalCode": "N17 0RT",
+              "addressCountry": "GB"
+            },
+            "hasMap": "https://maps.google.com/?q=Powerleague+Tottenham+80+Willoughby+Lane+London+N17+0RT"
+          }
+        ],
+        "areaServed": [
+          {
+            "@type": "Place",
+            "name": "Edmonton, London"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "London Borough of Enfield"
+          },
+          {
+            "@type": "Place",
+            "name": "North London"
+          }
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "enquiries",
+          "telephone": "+447443694846",
+          "email": "Talk2_N10@outlook.com",
+          "areaServed": "GB",
+          "availableLanguage": "English"
+        },
+        "sameAs": [
+          "https://instagram.com/n10_academy_official"
+        ]
       },
       {
-        "@type": "Question",
-        "name": "How do trial sessions work?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Your child comes along to a regular Saturday session at Jubilee Park free of charge. Coach Nathan and our coaching team will assess their ability and help match them to the right programme and age group. All abilities are welcome, and we don't turn anyone away." }
+        "@type": "ContactPage",
+        "@id": "https://n10academy.co.uk/contact.html#webpage",
+        "url": "https://n10academy.co.uk/contact.html",
+        "name": "Book a Free Football Trial in Edmonton",
+        "isPartOf": {
+          "@id": "https://n10academy.co.uk/#website"
+        },
+        "about": {
+          "@id": "https://n10academy.co.uk/#organization"
+        },
+        "inLanguage": "en-GB",
+        "breadcrumb": {
+          "@id": "https://n10academy.co.uk/contact.html#breadcrumb"
+        }
       },
       {
-        "@type": "Question",
-        "name": "What equipment does my child need?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Your child will need football boots (or trainers for their first trial), shin pads, and a water bottle. Comfortable sportswear is fine. You don't need to purchase any specific kit for a trial session." }
+        "@type": "BreadcrumbList",
+        "@id": "https://n10academy.co.uk/contact.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://n10academy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact / Book a Trial",
+            "item": "https://n10academy.co.uk/contact.html"
+          }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "Where exactly do you train?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Saturday sessions (development 10–11am and first team 12–2pm) are held at Jubilee Park, Houndsfield Road, Edmonton, London N9 7RA. From Thursday 10 September 2026, midweek first-team training runs Thursdays 5–7pm at Tottenham Powerleague, 80 Willoughby Lane, London N17 0RT, for the remainder of the season. Both venues are accessible by public transport with parking nearby." }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does it cost?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The first trial session is completely free. After the trial, pricing is discussed on an individual basis depending on the programme chosen. We offer flexible payment options to ensure no child misses out due to cost." }
-      },
-      {
-        "@type": "Question",
-        "name": "Are your coaches qualified?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. All N10 Academy coaches hold recognised FA coaching qualifications (Level 1 or Level 2), are fully DBS checked, and have completed FA Safeguarding and First Aid training. We take coach development seriously." }
-      },
-      {
-        "@type": "Question",
-        "name": "Is it safe for my child?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Child safety is our absolute priority. All coaches are DBS checked and Safeguarding trained in line with FA guidelines. We operate a clear Child Protection Policy and maintain a positive, respectful environment at every session. Parents are always welcome to stay and watch." }
+        "@type": "FAQPage",
+        "@id": "https://n10academy.co.uk/contact.html#faq",
+        "isPartOf": {
+          "@id": "https://n10academy.co.uk/contact.html#webpage"
+        },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What age groups do you accept?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We welcome boys and girls from U4 all the way through to U16. Each age group has a programme specifically designed for their stage of development, from introduction to football at U4–U5 through to our senior academy at U14–U16."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do trial sessions work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your child comes along to a regular Saturday session at Jubilee Park free of charge. Coach Nathan and our coaching team will assess their ability and help match them to the right programme and age group. All abilities are welcome, and we don't turn anyone away."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What equipment does my child need?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your child will need football boots (or trainers for their first trial), shin pads, and a water bottle. Comfortable sportswear is fine. You don't need to purchase any specific kit for a trial session."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where exactly do you train?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Saturday sessions (development 10–11am and first team 12–2pm) are held at Jubilee Park, Houndsfield Road, Edmonton, London N9 7RA. From Thursday 10 September 2026, midweek first-team training runs Thursdays 5–7pm at Tottenham Powerleague, 80 Willoughby Lane, London N17 0RT, for the remainder of the season. Both venues are accessible by public transport with parking nearby."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does it cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The first trial session is completely free, and children aged 4–5 train free until they turn 6. After the trial, pricing is discussed on an individual basis depending on the programme chosen. We offer flexible payment options to ensure no child misses out due to cost."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you coach girls as well as boys?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. All of our training days are open to boys and girls, and every age group from U4 to U16 welcomes girls."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do players get to play matches?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our first team plays matches on Sundays in the North London League. Ask Coach Nathan which team and matches suit your child's age and experience."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your coaches qualified?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our coaches hold the FA Level 1 coaching qualification, are DBS checked, and have completed FA Safeguarding and First Aid training. Head Coach Nathan Emanuel also holds the FA Level 2 Scout / Talent ID qualification. We take coach development seriously."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it safe for my child?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Child safety is our absolute priority. All coaches are DBS checked and Safeguarding trained in line with FA guidelines. We operate a clear Child Protection Policy and maintain a positive, respectful environment at every session. Parents are always welcome to stay and watch."
+            }
+          }
+        ]
       }
     ]
   }
@@ -114,7 +247,7 @@
 
       <!-- Logo + Wordmark -->
       <div class="flex-1 flex items-center">
-        <a href="index.html" class="flex items-center gap-3 group rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-label="N10 Academy home">
+        <a href="/" class="flex items-center gap-3 group rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-label="N10 Academy home">
           <img width="327" height="301" src="public/images/logo/N10 ACADEMY Logo.jpg" alt="N10 Academy crest" class="h-12 w-auto transition-transform duration-300 ease-out group-hover:scale-105" />
           <div class="flex flex-col justify-center">
             <span class="font-display text-xl text-brand-white leading-none" style="letter-spacing: 0.1em;">N10 ACADEMY</span>
@@ -125,7 +258,7 @@
 
       <!-- Centre: Desktop nav links -->
       <div class="hidden md:flex items-center gap-1" id="nav-links">
-        <a href="index.html"      data-nav="index"      class="nav-link">Home</a>
+        <a href="/"      data-nav="index"      class="nav-link">Home</a>
         <a href="programmes.html" data-nav="programmes" class="nav-link">Programmes</a>
         <a href="coaches.html"    data-nav="coaches"    class="nav-link">Coaches</a>
         <a href="coaching.html"   data-nav="coaching"   class="nav-link">1-to-1</a>
@@ -146,7 +279,7 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden flex-col bg-brand-charcoal border-t border-white/10 px-6 py-4 gap-0">
-      <a href="index.html"      data-nav="index"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Home</a>
+      <a href="/"      data-nav="index"      class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Home</a>
       <a href="programmes.html" data-nav="programmes" class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Programmes</a>
       <a href="coaches.html"    data-nav="coaches"    class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">Coaches</a>
       <a href="coaching.html"   data-nav="coaching"   class="block text-sm font-semibold uppercase tracking-wider text-brand-white/80 py-3.5 border-b border-white/5 hover:text-brand-red transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" onclick="closeMobileMenu()">1-to-1</a>
@@ -161,8 +294,8 @@
     <section class="page-hero bg-brand-black px-6" aria-label="Contact page header">
       <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(227,5,19,0.25) 0%, transparent 65%);" aria-hidden="true"></div>
       <div class="max-w-4xl mx-auto text-center relative z-10 w-full">
-        <p class="section-label mb-4 justify-center">Get In Touch</p>
         <h1 class="font-display text-6xl sm:text-7xl md:text-8xl text-brand-white leading-none tracking-display mb-4">
+          <span class="section-label mb-4" style="display: flex; justify-content: center; line-height: 1.5;">Free Football Trial · Jubilee Park, Edmonton</span>
           BOOK A <span class="text-brand-red">FREE TRIAL</span>
         </h1>
         <p class="text-brand-muted text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
@@ -291,7 +424,7 @@
         </div>
 
         <!-- Location info -->
-        <div class="reveal">
+        <div id="training-location" class="reveal">
           <p class="section-label mb-4">Find Us</p>
           <h2 class="font-display text-4xl sm:text-5xl text-brand-white leading-none tracking-display mb-8">TRAINING <span class="text-brand-red">LOCATION</span></h2>
 
@@ -507,7 +640,31 @@
             </button>
             <div class="faq-panel">
               <div class="px-6 pb-5">
-                <p class="text-brand-muted text-sm leading-relaxed">The first trial session is completely free. After the trial, pricing is discussed on an individual basis depending on the programme chosen. We offer flexible payment options to ensure no child misses out due to cost.</p>
+                <p class="text-brand-muted text-sm leading-relaxed">The first trial session is completely free, and children aged 4–5 train free until they turn 6. After the trial, pricing is discussed on an individual basis depending on the programme chosen. We offer flexible payment options to ensure no child misses out due to cost.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-brand-surface rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-expanded="false">
+              <span class="text-brand-white font-semibold text-sm">Do you coach girls as well as boys?</span>
+              <span class="faq-icon flex-shrink-0">+</span>
+            </button>
+            <div class="faq-panel">
+              <div class="px-6 pb-5">
+                <p class="text-brand-muted text-sm leading-relaxed">Yes. All of our training days are open to boys and girls, and every age group from U4 to U16 welcomes girls.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-brand-surface rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold" aria-expanded="false">
+              <span class="text-brand-white font-semibold text-sm">Do players get to play matches?</span>
+              <span class="faq-icon flex-shrink-0">+</span>
+            </button>
+            <div class="faq-panel">
+              <div class="px-6 pb-5">
+                <p class="text-brand-muted text-sm leading-relaxed">Yes. Our first team plays matches on Sundays in the North London League. Ask Coach Nathan which team and matches suit your child's age and experience.</p>
               </div>
             </div>
           </div>
@@ -519,7 +676,7 @@
             </button>
             <div class="faq-panel">
               <div class="px-6 pb-5">
-                <p class="text-brand-muted text-sm leading-relaxed">Yes. All N10 Academy coaches hold recognised FA coaching qualifications (Level 1 or Level 2), are fully DBS checked, and have completed FA Safeguarding and First Aid training. We take coach development seriously.</p>
+                <p class="text-brand-muted text-sm leading-relaxed">Yes. Our coaches hold the FA Level 1 coaching qualification, are DBS checked, and have completed FA Safeguarding and First Aid training. Head Coach Nathan Emanuel also holds the FA Level 2 Scout / Talent ID qualification. We take coach development seriously.</p>
               </div>
             </div>
           </div>
@@ -555,7 +712,7 @@
         <div>
           <h4 class="font-display text-lg text-brand-white tracking-display mb-5">PAGES</h4>
           <ul class="space-y-3">
-            <li><a href="index.html"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Home</a></li>
+            <li><a href="/"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Home</a></li>
             <li><a href="about.html"      class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">About Us</a></li>
             <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Programmes</a></li>
             <li><a href="coaches.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Coaches</a></li>
@@ -565,9 +722,9 @@
         <div>
           <h4 class="font-display text-lg text-brand-white tracking-display mb-5">PROGRAMMES & TRIALS</h4>
           <ul class="space-y-3">
-            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Weekly Training</a></li>
+            <li><a href="programmes.html#weekly-training" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Weekly Training</a></li>
             <li><a href="contact.html"    class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Book a Trial</a></li>
-            <li><a href="programmes.html" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Holiday Camps</a></li>
+            <li><a href="programmes.html#holiday-camps" class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">Holiday Camps</a></li>
             <li><a href="coaching.html"   class="text-brand-muted text-sm hover:text-brand-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-gold">1-to-1 Coaching</a></li>
           </ul>
         </div>
